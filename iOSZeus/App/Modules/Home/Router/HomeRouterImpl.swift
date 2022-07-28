@@ -5,10 +5,8 @@
 //  Created by Javier Cueto on 27/07/22.
 //
 
-final class HomeRouterImpl: HomeRouter {
+struct HomeRouterImpl: HomeRouter {
     func goToChart() {
 
     }
-    
-
 }

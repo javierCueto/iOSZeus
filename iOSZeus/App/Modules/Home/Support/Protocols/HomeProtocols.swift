@@ -12,7 +12,7 @@ protocol HomeViewFromPresenter: AnyObject {
     func showErrorMessage(withMessage: String)
 }
 
-protocol HomeRouter: AnyObject {
+protocol HomeRouter {
    func goToChart()
 }
 
