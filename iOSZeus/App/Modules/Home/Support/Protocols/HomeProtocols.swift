@@ -23,7 +23,7 @@ protocol HomePresenter: AnyObject {
     var router: HomeRouter? { get }
     
     func viewDidLoad()
-
+    func didSelectRowAt(indexPath: IndexPath)
 }
 
 protocol HomePresenterToRouter {

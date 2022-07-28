@@ -4,8 +4,11 @@
 //
 //  Created by Javier Cueto on 27/07/22.
 //
+import Foundation
 
 final class HomePresenterImpl: HomePresenter {
+
+    
     weak var view: HomeViewFromPresenter?
     
     var interactor: HomeInteractorInput?
@@ -16,6 +19,9 @@ final class HomePresenterImpl: HomePresenter {
         
     }
     
+    func didSelectRowAt(indexPath: IndexPath) {
+        print(indexPath.row)
+    }
     
 }
 

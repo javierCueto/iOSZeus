@@ -19,6 +19,12 @@
 		3BEE87E1289216C3007CB88F /* HomePresenterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEE87E0289216C3007CB88F /* HomePresenterImpl.swift */; };
 		3BEE87E32892176B007CB88F /* HomeInteractorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEE87E22892176B007CB88F /* HomeInteractorImpl.swift */; };
 		3BEE87E528921949007CB88F /* HomeRouterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEE87E428921949007CB88F /* HomeRouterImpl.swift */; };
+		3BEE87E728923A38007CB88F /* HomeTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEE87E628923A38007CB88F /* HomeTextCell.swift */; };
+		3BEE87ED28923AB6007CB88F /* HomeDefaultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEE87EC28923AB6007CB88F /* HomeDefaultCell.swift */; };
+		3BEE87F028923B8B007CB88F /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEE87EF28923B8B007CB88F /* UIView+Constraints.swift */; };
+		3BEE87F228923FA0007CB88F /* UITableViewCell+TextValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEE87F128923FA0007CB88F /* UITableViewCell+TextValidation.swift */; };
+		3BEE87F528924257007CB88F /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEE87F428924257007CB88F /* Reusable.swift */; };
+		3BEE87F72892466A007CB88F /* HomeCellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEE87F62892466A007CB88F /* HomeCellType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +53,12 @@
 		3BEE87E0289216C3007CB88F /* HomePresenterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenterImpl.swift; sourceTree = "<group>"; };
 		3BEE87E22892176B007CB88F /* HomeInteractorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractorImpl.swift; sourceTree = "<group>"; };
 		3BEE87E428921949007CB88F /* HomeRouterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouterImpl.swift; sourceTree = "<group>"; };
+		3BEE87E628923A38007CB88F /* HomeTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTextCell.swift; sourceTree = "<group>"; };
+		3BEE87EC28923AB6007CB88F /* HomeDefaultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDefaultCell.swift; sourceTree = "<group>"; };
+		3BEE87EF28923B8B007CB88F /* UIView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
+		3BEE87F128923FA0007CB88F /* UITableViewCell+TextValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+TextValidation.swift"; sourceTree = "<group>"; };
+		3BEE87F428924257007CB88F /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
+		3BEE87F62892466A007CB88F /* HomeCellType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCellType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +174,7 @@
 		3BEE87CF28921135007CB88F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3BEE87E828923A3D007CB88F /* Cells */,
 				3BEE87D728921213007CB88F /* HomeViewController.swift */,
 			);
 			path = View;
@@ -204,6 +217,7 @@
 			children = (
 				3BEE87DD2892155A007CB88F /* Protocols */,
 				3BEE87D328921187007CB88F /* Factory */,
+				3BEE87F62892466A007CB88F /* HomeCellType.swift */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -211,6 +225,8 @@
 		3BEE87D9289212CE007CB88F /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				3BEE87F328924248007CB88F /* Protocols */,
+				3BEE87EE28923B7A007CB88F /* Extensions */,
 				3BEE87DA289212D8007CB88F /* AppFactory */,
 			);
 			path = Common;
@@ -228,6 +244,32 @@
 			isa = PBXGroup;
 			children = (
 				3BEE87DE2892156D007CB88F /* HomeProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		3BEE87E828923A3D007CB88F /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				3BEE87E628923A38007CB88F /* HomeTextCell.swift */,
+				3BEE87EC28923AB6007CB88F /* HomeDefaultCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		3BEE87EE28923B7A007CB88F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3BEE87EF28923B8B007CB88F /* UIView+Constraints.swift */,
+				3BEE87F128923FA0007CB88F /* UITableViewCell+TextValidation.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		3BEE87F328924248007CB88F /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				3BEE87F428924257007CB88F /* Reusable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -334,11 +376,17 @@
 			files = (
 				3BEE879A2891ED11007CB88F /* AppDelegate.swift in Sources */,
 				3BEE87E32892176B007CB88F /* HomeInteractorImpl.swift in Sources */,
+				3BEE87F028923B8B007CB88F /* UIView+Constraints.swift in Sources */,
+				3BEE87F72892466A007CB88F /* HomeCellType.swift in Sources */,
 				3BEE879C2891ED11007CB88F /* SceneDelegate.swift in Sources */,
 				3BEE87D6289211BD007CB88F /* HomeModuleFactory.swift in Sources */,
+				3BEE87ED28923AB6007CB88F /* HomeDefaultCell.swift in Sources */,
 				3BEE87D828921213007CB88F /* HomeViewController.swift in Sources */,
 				3BEE87DF2892156D007CB88F /* HomeProtocols.swift in Sources */,
+				3BEE87F528924257007CB88F /* Reusable.swift in Sources */,
 				3BEE87E528921949007CB88F /* HomeRouterImpl.swift in Sources */,
+				3BEE87F228923FA0007CB88F /* UITableViewCell+TextValidation.swift in Sources */,
+				3BEE87E728923A38007CB88F /* HomeTextCell.swift in Sources */,
 				3BEE87DC289212F0007CB88F /* AppFactory.swift in Sources */,
 				3BEE87E1289216C3007CB88F /* HomePresenterImpl.swift in Sources */,
 			);
