@@ -14,14 +14,15 @@ protocol HomeViewFromPresenter: AnyObject {
 
 protocol HomeRouter {
    func goToChart()
-    func goToCamera(view: HomeViewFromPresenter?)
+    func goToCamera(view: HomeViewFromPresenter?, parentPresenter: CameraPresenterDelegate)
 }
 
-typealias HomePresenterViewInteractor = HomePresenter & HomeInteractorOutput & HomePresenterToRouter
+
 protocol HomePresenter: AnyObject {
     var view: HomeViewFromPresenter? { get }
     var interactor: HomeInteractorInput? { get }
     var router: HomeRouter? { get }
+    var title: String? { get }
     
     func viewDidLoad()
     func cellType(cellForRowAt indexPath: IndexPath) -> HomeCellType?
@@ -40,6 +41,7 @@ protocol HomeInteractorOutput: AnyObject {
 
 protocol HomeInteractorInput: AnyObject {
     var presenter: HomeInteractorOutput? { get }
+    var title: String? { get }
     func cellType(cellForRowAt indexPath: IndexPath) -> HomeCellType
     func getNumberCells() -> Int
 }

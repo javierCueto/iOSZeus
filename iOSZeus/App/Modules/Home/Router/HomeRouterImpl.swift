@@ -7,10 +7,9 @@
 
 
 struct HomeRouterImpl: HomeRouter {
-    
-    func goToCamera(view: HomeViewFromPresenter?) {
+    func goToCamera(view: HomeViewFromPresenter?, parentPresenter: CameraPresenterDelegate) {
         let cameraModule = CameraFactoryModule()
-        cameraModule.makeModule(view: view)
+        cameraModule.makeModule(view: view, parentPresenter: parentPresenter)
     }
     
     func goToChart() {

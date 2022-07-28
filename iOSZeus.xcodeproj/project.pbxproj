@@ -10,10 +10,10 @@
 		3B16C2802892D52D0078C602 /* GConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B16C27F2892D52D0078C602 /* GConstants.swift */; };
 		3B16C2882892E0CF0078C602 /* CameraFactoryModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B16C2872892E0CF0078C602 /* CameraFactoryModule.swift */; };
 		3B16C28A2892E1160078C602 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B16C2892892E1160078C602 /* CameraViewController.swift */; };
-		3B16C28C2892E2E40078C602 /* CameraInteractorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B16C28B2892E2E40078C602 /* CameraInteractorImpl.swift */; };
 		3B16C28E2892E2F90078C602 /* CameraPresenterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B16C28D2892E2F90078C602 /* CameraPresenterImpl.swift */; };
 		3B16C2902892E30C0078C602 /* CameraRouterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B16C28F2892E30C0078C602 /* CameraRouterImpl.swift */; };
 		3B16C2922892E3300078C602 /* CameraProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B16C2912892E3300078C602 /* CameraProtocols.swift */; };
+		3B16C29528933C3E0078C602 /* GLocalizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B16C29428933C3E0078C602 /* GLocalizable.swift */; };
 		3BEE879A2891ED11007CB88F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEE87992891ED11007CB88F /* AppDelegate.swift */; };
 		3BEE879C2891ED11007CB88F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEE879B2891ED11007CB88F /* SceneDelegate.swift */; };
 		3BEE87A32891ED15007CB88F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BEE87A22891ED15007CB88F /* Assets.xcassets */; };
@@ -28,7 +28,7 @@
 		3BEE87E528921949007CB88F /* HomeRouterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEE87E428921949007CB88F /* HomeRouterImpl.swift */; };
 		3BEE87ED28923AB6007CB88F /* HomeDefaultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEE87EC28923AB6007CB88F /* HomeDefaultCell.swift */; };
 		3BEE87F028923B8B007CB88F /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEE87EF28923B8B007CB88F /* UIView+Constraints.swift */; };
-		3BEE87F228923FA0007CB88F /* UITableViewCell+TextValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEE87F128923FA0007CB88F /* UITableViewCell+TextValidation.swift */; };
+		3BEE87F228923FA0007CB88F /* UIViewController+TextValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEE87F128923FA0007CB88F /* UIViewController+TextValidation.swift */; };
 		3BEE87F528924257007CB88F /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEE87F428924257007CB88F /* Reusable.swift */; };
 		3BEE87F72892466A007CB88F /* HomeCellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEE87F62892466A007CB88F /* HomeCellType.swift */; };
 /* End PBXBuildFile section */
@@ -47,10 +47,10 @@
 		3B16C27F2892D52D0078C602 /* GConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GConstants.swift; sourceTree = "<group>"; };
 		3B16C2872892E0CF0078C602 /* CameraFactoryModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraFactoryModule.swift; sourceTree = "<group>"; };
 		3B16C2892892E1160078C602 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
-		3B16C28B2892E2E40078C602 /* CameraInteractorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraInteractorImpl.swift; sourceTree = "<group>"; };
 		3B16C28D2892E2F90078C602 /* CameraPresenterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPresenterImpl.swift; sourceTree = "<group>"; };
 		3B16C28F2892E30C0078C602 /* CameraRouterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraRouterImpl.swift; sourceTree = "<group>"; };
 		3B16C2912892E3300078C602 /* CameraProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraProtocols.swift; sourceTree = "<group>"; };
+		3B16C29428933C3E0078C602 /* GLocalizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GLocalizable.swift; sourceTree = "<group>"; };
 		3BEE87962891ED11007CB88F /* iOSZeus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSZeus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BEE87992891ED11007CB88F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3BEE879B2891ED11007CB88F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -68,7 +68,7 @@
 		3BEE87E428921949007CB88F /* HomeRouterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouterImpl.swift; sourceTree = "<group>"; };
 		3BEE87EC28923AB6007CB88F /* HomeDefaultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDefaultCell.swift; sourceTree = "<group>"; };
 		3BEE87EF28923B8B007CB88F /* UIView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
-		3BEE87F128923FA0007CB88F /* UITableViewCell+TextValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+TextValidation.swift"; sourceTree = "<group>"; };
+		3BEE87F128923FA0007CB88F /* UIViewController+TextValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+TextValidation.swift"; sourceTree = "<group>"; };
 		3BEE87F428924257007CB88F /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
 		3BEE87F62892466A007CB88F /* HomeCellType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCellType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -131,7 +131,6 @@
 		3B16C2842892E08A0078C602 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
-				3B16C28B2892E2E40078C602 /* CameraInteractorImpl.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -150,6 +149,14 @@
 				3B16C28F2892E30C0078C602 /* CameraRouterImpl.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		3B16C29328933C2A0078C602 /* Localizable */ = {
+			isa = PBXGroup;
+			children = (
+				3B16C29428933C3E0078C602 /* GLocalizable.swift */,
+			);
+			path = Localizable;
 			sourceTree = "<group>";
 		};
 		3BEE878D2891ED11007CB88F = {
@@ -299,6 +306,7 @@
 		3BEE87D9289212CE007CB88F /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				3B16C29328933C2A0078C602 /* Localizable */,
 				3B16C27E2892D51E0078C602 /* Constants */,
 				3BEE87F328924248007CB88F /* Protocols */,
 				3BEE87EE28923B7A007CB88F /* Extensions */,
@@ -335,7 +343,7 @@
 			isa = PBXGroup;
 			children = (
 				3BEE87EF28923B8B007CB88F /* UIView+Constraints.swift */,
-				3BEE87F128923FA0007CB88F /* UITableViewCell+TextValidation.swift */,
+				3BEE87F128923FA0007CB88F /* UIViewController+TextValidation.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -455,18 +463,18 @@
 				3B16C28E2892E2F90078C602 /* CameraPresenterImpl.swift in Sources */,
 				3B16C2922892E3300078C602 /* CameraProtocols.swift in Sources */,
 				3BEE87F028923B8B007CB88F /* UIView+Constraints.swift in Sources */,
-				3B16C28C2892E2E40078C602 /* CameraInteractorImpl.swift in Sources */,
 				3B16C2902892E30C0078C602 /* CameraRouterImpl.swift in Sources */,
 				3BEE87F72892466A007CB88F /* HomeCellType.swift in Sources */,
 				3BEE879C2891ED11007CB88F /* SceneDelegate.swift in Sources */,
 				3BEE87D6289211BD007CB88F /* HomeModuleFactory.swift in Sources */,
+				3B16C29528933C3E0078C602 /* GLocalizable.swift in Sources */,
 				3BEE87ED28923AB6007CB88F /* HomeDefaultCell.swift in Sources */,
 				3BEE87D828921213007CB88F /* HomeViewController.swift in Sources */,
 				3BEE87DF2892156D007CB88F /* HomeProtocols.swift in Sources */,
 				3BEE87F528924257007CB88F /* Reusable.swift in Sources */,
 				3B16C2882892E0CF0078C602 /* CameraFactoryModule.swift in Sources */,
 				3BEE87E528921949007CB88F /* HomeRouterImpl.swift in Sources */,
-				3BEE87F228923FA0007CB88F /* UITableViewCell+TextValidation.swift in Sources */,
+				3BEE87F228923FA0007CB88F /* UIViewController+TextValidation.swift in Sources */,
 				3BEE87DC289212F0007CB88F /* AppFactory.swift in Sources */,
 				3BEE87E1289216C3007CB88F /* HomePresenterImpl.swift in Sources */,
 			);

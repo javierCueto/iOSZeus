@@ -19,6 +19,7 @@ struct HomeModuleFactoryImpl: HomeModuleFactory {
         let controller = HomeViewController()
         
         interactor.presenter = presenter
+        interactor.title = GLocalizable.optionTitle
         presenter.router = router
         presenter.view = controller
         presenter.interactor = interactor

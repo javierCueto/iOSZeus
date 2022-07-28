@@ -14,13 +14,17 @@ final class HomePresenterImpl: HomePresenter {
     
     var router: HomeRouter?
     
+    var title: String? {
+        interactor?.title
+    }
+    
     func viewDidLoad() {
         
     }
     
     func didSelectRowAt(indexPath: IndexPath) {
         print(indexPath.row)
-        router?.goToCamera(view: view)
+        router?.goToCamera(view: view, parentPresenter: self)
     }
     
     func cellType(cellForRowAt indexPath: IndexPath) -> HomeCellType? {
@@ -45,3 +49,12 @@ extension HomePresenterImpl: HomePresenterToRouter {
     }
     
 }
+
+extension HomePresenterImpl: CameraPresenterDelegate {
+    func imageTaken(image: Any) {
+        dump(image)
+    }
+
+}
+
+

@@ -8,6 +8,8 @@
 import Foundation
 
 final class HomeInteractorImpl: HomeInteractorInput {
+    var title: String?
+    
     func getNumberCells() -> Int {
         HomeCellType.allCases.count
     }

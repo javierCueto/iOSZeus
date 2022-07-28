@@ -1,5 +1,5 @@
 //
-//  UITableViewCell+TextValidation.swift
+//  UIViewController+TextValidation.swift
 //  iOSZeus
 //
 //  Created by Javier Cueto on 27/07/22.

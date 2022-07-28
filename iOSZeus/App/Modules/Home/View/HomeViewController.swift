@@ -39,12 +39,11 @@ final class HomeViewController: UITableViewController {
     
     private func configTableView() {
         tableView.register(HomeDefaultCell.self, forCellReuseIdentifier: HomeDefaultCell.reusableIdentifier)
-        tableView.rowHeight = GConstants.defaultHeightCell
     }
     
     private func configUI(){
         view.backgroundColor = .systemBackground
-        title = "Options"
+        title = presenter?.title
         nameTextField.delegate = self
     }
     
@@ -53,15 +52,16 @@ final class HomeViewController: UITableViewController {
         
         switch homeCellType {
         case .textFieldCell:
-            cell.configUI(view: nameTextField)
+            cell.configUI(parentView: cell.contentView, customView: nameTextField)
         default:
             let selfieLabel: UILabel = {
                 let label = UILabel()
                 label.textAlignment = .center
                 label.text = homeCellType?.description
+                label.numberOfLines = Int.zero
                 return label
             }()
-            cell.configUI(view: selfieLabel)
+            cell.configUI(parentView: cell, customView: selfieLabel)
         }
         return cell
     }
@@ -82,7 +82,17 @@ extension HomeViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         presenter?.numberCells() ?? Int.zero
     }
-    
+
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let homeCellType = presenter?.cellType(cellForRowAt: indexPath)
+        switch homeCellType {
+        case .textFieldCell:
+            return GConstants.defaultHeightCell
+        default:
+            return UITableView.automaticDimension
+        }
+
+    }
     
 }
 
@@ -90,7 +100,7 @@ extension HomeViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         presenter?.didSelectRowAt(indexPath: indexPath)
-  
+        view.endEditing(true)
     }
 }
 

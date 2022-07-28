@@ -19,9 +19,9 @@ final class HomeDefaultCell: UITableViewCell {
     }
     
     // MARK: - Helpers
-    func configUI(view: UIView){
-        contentView.addSubview(view)
-        view.anchor(
+    func configUI(parentView: UIView, customView: UIView){
+        parentView.addSubview(customView)
+        customView.anchor(
             top: topAnchor,
             right: rightAnchor,
             bottom: bottomAnchor,

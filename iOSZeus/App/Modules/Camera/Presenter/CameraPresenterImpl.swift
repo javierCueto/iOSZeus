@@ -5,27 +5,29 @@
 //  Created by Javier Cueto on 28/07/22.
 //
 
+protocol CameraPresenterDelegate: AnyObject {
+    func imageTaken(image: Any)
+}
+
 
 final class CameraPresenterImpl: CameraPresenter {
+
+    
     weak var view: CameraViewFromPresenter?
     
-    var interactor: CameraInteractorInput?
+    weak var delegate: CameraPresenterDelegate?
     
     var router: CameraRouter?
     
-    func viewDidLoad() {
-        
-    }
 }
 
-extension CameraPresenterImpl: CameraPresenterToRouter {
-    func moduleDidFinish() {
-        
+extension CameraPresenterImpl: CameraPresenterInputFromView {
+    func didCancel() {
+        router?.didCancel(cameraView: view)
     }
-}
-
-extension CameraPresenterImpl: CameraInteractorOutput {
-    func onError(errorMessage: String) {
     
+    func didImageTaken(image: Any) {
+        delegate?.imageTaken(image: image)
+        didCancel()
     }
 }

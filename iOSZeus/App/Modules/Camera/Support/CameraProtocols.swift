@@ -8,33 +8,20 @@
 import UIKit
 
 protocol CameraViewFromPresenter: AnyObject {
-    var presenter: CameraPresenter? { get }
+    var presenter: CameraPresenterInputFromView? { get }
 }
 
 protocol CameraRouter {
-   func moduleDidFinish()
+    func didCancel(cameraView: CameraViewFromPresenter?)
 }
 
-typealias CameraPresenterViewInteractor = CameraPresenter & CameraInteractorOutput & CameraPresenterToRouter
 protocol CameraPresenter: AnyObject {
     var view: CameraViewFromPresenter? { get }
-    var interactor: CameraInteractorInput? { get }
     var router: CameraRouter? { get }
-    
-    func viewDidLoad()
 }
 
-protocol CameraPresenterToRouter {
-    func moduleDidFinish()
-}
-
-protocol CameraInteractorOutput: AnyObject {
-    func onError(errorMessage: String)
-
-}
-
-protocol CameraInteractorInput: AnyObject {
-    var presenter: CameraInteractorOutput? { get }
-
+protocol CameraPresenterInputFromView: AnyObject {
+    func didImageTaken(image: Any)
+    func didCancel()
 }
 

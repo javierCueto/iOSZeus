@@ -5,8 +5,10 @@
 //  Created by Javier Cueto on 28/07/22.
 //
 
-final class CameraRouterImpl: CameraRouter {
-    func moduleDidFinish() {
-        
+struct CameraRouterImpl: CameraRouter {
+    func didCancel(cameraView: CameraViewFromPresenter?) {
+        guard let cameraView = cameraView as? CameraViewController else { return }
+        let nav = cameraView.navigationController
+        nav?.popViewController(animated: false)
     }
 }
