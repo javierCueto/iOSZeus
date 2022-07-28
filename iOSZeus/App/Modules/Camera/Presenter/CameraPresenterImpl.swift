@@ -5,10 +5,6 @@
 //  Created by Javier Cueto on 28/07/22.
 //
 
-protocol CameraPresenterDelegate: AnyObject {
-    func imageTaken(image: Any)
-}
-
 
 final class CameraPresenterImpl: CameraPresenter {
 

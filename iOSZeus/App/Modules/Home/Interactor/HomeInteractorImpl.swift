@@ -9,6 +9,7 @@ import Foundation
 
 final class HomeInteractorImpl: HomeInteractorInput {
     var title: String?
+    weak var presenter: HomeInteractorOutput?
     
     func getNumberCells() -> Int {
         HomeCellType.allCases.count
@@ -18,8 +19,6 @@ final class HomeInteractorImpl: HomeInteractorInput {
         let homeCellType = HomeCellType(rawValue: indexPath.row) ?? .selfieText
         return homeCellType
     }
-    
-    weak var presenter: HomeInteractorOutput?
     
     func getMovies() {
         

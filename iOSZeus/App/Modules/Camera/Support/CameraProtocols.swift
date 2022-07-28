@@ -25,3 +25,7 @@ protocol CameraPresenterInputFromView: AnyObject {
     func didCancel()
 }
 
+protocol CameraPresenterDelegate: AnyObject {
+    func imageTaken(image: Any)
+}
+
