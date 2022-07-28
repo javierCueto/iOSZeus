@@ -21,6 +21,7 @@ struct HomeModuleFactoryImpl: HomeModuleFactory {
         interactor.presenter = presenter
         presenter.router = router
         presenter.view = controller
+        presenter.interactor = interactor
         controller.presenter = presenter
         
         

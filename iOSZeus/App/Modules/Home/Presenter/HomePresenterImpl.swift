@@ -9,6 +9,8 @@ import Foundation
 final class HomePresenterImpl: HomePresenter {
 
     
+
+    
     weak var view: HomeViewFromPresenter?
     
     var interactor: HomeInteractorInput?
@@ -21,6 +23,10 @@ final class HomePresenterImpl: HomePresenter {
     
     func didSelectRowAt(indexPath: IndexPath) {
         print(indexPath.row)
+    }
+    
+    func cellType(cellForRowAt indexPath: IndexPath) -> HomeCellType? {
+        interactor?.cellType(cellForRowAt: indexPath)
     }
     
 }

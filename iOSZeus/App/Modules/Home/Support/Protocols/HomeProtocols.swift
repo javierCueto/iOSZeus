@@ -23,6 +23,7 @@ protocol HomePresenter: AnyObject {
     var router: HomeRouter? { get }
     
     func viewDidLoad()
+    func cellType(cellForRowAt indexPath: IndexPath) -> HomeCellType?
     func didSelectRowAt(indexPath: IndexPath)
 }
 
@@ -32,9 +33,11 @@ protocol HomePresenterToRouter {
 
 protocol HomeInteractorOutput: AnyObject {
     func onError(errorMessage: String)
+
 }
 
 protocol HomeInteractorInput: AnyObject {
     var presenter: HomeInteractorOutput? { get }
+    func cellType(cellForRowAt indexPath: IndexPath) -> HomeCellType
 }
 

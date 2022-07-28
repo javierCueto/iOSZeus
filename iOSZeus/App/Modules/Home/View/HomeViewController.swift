@@ -14,6 +14,16 @@ final class HomeViewController: UITableViewController {
     
     // MARK: - Private properties
     
+    private let nameTextField: UITextField = {
+        let textField = UITextField()
+        textField.textAlignment = .center
+        textField.layer.cornerRadius = 5
+        textField.backgroundColor = .systemGray6
+        return textField
+    }()
+    
+    
+    
     // MARK: - Life Cycle
     
     override func viewDidLoad() {
@@ -25,35 +35,43 @@ final class HomeViewController: UITableViewController {
     // MARK: - Helpers
     
     private func configTableView() {
-        tableView.register(HomeTextCell.self, forCellReuseIdentifier: HomeTextCell.reusableIdentifier)
         tableView.register(HomeDefaultCell.self, forCellReuseIdentifier: HomeDefaultCell.reusableIdentifier)
     }
     
     private func configUI(){
         view.backgroundColor = .systemBackground
+        nameTextField.delegate = self
     }
     
-    // MARK: - Actions
-    
-    // MARK: - Extension here
+    private func configCell(with cell: HomeDefaultCell, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
+        let homeCellType = presenter?.cellType(cellForRowAt: indexPath)
+        
+        switch homeCellType {
+        case .textFieldCell:
+            cell.configUI(view: nameTextField)
+        default:
+            let selfieLabel: UILabel = {
+                let label = UILabel()
+                label.textAlignment = .center
+                label.text = homeCellType?.description
+                return label
+            }()
+            cell.configUI(view: selfieLabel)
+        }
+        return cell
+    }
     
 }
 
 extension HomeViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let homeCellType = HomeCellType(rawValue: indexPath.row)
-        
-        switch homeCellType {
-        case .textFieldCell:
-            let cell = tableView.dequeueReusableCell(withIdentifier: HomeTextCell.reusableIdentifier, for: indexPath) as! HomeTextCell
-            cell.selectionStyle = .none
-            return cell
-        default:
-            let cell = tableView.dequeueReusableCell(withIdentifier: HomeDefaultCell.reusableIdentifier, for: indexPath) as! HomeDefaultCell
-            cell.selectionStyle = .none
-            return cell
+        guard
+            let cell = tableView.dequeueReusableCell(withIdentifier: HomeDefaultCell.reusableIdentifier, for: indexPath) as? HomeDefaultCell
+        else {
+            return UITableViewCell()
         }
+        return configCell(with: cell, cellForRowAt: indexPath)
     }
     
     

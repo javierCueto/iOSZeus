@@ -19,7 +19,6 @@
 		3BEE87E1289216C3007CB88F /* HomePresenterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEE87E0289216C3007CB88F /* HomePresenterImpl.swift */; };
 		3BEE87E32892176B007CB88F /* HomeInteractorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEE87E22892176B007CB88F /* HomeInteractorImpl.swift */; };
 		3BEE87E528921949007CB88F /* HomeRouterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEE87E428921949007CB88F /* HomeRouterImpl.swift */; };
-		3BEE87E728923A38007CB88F /* HomeTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEE87E628923A38007CB88F /* HomeTextCell.swift */; };
 		3BEE87ED28923AB6007CB88F /* HomeDefaultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEE87EC28923AB6007CB88F /* HomeDefaultCell.swift */; };
 		3BEE87F028923B8B007CB88F /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEE87EF28923B8B007CB88F /* UIView+Constraints.swift */; };
 		3BEE87F228923FA0007CB88F /* UITableViewCell+TextValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEE87F128923FA0007CB88F /* UITableViewCell+TextValidation.swift */; };
@@ -53,7 +52,6 @@
 		3BEE87E0289216C3007CB88F /* HomePresenterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenterImpl.swift; sourceTree = "<group>"; };
 		3BEE87E22892176B007CB88F /* HomeInteractorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractorImpl.swift; sourceTree = "<group>"; };
 		3BEE87E428921949007CB88F /* HomeRouterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouterImpl.swift; sourceTree = "<group>"; };
-		3BEE87E628923A38007CB88F /* HomeTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTextCell.swift; sourceTree = "<group>"; };
 		3BEE87EC28923AB6007CB88F /* HomeDefaultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDefaultCell.swift; sourceTree = "<group>"; };
 		3BEE87EF28923B8B007CB88F /* UIView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
 		3BEE87F128923FA0007CB88F /* UITableViewCell+TextValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+TextValidation.swift"; sourceTree = "<group>"; };
@@ -251,7 +249,6 @@
 		3BEE87E828923A3D007CB88F /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				3BEE87E628923A38007CB88F /* HomeTextCell.swift */,
 				3BEE87EC28923AB6007CB88F /* HomeDefaultCell.swift */,
 			);
 			path = Cells;
@@ -386,7 +383,6 @@
 				3BEE87F528924257007CB88F /* Reusable.swift in Sources */,
 				3BEE87E528921949007CB88F /* HomeRouterImpl.swift in Sources */,
 				3BEE87F228923FA0007CB88F /* UITableViewCell+TextValidation.swift in Sources */,
-				3BEE87E728923A38007CB88F /* HomeTextCell.swift in Sources */,
 				3BEE87DC289212F0007CB88F /* AppFactory.swift in Sources */,
 				3BEE87E1289216C3007CB88F /* HomePresenterImpl.swift in Sources */,
 			);
