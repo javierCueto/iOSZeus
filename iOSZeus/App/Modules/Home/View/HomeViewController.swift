@@ -13,7 +13,6 @@ final class HomeViewController: UITableViewController {
     var presenter: HomePresenter?
     
     // MARK: - Private properties
-    
     private let nameTextField: UITextField = {
         let textField = UITextField()
         textField.textAlignment = .center
@@ -23,7 +22,6 @@ final class HomeViewController: UITableViewController {
     }()
     
     // MARK: - Life Cycle
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         configUI()
@@ -36,7 +34,6 @@ final class HomeViewController: UITableViewController {
     }
     
     // MARK: - Helpers
-    
     private func configTableView() {
         tableView.register(HomeDefaultCell.self, forCellReuseIdentifier: HomeDefaultCell.reusableIdentifier)
     }
@@ -105,20 +102,7 @@ extension HomeViewController {
 }
 
 
-extension HomeViewController: HomeViewFromPresenter {
-    
-    func showErrorMessage(withMessage: String) {
-        
-    }
-    
-    func showSpinner() {
-        
-    }
-    
-    func hideSpinner() {
-    }
-    
-}
+extension HomeViewController: HomeViewFromPresenter { }
 
 
 

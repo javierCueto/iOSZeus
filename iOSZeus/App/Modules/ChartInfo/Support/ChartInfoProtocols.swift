@@ -1,23 +1,22 @@
 //
-//  HomeProtocols.swift
+//  ChartInfoProtocols.swift
 //  iOSZeus
 //
-//  Created by Javier Cueto on 27/07/22.
+//  Created by Javier Cueto on 28/07/22.
 //
 
 import UIKit
 
-protocol HomeViewFromPresenter: AnyObject {
-    var presenter: HomePresenter? { get }
+protocol ChartInfoViewFromPresenter: AnyObject {
+    var presenter: ChartInfoPresenter? { get }
 }
 
-protocol HomeRouter {
-   func goToChart()
-    func goToCamera(view: HomeViewFromPresenter?, parentPresenter: CameraPresenterDelegate)
+protocol ChartInfoRouter {
+    func didFinish()
 }
 
 
-protocol HomePresenter: AnyObject {
+protocol ChartInfoPresenter: AnyObject {
     var view: HomeViewFromPresenter? { get }
     var interactor: HomeInteractorInput? { get }
     var router: HomeRouter? { get }
@@ -29,19 +28,20 @@ protocol HomePresenter: AnyObject {
     func didSelectRowAt(indexPath: IndexPath)
 }
 
-protocol HomePresenterToRouter {
+protocol ChartInfoPresenterToRouter {
     func didSelectButtonChart()
 }
 
-protocol HomeInteractorOutput: AnyObject {
+protocol ChartInfoInteractorOutput: AnyObject {
     func onError(errorMessage: String)
 
 }
 
-protocol HomeInteractorInput: AnyObject {
-    var presenter: HomeInteractorOutput? { get }
+protocol ChartInfoInteractorInput: AnyObject {
+    var presenter: ChartInfoInteractorOutput? { get }
     var title: String? { get }
     func cellType(cellForRowAt indexPath: IndexPath) -> HomeCellType
     func getNumberCells() -> Int
 }
+
 
