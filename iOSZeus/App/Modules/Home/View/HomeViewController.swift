@@ -17,12 +17,10 @@ final class HomeViewController: UITableViewController {
     private let nameTextField: UITextField = {
         let textField = UITextField()
         textField.textAlignment = .center
-        textField.layer.cornerRadius = 5
+        textField.layer.cornerRadius = GConstants.defaultCornerRadius
         textField.backgroundColor = .systemGray6
         return textField
     }()
-    
-    
     
     // MARK: - Life Cycle
     
@@ -36,6 +34,7 @@ final class HomeViewController: UITableViewController {
     
     private func configTableView() {
         tableView.register(HomeDefaultCell.self, forCellReuseIdentifier: HomeDefaultCell.reusableIdentifier)
+        tableView.rowHeight = GConstants.defaultHeightCell
     }
     
     private func configUI(){
@@ -74,14 +73,8 @@ extension HomeViewController {
         return configCell(with: cell, cellForRowAt: indexPath)
     }
     
-    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        3
-    }
-    
-    
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 60
+        presenter?.numberCells() ?? Int.zero
     }
     
     
@@ -92,7 +85,6 @@ extension HomeViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         presenter?.didSelectRowAt(indexPath: indexPath)
     }
-    
     
 }
 
@@ -109,7 +101,6 @@ extension HomeViewController: HomeViewFromPresenter {
     
     func hideSpinner() {
     }
-    
     
 }
 

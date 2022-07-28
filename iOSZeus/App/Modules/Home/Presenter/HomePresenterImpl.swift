@@ -11,6 +11,8 @@ final class HomePresenterImpl: HomePresenter {
     
 
     
+
+    
     weak var view: HomeViewFromPresenter?
     
     var interactor: HomeInteractorInput?
@@ -27,6 +29,10 @@ final class HomePresenterImpl: HomePresenter {
     
     func cellType(cellForRowAt indexPath: IndexPath) -> HomeCellType? {
         interactor?.cellType(cellForRowAt: indexPath)
+    }
+    
+    func numberCells() -> Int? {
+        interactor?.getNumberCells()
     }
     
 }

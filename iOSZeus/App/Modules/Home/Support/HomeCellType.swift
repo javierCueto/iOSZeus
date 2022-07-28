@@ -22,6 +22,6 @@ extension HomeCellType: CustomStringConvertible {
            return "Open chart"
         }
     }
-    
-    
 }
+
+extension HomeCellType: CaseIterable { }

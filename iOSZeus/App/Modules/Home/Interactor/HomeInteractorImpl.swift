@@ -8,6 +8,10 @@
 import Foundation
 
 final class HomeInteractorImpl: HomeInteractorInput {
+    func getNumberCells() -> Int {
+        HomeCellType.allCases.count
+    }
+    
     func cellType(cellForRowAt indexPath: IndexPath) -> HomeCellType {
         let homeCellType = HomeCellType(rawValue: indexPath.row) ?? .selfieText
         return homeCellType

@@ -24,6 +24,7 @@ protocol HomePresenter: AnyObject {
     
     func viewDidLoad()
     func cellType(cellForRowAt indexPath: IndexPath) -> HomeCellType?
+    func numberCells() -> Int?
     func didSelectRowAt(indexPath: IndexPath)
 }
 
@@ -39,5 +40,6 @@ protocol HomeInteractorOutput: AnyObject {
 protocol HomeInteractorInput: AnyObject {
     var presenter: HomeInteractorOutput? { get }
     func cellType(cellForRowAt indexPath: IndexPath) -> HomeCellType
+    func getNumberCells() -> Int
 }
 
