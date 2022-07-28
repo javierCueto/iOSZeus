@@ -13,6 +13,17 @@ protocol HomeModuleFactory {
 
 struct HomeModuleFactoryImpl: HomeModuleFactory {
     func makeModule() -> UIViewController {
-        return HomeViewController()
+        let interactor = HomeInteractorImpl()
+        let presenter  = HomePresenterImpl()
+        let router = HomeRouterImpl()
+        let controller = HomeViewController()
+        
+        interactor.presenter = presenter
+        presenter.router = router
+        presenter.view = controller
+        controller.presenter = presenter
+        
+        
+        return controller
     }
 }

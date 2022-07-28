@@ -15,6 +15,10 @@
 		3BEE87D6289211BD007CB88F /* HomeModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEE87D5289211BD007CB88F /* HomeModuleFactory.swift */; };
 		3BEE87D828921213007CB88F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEE87D728921213007CB88F /* HomeViewController.swift */; };
 		3BEE87DC289212F0007CB88F /* AppFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEE87DB289212F0007CB88F /* AppFactory.swift */; };
+		3BEE87DF2892156D007CB88F /* HomeProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEE87DE2892156D007CB88F /* HomeProtocols.swift */; };
+		3BEE87E1289216C3007CB88F /* HomePresenterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEE87E0289216C3007CB88F /* HomePresenterImpl.swift */; };
+		3BEE87E32892176B007CB88F /* HomeInteractorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEE87E22892176B007CB88F /* HomeInteractorImpl.swift */; };
+		3BEE87E528921949007CB88F /* HomeRouterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEE87E428921949007CB88F /* HomeRouterImpl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +43,10 @@
 		3BEE87D5289211BD007CB88F /* HomeModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModuleFactory.swift; sourceTree = "<group>"; };
 		3BEE87D728921213007CB88F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		3BEE87DB289212F0007CB88F /* AppFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFactory.swift; sourceTree = "<group>"; };
+		3BEE87DE2892156D007CB88F /* HomeProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProtocols.swift; sourceTree = "<group>"; };
+		3BEE87E0289216C3007CB88F /* HomePresenterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenterImpl.swift; sourceTree = "<group>"; };
+		3BEE87E22892176B007CB88F /* HomeInteractorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractorImpl.swift; sourceTree = "<group>"; };
+		3BEE87E428921949007CB88F /* HomeRouterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouterImpl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +170,7 @@
 		3BEE87D02892113C007CB88F /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				3BEE87E0289216C3007CB88F /* HomePresenterImpl.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -169,6 +178,7 @@
 		3BEE87D128921143007CB88F /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
+				3BEE87E22892176B007CB88F /* HomeInteractorImpl.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -176,6 +186,7 @@
 		3BEE87D22892114A007CB88F /* Router */ = {
 			isa = PBXGroup;
 			children = (
+				3BEE87E428921949007CB88F /* HomeRouterImpl.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -191,6 +202,7 @@
 		3BEE87D42892119A007CB88F /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				3BEE87DD2892155A007CB88F /* Protocols */,
 				3BEE87D328921187007CB88F /* Factory */,
 			);
 			path = Support;
@@ -210,6 +222,14 @@
 				3BEE87DB289212F0007CB88F /* AppFactory.swift */,
 			);
 			path = AppFactory;
+			sourceTree = "<group>";
+		};
+		3BEE87DD2892155A007CB88F /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				3BEE87DE2892156D007CB88F /* HomeProtocols.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -313,10 +333,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				3BEE879A2891ED11007CB88F /* AppDelegate.swift in Sources */,
+				3BEE87E32892176B007CB88F /* HomeInteractorImpl.swift in Sources */,
 				3BEE879C2891ED11007CB88F /* SceneDelegate.swift in Sources */,
 				3BEE87D6289211BD007CB88F /* HomeModuleFactory.swift in Sources */,
 				3BEE87D828921213007CB88F /* HomeViewController.swift in Sources */,
+				3BEE87DF2892156D007CB88F /* HomeProtocols.swift in Sources */,
+				3BEE87E528921949007CB88F /* HomeRouterImpl.swift in Sources */,
 				3BEE87DC289212F0007CB88F /* AppFactory.swift in Sources */,
+				3BEE87E1289216C3007CB88F /* HomePresenterImpl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,9 +7,10 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+final class HomeViewController: UIViewController {
     
     // MARK: - Public properties
+    var presenter: HomePresenter?
     
     // MARK: - Private properties
     
@@ -27,3 +28,20 @@ class HomeViewController: UIViewController {
     // MARK: - Extension here
 
 }
+
+extension HomeViewController: HomeViewFromPresenter {
+    
+    func showErrorMessage(withMessage: String) {
+
+    }
+    
+    func showSpinner() {
+
+    }
+    
+    func hideSpinner() {
+    }
+    
+    
+}
+
