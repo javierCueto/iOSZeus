@@ -8,11 +8,6 @@ import Foundation
 
 final class HomePresenterImpl: HomePresenter {
 
-    
-
-    
-
-    
     weak var view: HomeViewFromPresenter?
     
     var interactor: HomeInteractorInput?
@@ -25,6 +20,7 @@ final class HomePresenterImpl: HomePresenter {
     
     func didSelectRowAt(indexPath: IndexPath) {
         print(indexPath.row)
+        router?.goToCamera(view: view)
     }
     
     func cellType(cellForRowAt indexPath: IndexPath) -> HomeCellType? {

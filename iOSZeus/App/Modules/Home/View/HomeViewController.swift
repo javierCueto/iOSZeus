@@ -30,6 +30,11 @@ final class HomeViewController: UITableViewController {
         configTableView()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBar.isHidden = false
+    }
+    
     // MARK: - Helpers
     
     private func configTableView() {
@@ -39,6 +44,7 @@ final class HomeViewController: UITableViewController {
     
     private func configUI(){
         view.backgroundColor = .systemBackground
+        title = "Options"
         nameTextField.delegate = self
     }
     
@@ -84,8 +90,8 @@ extension HomeViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         presenter?.didSelectRowAt(indexPath: indexPath)
+  
     }
-    
 }
 
 
@@ -103,4 +109,9 @@ extension HomeViewController: HomeViewFromPresenter {
     }
     
 }
+
+
+
+
+
 

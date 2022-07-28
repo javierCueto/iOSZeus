@@ -20,7 +20,7 @@ final class HomeDefaultCell: UITableViewCell {
     
     // MARK: - Helpers
     func configUI(view: UIView){
-        addSubview(view)
+        contentView.addSubview(view)
         view.anchor(
             top: topAnchor,
             right: rightAnchor,

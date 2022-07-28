@@ -14,6 +14,7 @@ protocol HomeViewFromPresenter: AnyObject {
 
 protocol HomeRouter {
    func goToChart()
+    func goToCamera(view: HomeViewFromPresenter?)
 }
 
 typealias HomePresenterViewInteractor = HomePresenter & HomeInteractorOutput & HomePresenterToRouter

@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		3B16C2802892D52D0078C602 /* GConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B16C27F2892D52D0078C602 /* GConstants.swift */; };
+		3B16C2882892E0CF0078C602 /* CameraFactoryModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B16C2872892E0CF0078C602 /* CameraFactoryModule.swift */; };
+		3B16C28A2892E1160078C602 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B16C2892892E1160078C602 /* CameraViewController.swift */; };
+		3B16C28C2892E2E40078C602 /* CameraInteractorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B16C28B2892E2E40078C602 /* CameraInteractorImpl.swift */; };
+		3B16C28E2892E2F90078C602 /* CameraPresenterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B16C28D2892E2F90078C602 /* CameraPresenterImpl.swift */; };
+		3B16C2902892E30C0078C602 /* CameraRouterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B16C28F2892E30C0078C602 /* CameraRouterImpl.swift */; };
+		3B16C2922892E3300078C602 /* CameraProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B16C2912892E3300078C602 /* CameraProtocols.swift */; };
 		3BEE879A2891ED11007CB88F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEE87992891ED11007CB88F /* AppDelegate.swift */; };
 		3BEE879C2891ED11007CB88F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEE879B2891ED11007CB88F /* SceneDelegate.swift */; };
 		3BEE87A32891ED15007CB88F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BEE87A22891ED15007CB88F /* Assets.xcassets */; };
@@ -39,6 +45,12 @@
 
 /* Begin PBXFileReference section */
 		3B16C27F2892D52D0078C602 /* GConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GConstants.swift; sourceTree = "<group>"; };
+		3B16C2872892E0CF0078C602 /* CameraFactoryModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraFactoryModule.swift; sourceTree = "<group>"; };
+		3B16C2892892E1160078C602 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		3B16C28B2892E2E40078C602 /* CameraInteractorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraInteractorImpl.swift; sourceTree = "<group>"; };
+		3B16C28D2892E2F90078C602 /* CameraPresenterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPresenterImpl.swift; sourceTree = "<group>"; };
+		3B16C28F2892E30C0078C602 /* CameraRouterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraRouterImpl.swift; sourceTree = "<group>"; };
+		3B16C2912892E3300078C602 /* CameraProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraProtocols.swift; sourceTree = "<group>"; };
 		3BEE87962891ED11007CB88F /* iOSZeus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSZeus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BEE87992891ED11007CB88F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3BEE879B2891ED11007CB88F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -85,6 +97,59 @@
 				3B16C27F2892D52D0078C602 /* GConstants.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		3B16C2812892E0620078C602 /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				3B16C2862892E0A20078C602 /* Router */,
+				3B16C2852892E0990078C602 /* Presenter */,
+				3B16C2842892E08A0078C602 /* Interactor */,
+				3B16C2832892E0830078C602 /* View */,
+				3B16C2822892E07B0078C602 /* Support */,
+			);
+			path = Camera;
+			sourceTree = "<group>";
+		};
+		3B16C2822892E07B0078C602 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				3B16C2872892E0CF0078C602 /* CameraFactoryModule.swift */,
+				3B16C2912892E3300078C602 /* CameraProtocols.swift */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		3B16C2832892E0830078C602 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3B16C2892892E1160078C602 /* CameraViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3B16C2842892E08A0078C602 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				3B16C28B2892E2E40078C602 /* CameraInteractorImpl.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		3B16C2852892E0990078C602 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				3B16C28D2892E2F90078C602 /* CameraPresenterImpl.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		3B16C2862892E0A20078C602 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				3B16C28F2892E30C0078C602 /* CameraRouterImpl.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 		3BEE878D2891ED11007CB88F = {
@@ -153,6 +218,7 @@
 		3BEE87CC28920FF9007CB88F /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				3B16C2812892E0620078C602 /* Camera */,
 				3BEE87CE28921130007CB88F /* Home */,
 				3BEE87CD28921000007CB88F /* LauchScreen */,
 			);
@@ -385,7 +451,12 @@
 				3BEE879A2891ED11007CB88F /* AppDelegate.swift in Sources */,
 				3B16C2802892D52D0078C602 /* GConstants.swift in Sources */,
 				3BEE87E32892176B007CB88F /* HomeInteractorImpl.swift in Sources */,
+				3B16C28A2892E1160078C602 /* CameraViewController.swift in Sources */,
+				3B16C28E2892E2F90078C602 /* CameraPresenterImpl.swift in Sources */,
+				3B16C2922892E3300078C602 /* CameraProtocols.swift in Sources */,
 				3BEE87F028923B8B007CB88F /* UIView+Constraints.swift in Sources */,
+				3B16C28C2892E2E40078C602 /* CameraInteractorImpl.swift in Sources */,
+				3B16C2902892E30C0078C602 /* CameraRouterImpl.swift in Sources */,
 				3BEE87F72892466A007CB88F /* HomeCellType.swift in Sources */,
 				3BEE879C2891ED11007CB88F /* SceneDelegate.swift in Sources */,
 				3BEE87D6289211BD007CB88F /* HomeModuleFactory.swift in Sources */,
@@ -393,6 +464,7 @@
 				3BEE87D828921213007CB88F /* HomeViewController.swift in Sources */,
 				3BEE87DF2892156D007CB88F /* HomeProtocols.swift in Sources */,
 				3BEE87F528924257007CB88F /* Reusable.swift in Sources */,
+				3B16C2882892E0CF0078C602 /* CameraFactoryModule.swift in Sources */,
 				3BEE87E528921949007CB88F /* HomeRouterImpl.swift in Sources */,
 				3BEE87F228923FA0007CB88F /* UITableViewCell+TextValidation.swift in Sources */,
 				3BEE87DC289212F0007CB88F /* AppFactory.swift in Sources */,
