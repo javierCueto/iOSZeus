@@ -28,7 +28,6 @@ final class FirestoreClientRequester: Requester {
             saveData(parameters: parameters,type: type, completion: completion)
         }
         loadData(type: type, completion: completion)
-        
     }
     
     private func loadData<T: Decodable>(
@@ -58,7 +57,6 @@ final class FirestoreClientRequester: Requester {
         type: T.Type,
         completion: @escaping (Result<T, Error>
         ) -> Void) {
-        
         task.setData(parameters) { err in
             if let err = err {
                 completion(.failure(err))
@@ -67,7 +65,6 @@ final class FirestoreClientRequester: Requester {
                 completion(.success(data))
             }
         }
-        
     }
     
     

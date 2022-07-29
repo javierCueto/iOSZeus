@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import Combine
 
 final class HomeViewController: UITableViewController {
     
@@ -68,21 +67,17 @@ final class HomeViewController: UITableViewController {
                 label.numberOfLines = Int.zero
                 return label
             }()
-
+            
             cell.configUI(parentView: cell, customView: selfieLabel)
         }
-        //cell.backgroundColor = backGroundColor
         return cell
     }
-    
-    var cancellable: AnyCancellable?
     
     @objc
     private func openPickerColor(){
         let picker = UIColorPickerViewController()
-           picker.delegate = self
-           
-           self.present(picker, animated: true, completion: nil)
+        picker.delegate = self
+        self.present(picker, animated: true, completion: nil)
     }
     
 }
@@ -101,7 +96,7 @@ extension HomeViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         presenter?.numberCells() ?? Int.zero
     }
-
+    
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         let homeCellType = presenter?.cellType(cellForRowAt: indexPath)
         switch homeCellType {
@@ -110,7 +105,7 @@ extension HomeViewController {
         default:
             return UITableView.automaticDimension
         }
-
+        
     }
     
 }
