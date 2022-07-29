@@ -8,6 +8,8 @@ import Foundation
 
 final class HomePresenterImpl: HomePresenter {
 
+    
+
     weak var view: HomeViewFromPresenter?
     
     var interactor: HomeInteractorInput?
@@ -32,6 +34,10 @@ final class HomePresenterImpl: HomePresenter {
     
     func numberCells() -> Int? {
         interactor?.getNumberCells()
+    }
+    
+    func saveColor(_ color: String) {
+        interactor?.persistenColor(color)
     }
     
 }

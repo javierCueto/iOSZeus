@@ -8,7 +8,6 @@
 import Foundation
 
 final class HomeInteractorImpl: HomeInteractorInput {
-
     
     
     
@@ -22,7 +21,7 @@ final class HomeInteractorImpl: HomeInteractorInput {
     }
     
     func getColor() {
-        homeService.loadNewColor { result in
+        homeService.loadColor { result in
             switch result {
                 
             case .success(let theme):
@@ -53,6 +52,17 @@ final class HomeInteractorImpl: HomeInteractorInput {
             openChart()
         }
     }
+    
+    func persistenColor(_ color: String) {
+        homeService.saveNewColor(with: color) { error in
+            if let error = error {
+                self.presenter?.onError(errorMessage: error.localizedDescription)
+            }
+        }
+    }
+    
+
+
     
 }
 

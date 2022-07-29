@@ -139,7 +139,9 @@ extension HomeViewController: HomeViewFromPresenter {
 
 extension HomeViewController: UIColorPickerViewControllerDelegate {
     func colorPickerViewControllerDidFinish(_ viewController: UIColorPickerViewController) {
-        self.view.backgroundColor = viewController.selectedColor
+        let color = viewController.selectedColor
+        presenter?.saveColor(hexStringFromColor(color: color))
+        self.view.backgroundColor = color
     }
 }
 

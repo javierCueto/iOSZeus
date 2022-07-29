@@ -13,7 +13,7 @@ struct ChartInfoServiceImpl: ChartInfoService  {
     let apiClient: Requester
     
     func getDataChart(completion: @escaping (Result<DataChart, Error>) -> Void) {
-        apiClient.request(type: DataChartDTO.self) { result in
+        apiClient.request(parameters: nil, type: DataChartDTO.self) { result in
             switch result {
             case .success(let data):
                 completion(.success(data.toDomain()))

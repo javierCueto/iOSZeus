@@ -25,7 +25,11 @@ struct ApiClient: Requester {
     }
     
 
-    func request<T: Decodable>(type: T.Type, completion: @escaping (Result<T,Error>) -> Void ) {
+    func request<T: Decodable>(
+        parameters: [String: Any]? = nil,
+        type: T.Type,
+        completion: @escaping (Result<T,Error>) -> Void
+    ) {
         guard let url = url else { return }
         urlSession.dataTask(with: url) { data, response, error in
             if let data = data {

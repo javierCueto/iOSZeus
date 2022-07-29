@@ -7,5 +7,8 @@
 
 
 protocol Requester {
-    func request<T: Decodable>(type: T.Type, completion: @escaping (Result<T,Error>) -> Void)
+    func request<T: Decodable>(
+        parameters: [String: Any]?,
+        type: T.Type,
+        completion: @escaping (Result<T,Error>) -> Void)
 }

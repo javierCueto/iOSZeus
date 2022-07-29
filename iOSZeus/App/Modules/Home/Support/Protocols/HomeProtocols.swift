@@ -29,6 +29,7 @@ protocol HomePresenter: AnyObject {
     func cellType(cellForRowAt indexPath: IndexPath) -> HomeCellType?
     func numberCells() -> Int?
     func didSelectRowAt(indexPath: IndexPath)
+    func saveColor(_ color: String)
 }
 
 protocol HomePresenterToRouter {
@@ -49,5 +50,6 @@ protocol HomeInteractorInput: AnyObject {
     func getNumberCells() -> Int
     func goToModule(indexPath: IndexPath)
     func getColor()
+    func persistenColor(_ color: String)
 }
 
