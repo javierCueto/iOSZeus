@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Combine
 
 final class HomeViewController: UITableViewController {
     
@@ -20,6 +21,8 @@ final class HomeViewController: UITableViewController {
         textField.backgroundColor = .systemGray6
         return textField
     }()
+    
+    private var backGroundColor: UIColor?
     
     // MARK: - Life Cycle
     override func viewDidLoad() {
@@ -38,18 +41,16 @@ final class HomeViewController: UITableViewController {
     // MARK: - Helpers
     private func configTableView() {
         tableView.register(HomeDefaultCell.self, forCellReuseIdentifier: HomeDefaultCell.reusableIdentifier)
-        tableView.backgroundColor = hexStringToUIColor(hex: "#d3d3d3")
     }
     
     private func configUI(){
-        view.backgroundColor = hexStringToUIColor(hex: "#d3d3d3")
         title = presenter?.title
         nameTextField.delegate = self
     }
     
     
     private func addButtonBackGroundColor() {
-        let themeColor = UIBarButtonItem(image: UIImage(systemName: "paintbrush"), style: .done, target: nil, action: nil)
+        let themeColor = UIBarButtonItem(image: UIImage(systemName: "paintbrush"), style: .done, target: self, action: #selector(openPickerColor))
         navigationItem.rightBarButtonItem = themeColor
     }
     
@@ -67,9 +68,21 @@ final class HomeViewController: UITableViewController {
                 label.numberOfLines = Int.zero
                 return label
             }()
+
             cell.configUI(parentView: cell, customView: selfieLabel)
         }
+        //cell.backgroundColor = backGroundColor
         return cell
+    }
+    
+    var cancellable: AnyCancellable?
+    
+    @objc
+    private func openPickerColor(){
+        let picker = UIColorPickerViewController()
+           picker.delegate = self
+           
+           self.present(picker, animated: true, completion: nil)
     }
     
 }
@@ -113,7 +126,10 @@ extension HomeViewController {
 
 extension HomeViewController: HomeViewFromPresenter {
     func setColor(_ color: String) {
-        //view.backgroundColor = UIColor(
+        backGroundColor = hexStringToUIColor(hex: color)
+        DispatchQueue.main.async {
+            self.view.backgroundColor = self.backGroundColor
+        }
     }
     
     func showError(errorMessage: String) {
@@ -121,28 +137,14 @@ extension HomeViewController: HomeViewFromPresenter {
     }
 }
 
-
-    func hexStringToUIColor (hex:String) -> UIColor {
-        var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
-
-        if (cString.hasPrefix("#")) {
-            cString.remove(at: cString.startIndex)
-        }
-
-        if ((cString.count) != 6) {
-            return UIColor.gray
-        }
-
-        var rgbValue:UInt64 = 0
-        Scanner(string: cString).scanHexInt64(&rgbValue)
-
-        return UIColor(
-            red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
-            green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
-            blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
-            alpha: CGFloat(1.0)
-        )
+extension HomeViewController: UIColorPickerViewControllerDelegate {
+    func colorPickerViewControllerDidFinish(_ viewController: UIColorPickerViewController) {
+        self.view.backgroundColor = viewController.selectedColor
     }
+}
+
+
+
 
 
 

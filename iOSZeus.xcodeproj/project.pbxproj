@@ -54,7 +54,7 @@
 		3BEE87E528921949007CB88F /* HomeRouterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEE87E428921949007CB88F /* HomeRouterImpl.swift */; };
 		3BEE87ED28923AB6007CB88F /* HomeDefaultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEE87EC28923AB6007CB88F /* HomeDefaultCell.swift */; };
 		3BEE87F028923B8B007CB88F /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEE87EF28923B8B007CB88F /* UIView+Constraints.swift */; };
-		3BEE87F228923FA0007CB88F /* UIViewController+TextValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEE87F128923FA0007CB88F /* UIViewController+TextValidation.swift */; };
+		3BEE87F228923FA0007CB88F /* UIViewController+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEE87F128923FA0007CB88F /* UIViewController+Utils.swift */; };
 		3BEE87F528924257007CB88F /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEE87F428924257007CB88F /* Reusable.swift */; };
 		3BEE87F72892466A007CB88F /* HomeCellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEE87F62892466A007CB88F /* HomeCellType.swift */; };
 /* End PBXBuildFile section */
@@ -117,7 +117,7 @@
 		3BEE87E428921949007CB88F /* HomeRouterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouterImpl.swift; sourceTree = "<group>"; };
 		3BEE87EC28923AB6007CB88F /* HomeDefaultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDefaultCell.swift; sourceTree = "<group>"; };
 		3BEE87EF28923B8B007CB88F /* UIView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
-		3BEE87F128923FA0007CB88F /* UIViewController+TextValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+TextValidation.swift"; sourceTree = "<group>"; };
+		3BEE87F128923FA0007CB88F /* UIViewController+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Utils.swift"; sourceTree = "<group>"; };
 		3BEE87F428924257007CB88F /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
 		3BEE87F62892466A007CB88F /* HomeCellType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCellType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -529,7 +529,7 @@
 			isa = PBXGroup;
 			children = (
 				3BEE87EF28923B8B007CB88F /* UIView+Constraints.swift */,
-				3BEE87F128923FA0007CB88F /* UIViewController+TextValidation.swift */,
+				3BEE87F128923FA0007CB88F /* UIViewController+Utils.swift */,
 				3B16C2BC289371260078C602 /* UIViewController+CustomAlerts.swift */,
 			);
 			path = Extensions;
@@ -690,7 +690,7 @@
 				3B16C2882892E0CF0078C602 /* CameraFactoryModule.swift in Sources */,
 				3BEE87E528921949007CB88F /* HomeRouterImpl.swift in Sources */,
 				3B16C2C4289433900078C602 /* ChartInfoItemCell.swift in Sources */,
-				3BEE87F228923FA0007CB88F /* UIViewController+TextValidation.swift in Sources */,
+				3BEE87F228923FA0007CB88F /* UIViewController+Utils.swift in Sources */,
 				3BA8814928948A6C00C8DA3A /* SettingsDTO.swift in Sources */,
 				3BEE87DC289212F0007CB88F /* AppFactory.swift in Sources */,
 				3B16C2B9289362560078C602 /* ChartInfoModuleFactory.swift in Sources */,

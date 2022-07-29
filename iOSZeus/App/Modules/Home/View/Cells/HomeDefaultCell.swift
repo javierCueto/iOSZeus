@@ -20,6 +20,8 @@ final class HomeDefaultCell: UITableViewCell {
     
     // MARK: - Helpers
     func configUI(parentView: UIView, customView: UIView){
+        self.backgroundColor = .clear
+        contentView.backgroundColor = .clear
         parentView.addSubview(customView)
         customView.anchor(
             top: topAnchor,
@@ -31,6 +33,7 @@ final class HomeDefaultCell: UITableViewCell {
             pBottom: 10,
             pLeft: 20)
     }
+    
     
 }
 
