@@ -27,7 +27,6 @@ protocol ChartInfoPresenter: AnyObject {
     var cellItems: [ChartInfoCellViewModel] { get }
     
     func viewDidLoad()
-    //func charInfoCellViewModel() -> CharInfoCellViewModel
 }
 
 protocol CharInfoRouter {

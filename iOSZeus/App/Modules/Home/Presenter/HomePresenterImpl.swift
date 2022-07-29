@@ -19,7 +19,7 @@ final class HomePresenterImpl: HomePresenter {
     }
     
     func viewDidLoad() {
-        
+        interactor?.getColor()
     }
     
     func didSelectRowAt(indexPath: IndexPath) {
@@ -37,6 +37,10 @@ final class HomePresenterImpl: HomePresenter {
 }
 
 extension HomePresenterImpl: HomeInteractorOutput {
+    func updateColor(_ color: String) {
+        view?.setColor(color)
+    }
+    
     func onError(errorMessage: String) {
         view?.showError(errorMessage: errorMessage)
     }

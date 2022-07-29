@@ -8,10 +8,30 @@
 import Foundation
 
 final class HomeInteractorImpl: HomeInteractorInput {
+
+    
     
     
     var title: String?
     weak var presenter: HomeInteractorOutput?
+    
+    private let homeService: HomeService
+    
+    init(homeService: HomeService) {
+        self.homeService = homeService
+    }
+    
+    func getColor() {
+        homeService.loadNewColor { result in
+            switch result {
+                
+            case .success(let theme):
+                self.presenter?.updateColor(theme.color)
+            case .failure(let error):
+                self.presenter?.onError(errorMessage: error.localizedDescription)
+            }
+        }
+    }
     
     func getNumberCells() -> Int {
         HomeCellType.allCases.count

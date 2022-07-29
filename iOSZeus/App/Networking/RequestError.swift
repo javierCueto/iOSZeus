@@ -9,6 +9,7 @@ import Foundation
 
 enum RequestError {
     case errorParsing
+    case errorLoadingData
 }
 
 extension RequestError: LocalizedError {
@@ -16,6 +17,8 @@ extension RequestError: LocalizedError {
         switch self {
         case .errorParsing:
             return "Error parsing data"
+        case .errorLoadingData:
+            return "Error loading data in the service"
         }
     }
 }

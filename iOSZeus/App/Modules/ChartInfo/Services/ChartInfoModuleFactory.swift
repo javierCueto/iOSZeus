@@ -9,8 +9,8 @@ import UIKit
 
 struct ChartInfoModuleFactory {
     func makeModule(navigationController: UINavigationController) {
-        let apiRequester = ApiRequester()
-        let service = ChartInfoServiceImpl(apiRequester: apiRequester)
+        let apiClient = ApiClient()
+        let service = ChartInfoServiceImpl(apiClient: apiClient)
         let interactor = ChartInfoInteractorImpl(chartInfoService: service)
         let presenter = ChartInfoPresenterImpl()
         let controller = ChartInfoViewController()

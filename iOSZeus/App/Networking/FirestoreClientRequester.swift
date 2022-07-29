@@ -1,0 +1,56 @@
+//
+//  FirestoreClientRequester.swift
+//  iOSZeus
+//
+//  Created by Javier Cueto on 29/07/22.
+//
+
+import FirebaseFirestore
+
+final class FirestoreClientRequester: Requester {
+    private let decoder: JSONDecoder = {
+       let decoder = JSONDecoder()
+        decoder.keyDecodingStrategy = .convertFromSnakeCase
+        return decoder
+    }()
+    
+    
+    let db = Firestore.firestore()
+    
+    func request<T: Decodable>(type: T.Type, completion: @escaping (Result<T, Error>) -> Void) {
+        
+//        db.collection("settings").document("theme").setData([
+//            "color": "red",
+//        ]) { err in
+//            if let err = err {
+//                completion(.failure(err))
+//            } else {
+//                guard let data:T = T.self as? T else { return }
+//                completion(.success(data))
+//            }
+//        }
+        
+        let docRef = db.collection("settings").document("theme")
+
+        docRef.getDocument { (document, error) in
+            if let document = document, document.exists {
+                guard let dataDescription = document.data() else { return }
+                
+                do {
+                    let jsonData = try JSONSerialization.data(withJSONObject:dataDescription)
+                    let model = try self.decoder.decode(T.self, from: jsonData)
+                    completion(.success(model))
+                }catch {
+                    completion(Result.failure(RequestError.errorParsing))
+                }
+            } else {
+                guard let error = error else { return }
+                completion(.failure(error))
+            }
+        }
+
+    }
+    
+
+
+}

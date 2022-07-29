@@ -1,5 +1,5 @@
 //
-//  ApiRequester.swift
+//  ApiClient.swift
 //  iOSZeus
 //
 //  Created by Javier Cueto on 28/07/22.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ApiRequester: Requester {
+struct ApiClient: Requester {
     
     private var url: URL?
     private var urlSession: URLSession

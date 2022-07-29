@@ -24,8 +24,10 @@ final class HomeViewController: UITableViewController {
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        presenter?.viewDidLoad()
         configUI()
         configTableView()
+        addButtonBackGroundColor()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -36,12 +38,19 @@ final class HomeViewController: UITableViewController {
     // MARK: - Helpers
     private func configTableView() {
         tableView.register(HomeDefaultCell.self, forCellReuseIdentifier: HomeDefaultCell.reusableIdentifier)
+        tableView.backgroundColor = hexStringToUIColor(hex: "#d3d3d3")
     }
     
     private func configUI(){
-        view.backgroundColor = .systemBackground
+        view.backgroundColor = hexStringToUIColor(hex: "#d3d3d3")
         title = presenter?.title
         nameTextField.delegate = self
+    }
+    
+    
+    private func addButtonBackGroundColor() {
+        let themeColor = UIBarButtonItem(image: UIImage(systemName: "paintbrush"), style: .done, target: nil, action: nil)
+        navigationItem.rightBarButtonItem = themeColor
     }
     
     private func configCell(with cell: HomeDefaultCell, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
@@ -103,12 +112,37 @@ extension HomeViewController {
 
 
 extension HomeViewController: HomeViewFromPresenter {
+    func setColor(_ color: String) {
+        //view.backgroundColor = UIColor(
+    }
+    
     func showError(errorMessage: String) {
         presentAlert(alertText: GLocalizable.errorTitle, alertMessage: errorMessage)
     }
 }
 
 
+    func hexStringToUIColor (hex:String) -> UIColor {
+        var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
+
+        if (cString.hasPrefix("#")) {
+            cString.remove(at: cString.startIndex)
+        }
+
+        if ((cString.count) != 6) {
+            return UIColor.gray
+        }
+
+        var rgbValue:UInt64 = 0
+        Scanner(string: cString).scanHexInt64(&rgbValue)
+
+        return UIColor(
+            red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
+            green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
+            blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
+            alpha: CGFloat(1.0)
+        )
+    }
 
 
 

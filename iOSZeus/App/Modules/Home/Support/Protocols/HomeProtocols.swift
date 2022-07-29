@@ -10,6 +10,7 @@ import UIKit
 protocol HomeViewFromPresenter: AnyObject {
     var presenter: HomePresenter? { get }
     func showError(errorMessage: String)
+    func setColor(_ color: String)
 }
 
 protocol HomeRouter {
@@ -38,6 +39,7 @@ protocol HomeInteractorOutput: AnyObject {
     func goToCameraModule()
     func goToChartModule()
     func onError(errorMessage: String)
+    func updateColor(_ color: String)
 }
 
 protocol HomeInteractorInput: AnyObject {
@@ -46,5 +48,6 @@ protocol HomeInteractorInput: AnyObject {
     func cellType(cellForRowAt indexPath: IndexPath) -> HomeCellType
     func getNumberCells() -> Int
     func goToModule(indexPath: IndexPath)
+    func getColor()
 }
 

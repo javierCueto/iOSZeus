@@ -10,10 +10,10 @@ protocol ChartInfoService {
 }
 
 struct ChartInfoServiceImpl: ChartInfoService  {
-    let apiRequester: Requester
+    let apiClient: Requester
     
     func getDataChart(completion: @escaping (Result<DataChart, Error>) -> Void) {
-        apiRequester.request(type: DataChartDTO.self) { result in
+        apiClient.request(type: DataChartDTO.self) { result in
             switch result {
             case .success(let data):
                 completion(.success(data.toDomain()))

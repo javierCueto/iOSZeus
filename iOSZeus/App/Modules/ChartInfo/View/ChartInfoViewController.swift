@@ -43,9 +43,7 @@ final class ChartInfoViewController: UITableViewController {
         tableView.rowHeight = 350
         tableView.separatorStyle = .none
     }
-    // MARK: - Actions
     
-    // MARK: - Extension here
 }
 
 extension ChartInfoViewController {
