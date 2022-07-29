@@ -29,6 +29,9 @@
 		3B16C2B9289362560078C602 /* ChartInfoModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B16C2B8289362560078C602 /* ChartInfoModuleFactory.swift */; };
 		3B16C2BB289363480078C602 /* ChartInfoRouterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B16C2BA289363480078C602 /* ChartInfoRouterImpl.swift */; };
 		3B16C2BD289371260078C602 /* UIViewController+CustomAlerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B16C2BC289371260078C602 /* UIViewController+CustomAlerts.swift */; };
+		3B16C2C028942C0B0078C602 /* Charts in Frameworks */ = {isa = PBXBuildFile; productRef = 3B16C2BF28942C0B0078C602 /* Charts */; };
+		3B16C2C4289433900078C602 /* ChartInfoItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B16C2C3289433900078C602 /* ChartInfoItemCell.swift */; };
+		3B16C2C72894465B0078C602 /* ChartInfoCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B16C2C62894465B0078C602 /* ChartInfoCellViewModel.swift */; };
 		3BEE879A2891ED11007CB88F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEE87992891ED11007CB88F /* AppDelegate.swift */; };
 		3BEE879C2891ED11007CB88F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEE879B2891ED11007CB88F /* SceneDelegate.swift */; };
 		3BEE87A32891ED15007CB88F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BEE87A22891ED15007CB88F /* Assets.xcassets */; };
@@ -81,6 +84,8 @@
 		3B16C2B8289362560078C602 /* ChartInfoModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartInfoModuleFactory.swift; sourceTree = "<group>"; };
 		3B16C2BA289363480078C602 /* ChartInfoRouterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartInfoRouterImpl.swift; sourceTree = "<group>"; };
 		3B16C2BC289371260078C602 /* UIViewController+CustomAlerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+CustomAlerts.swift"; sourceTree = "<group>"; };
+		3B16C2C3289433900078C602 /* ChartInfoItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartInfoItemCell.swift; sourceTree = "<group>"; };
+		3B16C2C62894465B0078C602 /* ChartInfoCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartInfoCellViewModel.swift; sourceTree = "<group>"; };
 		3BEE87962891ED11007CB88F /* iOSZeus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSZeus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BEE87992891ED11007CB88F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3BEE879B2891ED11007CB88F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -108,6 +113,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B16C2C028942C0B0078C602 /* Charts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,6 +211,8 @@
 		3B16C2972893428B0078C602 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3B16C2C5289446360078C602 /* ViewModel */,
+				3B16C2C2289433790078C602 /* Cell */,
 				3B16C2B6289361E90078C602 /* ChartInfoViewController.swift */,
 			);
 			path = View;
@@ -278,6 +286,22 @@
 				3B16C2B0289359890078C602 /* DataChartDTO+Mapping.swift */,
 			);
 			path = DataMapping;
+			sourceTree = "<group>";
+		};
+		3B16C2C2289433790078C602 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				3B16C2C3289433900078C602 /* ChartInfoItemCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		3B16C2C5289446360078C602 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3B16C2C62894465B0078C602 /* ChartInfoCellViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		3BEE878D2891ED11007CB88F = {
@@ -497,6 +521,9 @@
 			dependencies = (
 			);
 			name = iOSZeus;
+			packageProductDependencies = (
+				3B16C2BF28942C0B0078C602 /* Charts */,
+			);
 			productName = iOSZeus;
 			productReference = 3BEE87962891ED11007CB88F /* iOSZeus.app */;
 			productType = "com.apple.product-type.application";
@@ -547,6 +574,9 @@
 				Base,
 			);
 			mainGroup = 3BEE878D2891ED11007CB88F;
+			packageReferences = (
+				3B16C2BE28942C0B0078C602 /* XCRemoteSwiftPackageReference "Charts" */,
+			);
 			productRefGroup = 3BEE87972891ED11007CB88F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -591,6 +621,7 @@
 				3B16C2BB289363480078C602 /* ChartInfoRouterImpl.swift in Sources */,
 				3B16C2BD289371260078C602 /* UIViewController+CustomAlerts.swift in Sources */,
 				3BEE87E32892176B007CB88F /* HomeInteractorImpl.swift in Sources */,
+				3B16C2C72894465B0078C602 /* ChartInfoCellViewModel.swift in Sources */,
 				3B16C28A2892E1160078C602 /* CameraViewController.swift in Sources */,
 				3B16C28E2892E2F90078C602 /* CameraPresenterImpl.swift in Sources */,
 				3B16C2922892E3300078C602 /* CameraProtocols.swift in Sources */,
@@ -612,6 +643,7 @@
 				3B16C2B7289361E90078C602 /* ChartInfoViewController.swift in Sources */,
 				3B16C2882892E0CF0078C602 /* CameraFactoryModule.swift in Sources */,
 				3BEE87E528921949007CB88F /* HomeRouterImpl.swift in Sources */,
+				3B16C2C4289433900078C602 /* ChartInfoItemCell.swift in Sources */,
 				3BEE87F228923FA0007CB88F /* UIViewController+TextValidation.swift in Sources */,
 				3BEE87DC289212F0007CB88F /* AppFactory.swift in Sources */,
 				3B16C2B9289362560078C602 /* ChartInfoModuleFactory.swift in Sources */,
@@ -890,6 +922,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3B16C2BE28942C0B0078C602 /* XCRemoteSwiftPackageReference "Charts" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/danielgindi/Charts.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3B16C2BF28942C0B0078C602 /* Charts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3B16C2BE28942C0B0078C602 /* XCRemoteSwiftPackageReference "Charts" */;
+			productName = Charts;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3BEE878E2891ED11007CB88F /* Project object */;
 }

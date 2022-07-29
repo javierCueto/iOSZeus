@@ -6,13 +6,21 @@
 //
 
 final class ChartInfoPresenterImpl: ChartInfoPresenter {
+    var cellItems: [ChartInfoCellViewModel] = []
+    
     var router: CharInfoRouter?
     
     weak var view: ChartInfoViewFromPresenter?
     
     var interactor: ChartInfoInteractor?
     
-    var title: String?
+    var title: String? {
+        interactor?.title
+    }
+    
+    var numberOfRowsInSection: Int? {
+        interactor?.numberOfCharts
+    }
     
     func viewDidLoad() {
         interactor?.getChartData()
@@ -22,7 +30,10 @@ final class ChartInfoPresenterImpl: ChartInfoPresenter {
 
 extension ChartInfoPresenterImpl: ChartInfoInteractorOutput {
     func dataFromInteractor(_ dataChart: DataChart) {
-        print(dataChart)
+        let viewModelCompanies = ChartInfoCellViewModel(companies: dataChart.companies)
+        let viewModelReports = ChartInfoCellViewModel(reports: dataChart.reports)
+        cellItems = [viewModelReports, viewModelCompanies]
+        view?.dataWasLoad()
     }
     
     func onError(errorMessage: String) {

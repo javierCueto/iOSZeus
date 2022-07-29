@@ -9,6 +9,7 @@ import UIKit
 
 protocol ChartInfoViewFromPresenter: AnyObject {
     var presenter: ChartInfoPresenter? { get }
+    func dataWasLoad() 
 }
 
 protocol ChartInfoRouter {
@@ -21,8 +22,12 @@ protocol ChartInfoPresenter: AnyObject {
     var interactor: ChartInfoInteractor? { get }
     var router: CharInfoRouter? { get }
     var title: String? { get }
+    var numberOfRowsInSection: Int? { get }
+    
+    var cellItems: [ChartInfoCellViewModel] { get }
     
     func viewDidLoad()
+    //func charInfoCellViewModel() -> CharInfoCellViewModel
 }
 
 protocol CharInfoRouter {
@@ -38,6 +43,7 @@ protocol ChartInfoInteractorOutput: AnyObject {
 protocol ChartInfoInteractor: AnyObject {
     var presenter: ChartInfoInteractorOutput? { get }
     var title: String? { get }
+    var numberOfCharts: Int { get }
     func getChartData()
 }
 
