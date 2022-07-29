@@ -14,7 +14,7 @@ protocol HomeViewFromPresenter: AnyObject {
 }
 
 protocol HomeRouter {
-    func goToChart(view: HomeViewFromPresenter?)
+    func goToChart(view: HomeViewFromPresenter?, backGroundColor: String?)
     func goToCamera(view: HomeViewFromPresenter?, parentPresenter: CameraPresenterDelegate)
 }
 
@@ -33,12 +33,12 @@ protocol HomePresenter: AnyObject {
 }
 
 protocol HomePresenterToRouter {
-    func didSelectButtonChart()
+   // func didSelectButtonChart()
 }
 
 protocol HomeInteractorOutput: AnyObject {
     func goToCameraModule()
-    func goToChartModule()
+    func goToChartModule(backgroundColor: String?)
     func onError(errorMessage: String)
     func updateColor(_ color: String)
 }

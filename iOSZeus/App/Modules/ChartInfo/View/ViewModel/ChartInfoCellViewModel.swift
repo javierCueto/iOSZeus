@@ -20,8 +20,6 @@ extension ChartInfoCellViewModel{
         value = reports.map { Double($0.quantity) ?? 0 }
         labels = reports.map { $0.value }
         addPercentage()
-
-
     }
     
     init(companies: [Company]) {

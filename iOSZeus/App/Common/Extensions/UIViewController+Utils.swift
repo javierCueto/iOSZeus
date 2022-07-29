@@ -18,7 +18,8 @@ extension UIViewController: UITextFieldDelegate {
 }
 
 extension UIViewController {
-    func hexStringToUIColor (hex:String) -> UIColor {
+    func hexStringToUIColor(hex: String?) -> UIColor {
+        guard let hex = hex else { return UIColor.systemBackground }
         var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
 
         if (cString.hasPrefix("#")) {

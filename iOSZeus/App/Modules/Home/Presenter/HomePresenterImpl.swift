@@ -55,17 +55,12 @@ extension HomePresenterImpl: HomeInteractorOutput {
         router?.goToCamera(view: view, parentPresenter: self)
     }
     
-    func goToChartModule() {
-        router?.goToChart(view: view)
+    func goToChartModule(backgroundColor: String?) {
+        router?.goToChart(view: view, backGroundColor: backgroundColor)
     }
 }
 
-extension HomePresenterImpl: HomePresenterToRouter {
-    func didSelectButtonChart() {
-        router?.goToChart(view: view)
-    }
-    
-}
+
 
 extension HomePresenterImpl: CameraPresenterDelegate {
     func imageTaken(image: Any) {

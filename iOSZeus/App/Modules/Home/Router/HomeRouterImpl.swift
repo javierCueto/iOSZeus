@@ -7,14 +7,15 @@
 
 
 struct HomeRouterImpl: HomeRouter {
+    
     func goToCamera(view: HomeViewFromPresenter?, parentPresenter: CameraPresenterDelegate) {
         let cameraModule = CameraFactoryModule()
         cameraModule.makeModule(view: view, parentPresenter: parentPresenter)
     }
     
-    func goToChart(view: HomeViewFromPresenter?) {
+    func goToChart(view: HomeViewFromPresenter?, backGroundColor: String?) {
         guard let view = view as? HomeViewController, let nav = view.navigationController else { return }
         let chartInfoModule = ChartInfoModuleFactory()
-        chartInfoModule.makeModule(navigationController: nav)
+        chartInfoModule.makeModule(navigationController: nav,  backGroundColor: backGroundColor)
     }
 }

@@ -11,8 +11,8 @@ import UIKit
 final class ChartInfoViewController: UITableViewController {
     // MARK: - Public properties
     var presenter: ChartInfoPresenter?
+    var backGroundColor: String?
     // MARK: - Private properties
-    
     
     
     // MARK: - Life Cycle
@@ -35,7 +35,7 @@ final class ChartInfoViewController: UITableViewController {
     // MARK: - Helpers
     private func configUI() {
         title = presenter?.title
-        view.backgroundColor =  UIColor(red: 0.91, green: 0.93, blue: 0.98, alpha: 1.00)
+        view.backgroundColor =  hexStringToUIColor(hex: backGroundColor) 
     }
     
     private func configTableView() {
@@ -54,7 +54,7 @@ extension ChartInfoViewController {
         else {
             return UITableViewCell()
         }
-        cell.configData(with: viewModel)
+        cell.configData(with: viewModel, backgroundColor: hexStringToUIColor(hex: backGroundColor) )
         return cell
     }
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

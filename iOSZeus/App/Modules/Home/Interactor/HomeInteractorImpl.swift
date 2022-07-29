@@ -12,6 +12,7 @@ final class HomeInteractorImpl: HomeInteractorInput {
     
     
     var title: String?
+    var systemColor: String?
     weak var presenter: HomeInteractorOutput?
     
     private let homeService: HomeService
@@ -25,6 +26,7 @@ final class HomeInteractorImpl: HomeInteractorInput {
             switch result {
                 
             case .success(let theme):
+                self.systemColor = theme.color
                 self.presenter?.updateColor(theme.color)
             case .failure(let error):
                 self.presenter?.onError(errorMessage: error.localizedDescription)
@@ -54,6 +56,7 @@ final class HomeInteractorImpl: HomeInteractorInput {
     }
     
     func persistenColor(_ color: String) {
+        systemColor = color
         homeService.saveNewColor(with: color) { error in
             if let error = error {
                 self.presenter?.onError(errorMessage: error.localizedDescription)
@@ -76,6 +79,6 @@ extension HomeInteractorImpl  {
     }
     
     private func openChart(){
-        presenter?.goToChartModule()
+        presenter?.goToChartModule(backgroundColor: systemColor)
     }
 }

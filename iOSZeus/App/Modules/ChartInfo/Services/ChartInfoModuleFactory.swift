@@ -8,7 +8,7 @@
 import UIKit
 
 struct ChartInfoModuleFactory {
-    func makeModule(navigationController: UINavigationController) {
+    func makeModule(navigationController: UINavigationController, backGroundColor: String?) {
         let apiClient = ApiClient()
         let service = ChartInfoServiceImpl(apiClient: apiClient)
         let interactor = ChartInfoInteractorImpl(chartInfoService: service)
@@ -21,6 +21,7 @@ struct ChartInfoModuleFactory {
         presenter.router = router
         presenter.view = controller
         interactor.presenter = presenter
+        controller.backGroundColor = backGroundColor
         
         navigationController.pushViewController(controller, animated: true)
     }

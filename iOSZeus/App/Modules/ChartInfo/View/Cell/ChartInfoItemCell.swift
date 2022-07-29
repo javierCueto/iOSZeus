@@ -15,7 +15,6 @@ final class ChartInfoItemCell: UITableViewCell {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 30)
         label.textColor = .darkGray
-        label.text = "hola lmucho"
         return label
     }()
     
@@ -32,7 +31,6 @@ final class ChartInfoItemCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        backgroundColor = UIColor(red: 0.91, green: 0.93, blue: 0.98, alpha: 1.00)
         configUI()
     }
     
@@ -43,13 +41,13 @@ final class ChartInfoItemCell: UITableViewCell {
     // MARK: - Helpers
     
     private func configUI() {
+        backgroundColor = .clear
         addSubview(containerStackView)
         containerStackView.anchor(top: topAnchor, right: rightAnchor, bottom: bottomAnchor, left: leftAnchor, pRight: 20, pBottom: 40, pLeft: 20)
         configChart()
     }
     
     private func configChart() {
-        chartView.holeColor = UIColor(red: 0.91, green: 0.93, blue: 0.98, alpha: 1.00)
         chartView.legend.form = .circle
         chartView.legend.yEntrySpace = 15
         chartView.legend.formSize = 14
@@ -62,7 +60,8 @@ final class ChartInfoItemCell: UITableViewCell {
         chartView.drawEntryLabelsEnabled = false
     }
     
-    func configData(with chartInfoCellViewModel: ChartInfoCellViewModel) {
+    func configData(with chartInfoCellViewModel: ChartInfoCellViewModel, backgroundColor: UIColor ) {
+        chartView.holeColor = backgroundColor
         let label = chartInfoCellViewModel.labels
         let values = chartInfoCellViewModel.value
         var entries: [PieChartDataEntry] = []
