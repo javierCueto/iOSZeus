@@ -12,7 +12,7 @@ protocol HomeViewFromPresenter: AnyObject {
 }
 
 protocol HomeRouter {
-   func goToChart()
+    func goToChart(view: HomeViewFromPresenter?)
     func goToCamera(view: HomeViewFromPresenter?, parentPresenter: CameraPresenterDelegate)
 }
 

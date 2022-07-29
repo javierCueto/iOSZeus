@@ -19,7 +19,7 @@ struct ApiRequester: Requester {
     }()
     
     
-    init(urlSession: URLSession = .shared, url: URL? = URL(string: "https://s3.amazonaws.com/sq-mobile-interview/employees.json")){
+    init(urlSession: URLSession = .shared, url: URL? = URL(string: "https://s3.amazonaws.com/dev.structure.files/examen/ios/test.json")){
         self.url = url
         self.urlSession = urlSession
     }

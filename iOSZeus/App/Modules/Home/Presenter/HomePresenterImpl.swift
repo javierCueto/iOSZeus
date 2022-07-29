@@ -23,8 +23,8 @@ final class HomePresenterImpl: HomePresenter {
     }
     
     func didSelectRowAt(indexPath: IndexPath) {
-        print(indexPath.row)
-        router?.goToCamera(view: view, parentPresenter: self)
+        //router?.goToCamera(view: view, parentPresenter: self)
+        router?.goToChart(view: view)
     }
     
     func cellType(cellForRowAt indexPath: IndexPath) -> HomeCellType? {
@@ -45,7 +45,7 @@ extension HomePresenterImpl: HomeInteractorOutput {
 
 extension HomePresenterImpl: HomePresenterToRouter {
     func didSelectButtonChart() {
-        router?.goToChart()
+        router?.goToChart(view: view)
     }
     
 }

@@ -18,6 +18,16 @@
 		3B16C2A0289345AB0078C602 /* ApiRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B16C29F289345AB0078C602 /* ApiRequester.swift */; };
 		3B16C2A2289345B40078C602 /* Requester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B16C2A1289345B40078C602 /* Requester.swift */; };
 		3B16C2A4289345FE0078C602 /* RequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B16C2A3289345FE0078C602 /* RequestError.swift */; };
+		3B16C2A7289355AB0078C602 /* Report.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B16C2A6289355AB0078C602 /* Report.swift */; };
+		3B16C2A9289356370078C602 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B16C2A8289356370078C602 /* Company.swift */; };
+		3B16C2AB289357220078C602 /* DataChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B16C2AA289357220078C602 /* DataChart.swift */; };
+		3B16C2AE289357C80078C602 /* ChartInfoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B16C2AD289357C80078C602 /* ChartInfoService.swift */; };
+		3B16C2B1289359890078C602 /* DataChartDTO+Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B16C2B0289359890078C602 /* DataChartDTO+Mapping.swift */; };
+		3B16C2B328935DA10078C602 /* ChartInfoInteractorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B16C2B228935DA10078C602 /* ChartInfoInteractorImpl.swift */; };
+		3B16C2B5289360EE0078C602 /* ChartInfoPresenterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B16C2B4289360EE0078C602 /* ChartInfoPresenterImpl.swift */; };
+		3B16C2B7289361E90078C602 /* ChartInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B16C2B6289361E90078C602 /* ChartInfoViewController.swift */; };
+		3B16C2B9289362560078C602 /* ChartInfoModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B16C2B8289362560078C602 /* ChartInfoModuleFactory.swift */; };
+		3B16C2BB289363480078C602 /* ChartInfoRouterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B16C2BA289363480078C602 /* ChartInfoRouterImpl.swift */; };
 		3BEE879A2891ED11007CB88F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEE87992891ED11007CB88F /* AppDelegate.swift */; };
 		3BEE879C2891ED11007CB88F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEE879B2891ED11007CB88F /* SceneDelegate.swift */; };
 		3BEE87A32891ED15007CB88F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BEE87A22891ED15007CB88F /* Assets.xcassets */; };
@@ -59,6 +69,16 @@
 		3B16C29F289345AB0078C602 /* ApiRequester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequester.swift; sourceTree = "<group>"; };
 		3B16C2A1289345B40078C602 /* Requester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requester.swift; sourceTree = "<group>"; };
 		3B16C2A3289345FE0078C602 /* RequestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestError.swift; sourceTree = "<group>"; };
+		3B16C2A6289355AB0078C602 /* Report.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Report.swift; sourceTree = "<group>"; };
+		3B16C2A8289356370078C602 /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
+		3B16C2AA289357220078C602 /* DataChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataChart.swift; sourceTree = "<group>"; };
+		3B16C2AD289357C80078C602 /* ChartInfoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartInfoService.swift; sourceTree = "<group>"; };
+		3B16C2B0289359890078C602 /* DataChartDTO+Mapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataChartDTO+Mapping.swift"; sourceTree = "<group>"; };
+		3B16C2B228935DA10078C602 /* ChartInfoInteractorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartInfoInteractorImpl.swift; sourceTree = "<group>"; };
+		3B16C2B4289360EE0078C602 /* ChartInfoPresenterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartInfoPresenterImpl.swift; sourceTree = "<group>"; };
+		3B16C2B6289361E90078C602 /* ChartInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartInfoViewController.swift; sourceTree = "<group>"; };
+		3B16C2B8289362560078C602 /* ChartInfoModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartInfoModuleFactory.swift; sourceTree = "<group>"; };
+		3B16C2BA289363480078C602 /* ChartInfoRouterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartInfoRouterImpl.swift; sourceTree = "<group>"; };
 		3BEE87962891ED11007CB88F /* iOSZeus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSZeus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BEE87992891ED11007CB88F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3BEE879B2891ED11007CB88F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -170,6 +190,7 @@
 		3B16C296289342710078C602 /* ChartInfo */ = {
 			isa = PBXGroup;
 			children = (
+				3B16C2AC289357730078C602 /* Services */,
 				3B16C29B289342C30078C602 /* Router */,
 				3B16C29A289342A20078C602 /* Support */,
 				3B16C299289342960078C602 /* Presenter */,
@@ -182,6 +203,7 @@
 		3B16C2972893428B0078C602 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3B16C2B6289361E90078C602 /* ChartInfoViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -189,6 +211,7 @@
 		3B16C298289342900078C602 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
+				3B16C2B228935DA10078C602 /* ChartInfoInteractorImpl.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -196,6 +219,7 @@
 		3B16C299289342960078C602 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				3B16C2B4289360EE0078C602 /* ChartInfoPresenterImpl.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -211,6 +235,7 @@
 		3B16C29B289342C30078C602 /* Router */ = {
 			isa = PBXGroup;
 			children = (
+				3B16C2BA289363480078C602 /* ChartInfoRouterImpl.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -225,11 +250,32 @@
 			path = Networking;
 			sourceTree = "<group>";
 		};
-		3B16C2A5289354EC0078C602 /* Model */ = {
+		3B16C2A5289354EC0078C602 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				3B16C2A6289355AB0078C602 /* Report.swift */,
+				3B16C2A8289356370078C602 /* Company.swift */,
+				3B16C2AA289357220078C602 /* DataChart.swift */,
 			);
-			path = Model;
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3B16C2AC289357730078C602 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				3B16C2AF289359320078C602 /* DataMapping */,
+				3B16C2AD289357C80078C602 /* ChartInfoService.swift */,
+				3B16C2B8289362560078C602 /* ChartInfoModuleFactory.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		3B16C2AF289359320078C602 /* DataMapping */ = {
+			isa = PBXGroup;
+			children = (
+				3B16C2B0289359890078C602 /* DataChartDTO+Mapping.swift */,
+			);
+			path = DataMapping;
 			sourceTree = "<group>";
 		};
 		3BEE878D2891ED11007CB88F = {
@@ -271,7 +317,7 @@
 		3BEE87C928920FA4007CB88F /* App */ = {
 			isa = PBXGroup;
 			children = (
-				3B16C2A5289354EC0078C602 /* Model */,
+				3B16C2A5289354EC0078C602 /* Models */,
 				3B16C29E2893455F0078C602 /* Networking */,
 				3BEE87D9289212CE007CB88F /* Common */,
 				3BEE87CC28920FF9007CB88F /* Modules */,
@@ -537,6 +583,9 @@
 				3B16C2A2289345B40078C602 /* Requester.swift in Sources */,
 				3B16C2802892D52D0078C602 /* GConstants.swift in Sources */,
 				3B16C2A0289345AB0078C602 /* ApiRequester.swift in Sources */,
+				3B16C2AE289357C80078C602 /* ChartInfoService.swift in Sources */,
+				3B16C2A7289355AB0078C602 /* Report.swift in Sources */,
+				3B16C2BB289363480078C602 /* ChartInfoRouterImpl.swift in Sources */,
 				3BEE87E32892176B007CB88F /* HomeInteractorImpl.swift in Sources */,
 				3B16C28A2892E1160078C602 /* CameraViewController.swift in Sources */,
 				3B16C28E2892E2F90078C602 /* CameraPresenterImpl.swift in Sources */,
@@ -545,18 +594,25 @@
 				3B16C2902892E30C0078C602 /* CameraRouterImpl.swift in Sources */,
 				3B16C2A4289345FE0078C602 /* RequestError.swift in Sources */,
 				3BEE87F72892466A007CB88F /* HomeCellType.swift in Sources */,
+				3B16C2B328935DA10078C602 /* ChartInfoInteractorImpl.swift in Sources */,
 				3BEE879C2891ED11007CB88F /* SceneDelegate.swift in Sources */,
 				3BEE87D6289211BD007CB88F /* HomeModuleFactory.swift in Sources */,
 				3B16C29528933C3E0078C602 /* GLocalizable.swift in Sources */,
 				3BEE87ED28923AB6007CB88F /* HomeDefaultCell.swift in Sources */,
+				3B16C2AB289357220078C602 /* DataChart.swift in Sources */,
 				3BEE87D828921213007CB88F /* HomeViewController.swift in Sources */,
+				3B16C2B1289359890078C602 /* DataChartDTO+Mapping.swift in Sources */,
 				3BEE87DF2892156D007CB88F /* HomeProtocols.swift in Sources */,
+				3B16C2A9289356370078C602 /* Company.swift in Sources */,
 				3BEE87F528924257007CB88F /* Reusable.swift in Sources */,
+				3B16C2B7289361E90078C602 /* ChartInfoViewController.swift in Sources */,
 				3B16C2882892E0CF0078C602 /* CameraFactoryModule.swift in Sources */,
 				3BEE87E528921949007CB88F /* HomeRouterImpl.swift in Sources */,
 				3BEE87F228923FA0007CB88F /* UIViewController+TextValidation.swift in Sources */,
 				3BEE87DC289212F0007CB88F /* AppFactory.swift in Sources */,
+				3B16C2B9289362560078C602 /* ChartInfoModuleFactory.swift in Sources */,
 				3BEE87E1289216C3007CB88F /* HomePresenterImpl.swift in Sources */,
+				3B16C2B5289360EE0078C602 /* ChartInfoPresenterImpl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
