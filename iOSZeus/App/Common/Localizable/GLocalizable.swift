@@ -7,5 +7,8 @@
 
 enum GLocalizable {
     static let optionTitle = "Options"
+    static let errorTitle = "Error"
+    static let accept = "Accept"
+    static let needRealDevice = "This feature required a real iPhone not a simulator"
 }
 

@@ -16,6 +16,7 @@ final class ChartInfoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        presenter?.viewDidLoad()
         configUI()
     }
     

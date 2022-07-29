@@ -8,7 +8,7 @@
 final class ChartInfoPresenterImpl: ChartInfoPresenter {
     var router: CharInfoRouter?
     
-    var view: ChartInfoViewFromPresenter?
+    weak var view: ChartInfoViewFromPresenter?
     
     var interactor: ChartInfoInteractor?
     
@@ -22,6 +22,7 @@ final class ChartInfoPresenterImpl: ChartInfoPresenter {
 
 extension ChartInfoPresenterImpl: ChartInfoInteractorOutput {
     func dataFromInteractor(_ dataChart: DataChart) {
+        print(dataChart)
     }
     
     func onError(errorMessage: String) {

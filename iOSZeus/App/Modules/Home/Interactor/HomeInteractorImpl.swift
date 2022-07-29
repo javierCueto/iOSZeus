@@ -8,6 +8,8 @@
 import Foundation
 
 final class HomeInteractorImpl: HomeInteractorInput {
+    
+    
     var title: String?
     weak var presenter: HomeInteractorOutput?
     
@@ -20,7 +22,30 @@ final class HomeInteractorImpl: HomeInteractorInput {
         return homeCellType
     }
     
-    func getMovies() {
-        
+    func goToModule(indexPath: IndexPath) {
+        let homeCellType = HomeCellType(rawValue: indexPath.row) ?? .selfieText
+        switch homeCellType {
+        case .textFieldCell:
+            break
+        case .selfieText:
+            openCamera()
+        case .chartText:
+            openChart()
+        }
+    }
+    
+}
+
+extension HomeInteractorImpl  {
+    private func openCamera() {
+        #if IOS_SIMULATOR
+        presenter?.onError(errorMessage: GLocalizable.needRealDevice)
+        #else
+        presenter?.goToCameraModule()
+        #endif
+    }
+    
+    private func openChart(){
+        presenter?.goToChartModule()
     }
 }

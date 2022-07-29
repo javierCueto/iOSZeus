@@ -102,7 +102,11 @@ extension HomeViewController {
 }
 
 
-extension HomeViewController: HomeViewFromPresenter { }
+extension HomeViewController: HomeViewFromPresenter {
+    func showError(errorMessage: String) {
+        presentAlert(alertText: GLocalizable.errorTitle, alertMessage: errorMessage)
+    }
+}
 
 
 

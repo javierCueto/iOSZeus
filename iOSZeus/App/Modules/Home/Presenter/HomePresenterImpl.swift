@@ -23,8 +23,7 @@ final class HomePresenterImpl: HomePresenter {
     }
     
     func didSelectRowAt(indexPath: IndexPath) {
-        //router?.goToCamera(view: view, parentPresenter: self)
-        router?.goToChart(view: view)
+        interactor?.goToModule(indexPath: indexPath)
     }
     
     func cellType(cellForRowAt indexPath: IndexPath) -> HomeCellType? {
@@ -39,7 +38,15 @@ final class HomePresenterImpl: HomePresenter {
 
 extension HomePresenterImpl: HomeInteractorOutput {
     func onError(errorMessage: String) {
-
+        view?.showError(errorMessage: errorMessage)
+    }
+    
+    func goToCameraModule() {
+        router?.goToCamera(view: view, parentPresenter: self)
+    }
+    
+    func goToChartModule() {
+        router?.goToChart(view: view)
     }
 }
 

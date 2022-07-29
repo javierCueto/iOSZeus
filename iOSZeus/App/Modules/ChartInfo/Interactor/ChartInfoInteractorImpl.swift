@@ -7,7 +7,7 @@
 
 final class ChartInfoInteractorImpl: ChartInfoInteractor {
     
-    var presenter: ChartInfoInteractorOutput?
+    weak var presenter: ChartInfoInteractorOutput?
     
     var title: String?
     

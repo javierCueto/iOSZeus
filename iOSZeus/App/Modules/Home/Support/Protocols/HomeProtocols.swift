@@ -9,6 +9,7 @@ import UIKit
 
 protocol HomeViewFromPresenter: AnyObject {
     var presenter: HomePresenter? { get }
+    func showError(errorMessage: String)
 }
 
 protocol HomeRouter {
@@ -34,8 +35,9 @@ protocol HomePresenterToRouter {
 }
 
 protocol HomeInteractorOutput: AnyObject {
+    func goToCameraModule()
+    func goToChartModule()
     func onError(errorMessage: String)
-
 }
 
 protocol HomeInteractorInput: AnyObject {
@@ -43,5 +45,6 @@ protocol HomeInteractorInput: AnyObject {
     var title: String? { get }
     func cellType(cellForRowAt indexPath: IndexPath) -> HomeCellType
     func getNumberCells() -> Int
+    func goToModule(indexPath: IndexPath)
 }
 
