@@ -30,7 +30,6 @@ extension ChartInfoCellViewModel{
     
     private mutating func addPercentage() {
         labels.enumerated().forEach({ index, value in
-            print(index)
             self.labels[index] = "\(value) \(self.value[index]) %"
         })
     }
