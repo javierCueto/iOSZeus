@@ -12,6 +12,8 @@ protocol HomeViewFromPresenter: AnyObject {
     func showError(errorMessage: String)
     func setColor(_ color: String)
     func clearField()
+    func displaySpinner()
+    func removeSpinner()
 }
 
 protocol HomeRouter {
@@ -42,6 +44,8 @@ protocol HomeInteractorOutput: AnyObject {
     func onError(errorMessage: String)
     func updateColor(_ color: String)
     func userDataLoaded()
+    func showSpinner()
+    func hideSpinner()
 }
 
 protocol HomeInteractorInput: AnyObject {

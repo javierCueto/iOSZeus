@@ -25,7 +25,9 @@ final class HomeInteractorImpl: HomeInteractorInput {
     }
     
     func getColor() {
+        presenter?.showSpinner()
         homeService.loadColor { result in
+            self.presenter?.hideSpinner()
             switch result {
             case .success(let theme):
                 self.systemColor = theme.color
@@ -66,7 +68,9 @@ final class HomeInteractorImpl: HomeInteractorInput {
     
     func persistenColor(_ color: String) {
         systemColor = color
+        presenter?.showSpinner()
         homeService.saveNewColor(with: color) { error in
+            self.presenter?.hideSpinner()
             if let error = error {
                 self.presenter?.onError(errorMessage: error.localizedDescription)
             }
@@ -90,13 +94,14 @@ final class HomeInteractorImpl: HomeInteractorInput {
             presenter?.onError(errorMessage: GLocalizable.imageRequired)
             return
         }
-        
+        presenter?.showSpinner()
         homeService.saveImageUser(with: imageData) { result in
             switch result {
             case .success(let photoURL):
                 self.photoURL = photoURL
                 self.saveDataUser()
             case .failure(let error):
+                self.presenter?.hideSpinner()
                 self.presenter?.onError(errorMessage: error.localizedDescription)
             }
         }
@@ -105,6 +110,7 @@ final class HomeInteractorImpl: HomeInteractorInput {
     
     private func saveDataUser() {
         homeService.saveDataUser(with: nameField, with: photoURL) { error in
+            self.presenter?.hideSpinner()
             if let error = error {
                 self.presenter?.onError(errorMessage: error.localizedDescription)
             }else{

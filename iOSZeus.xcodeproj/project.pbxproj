@@ -43,6 +43,7 @@
 		3BA8814C2895610900C8DA3A /* FirestoreImageCDN.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA8814B2895610900C8DA3A /* FirestoreImageCDN.swift */; };
 		3BA8814E289561FC00C8DA3A /* ImageCDN.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA8814D289561FC00C8DA3A /* ImageCDN.swift */; };
 		3BA881502895626700C8DA3A /* ErrorImageCDN.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA8814F2895626700C8DA3A /* ErrorImageCDN.swift */; };
+		3BA88154289568D800C8DA3A /* SpinnerDisplayable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA88153289568D800C8DA3A /* SpinnerDisplayable.swift */; };
 		3BEE879A2891ED11007CB88F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEE87992891ED11007CB88F /* AppDelegate.swift */; };
 		3BEE879C2891ED11007CB88F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEE879B2891ED11007CB88F /* SceneDelegate.swift */; };
 		3BEE87A32891ED15007CB88F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BEE87A22891ED15007CB88F /* Assets.xcassets */; };
@@ -106,6 +107,7 @@
 		3BA8814B2895610900C8DA3A /* FirestoreImageCDN.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreImageCDN.swift; sourceTree = "<group>"; };
 		3BA8814D289561FC00C8DA3A /* ImageCDN.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCDN.swift; sourceTree = "<group>"; };
 		3BA8814F2895626700C8DA3A /* ErrorImageCDN.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorImageCDN.swift; sourceTree = "<group>"; };
+		3BA88153289568D800C8DA3A /* SpinnerDisplayable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerDisplayable.swift; sourceTree = "<group>"; };
 		3BEE87962891ED11007CB88F /* iOSZeus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSZeus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BEE87992891ED11007CB88F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3BEE879B2891ED11007CB88F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -365,6 +367,14 @@
 			path = API;
 			sourceTree = "<group>";
 		};
+		3BA88152289568BD00C8DA3A /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				3BA88153289568D800C8DA3A /* SpinnerDisplayable.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		3BEE878D2891ED11007CB88F = {
 			isa = PBXGroup;
 			children = (
@@ -517,6 +527,7 @@
 		3BEE87D9289212CE007CB88F /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				3BA88152289568BD00C8DA3A /* Components */,
 				3B16C29328933C2A0078C602 /* Localizable */,
 				3B16C27E2892D51E0078C602 /* Constants */,
 				3BEE87F328924248007CB88F /* Protocols */,
@@ -716,6 +727,7 @@
 				3BEE87F528924257007CB88F /* Reusable.swift in Sources */,
 				3B16C2B7289361E90078C602 /* ChartInfoViewController.swift in Sources */,
 				3B16C2882892E0CF0078C602 /* CameraFactoryModule.swift in Sources */,
+				3BA88154289568D800C8DA3A /* SpinnerDisplayable.swift in Sources */,
 				3BEE87E528921949007CB88F /* HomeRouterImpl.swift in Sources */,
 				3B16C2C4289433900078C602 /* ChartInfoItemCell.swift in Sources */,
 				3BEE87F228923FA0007CB88F /* UIViewController+Utils.swift in Sources */,

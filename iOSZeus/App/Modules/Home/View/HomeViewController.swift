@@ -123,6 +123,7 @@ extension HomeViewController {
 
 
 extension HomeViewController: HomeViewFromPresenter {
+
     func setColor(_ color: String) {
         backGroundColor = hexStringToUIColor(hex: color)
         DispatchQueue.main.async {
@@ -136,6 +137,16 @@ extension HomeViewController: HomeViewFromPresenter {
     
     func clearField() {
         nameTextField.text = String()
+    }
+}
+
+extension HomeViewController: SpinnerDisplayable {
+    func displaySpinner() {
+        presentSpinner()
+    }
+    
+    func removeSpinner() {
+        hideSpinner()
     }
 }
 

@@ -51,7 +51,6 @@ extension HomePresenterImpl: HomePresenteInput {
 
 extension HomePresenterImpl: HomeInteractorOutput {
 
-    
     func updateColor(_ color: String) {
         view?.setColor(color)
     }
@@ -71,6 +70,15 @@ extension HomePresenterImpl: HomeInteractorOutput {
     func userDataLoaded() {
         view?.clearField()
     }
+    
+    func showSpinner() {
+        view?.displaySpinner()
+    }
+    
+    func hideSpinner() {
+        view?.removeSpinner()
+    }
+    
 }
 
 
@@ -79,7 +87,6 @@ extension HomePresenterImpl: CameraPresenterDelegate {
     func imageTaken(image: Any) {
         interactor?.persistenImage(image)
     }
-
 }
 
 

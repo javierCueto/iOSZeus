@@ -60,4 +60,9 @@ extension UIView {
         centerXAnchor.constraint(equalTo: self.superview!.centerXAnchor).isActive = true
     }
     
+    func fillSuperView() {
+        guard let superview = self.superview else { return }
+        anchor(top: superview.topAnchor, right: superview.rightAnchor, bottom: superview.bottomAnchor, left: superview.leftAnchor)
+    }
+    
 }
