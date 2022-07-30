@@ -7,16 +7,12 @@
 
 import UIKit
 
-
 final class ChartInfoViewController: UITableViewController {
     // MARK: - Public properties
     var presenter: ChartInfoPresenter?
     var backGroundColor: String?
-    // MARK: - Private properties
-    
     
     // MARK: - Life Cycle
-    
     init() {
         super.init(nibName: nil, bundle: nil)
     }
@@ -40,7 +36,7 @@ final class ChartInfoViewController: UITableViewController {
     
     private func configTableView() {
         tableView.register(ChartInfoItemCell.self, forCellReuseIdentifier: ChartInfoItemCell.reusableIdentifier)
-        tableView.rowHeight = 350
+        tableView.rowHeight = GConstants.cellSizeChart
         tableView.separatorStyle = .none
     }
     
@@ -57,10 +53,10 @@ extension ChartInfoViewController {
         cell.configData(with: viewModel, backgroundColor: hexStringToUIColor(hex: backGroundColor) )
         return cell
     }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return presenter?.numberOfRowsInSection ?? Int.zero
     }
-    
 }
 
 extension ChartInfoViewController: ChartInfoViewFromPresenter {
@@ -68,5 +64,9 @@ extension ChartInfoViewController: ChartInfoViewFromPresenter {
         DispatchQueue.main.async {
             self.tableView.reloadData()
         }
+    }
+    
+    func showError(_ errorMessage: String) {
+        presentAlert(alertText: GLocalizable.errorTitle, alertMessage: errorMessage)
     }
 }

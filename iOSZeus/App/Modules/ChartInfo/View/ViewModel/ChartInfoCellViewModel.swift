@@ -8,16 +8,13 @@
 import Charts
 
 struct ChartInfoCellViewModel {
-    
     var labels: [String]
-    
     var value: [Double]
-
 }
 
 extension ChartInfoCellViewModel{
     init(reports: [Report]) {
-        value = reports.map { Double($0.quantity) ?? 0 }
+        value = reports.map { Double($0.quantity) ?? Double.zero }
         labels = reports.map { $0.value }
         addPercentage()
     }

@@ -51,13 +51,12 @@ extension ModulesFactoryImpl: ChartFactory {
         let interactor = ChartInfoInteractorImpl(chartInfoService: service)
         let presenter = ChartInfoPresenterImpl()
         let controller = ChartInfoViewController()
-        let router = ChartInfoRouterImpl()
         
         controller.presenter = presenter
         presenter.interactor = interactor
-        presenter.router = router
         presenter.view = controller
         interactor.presenter = presenter
+        interactor.title = GLocalizable.supervision
         controller.backGroundColor = backGroundColor
         
         navigationController.pushViewController(controller, animated: true)

@@ -19,5 +19,7 @@ enum GLocalizable {
     
     static let imageDoesNotExist = "There is no image to load"
     static let imageReducing = "Error compressing image"
+    
+    static let supervision = "Supervition"
 }
 

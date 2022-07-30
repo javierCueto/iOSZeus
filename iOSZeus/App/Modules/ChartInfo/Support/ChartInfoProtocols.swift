@@ -9,28 +9,17 @@ import UIKit
 
 protocol ChartInfoViewFromPresenter: AnyObject {
     var presenter: ChartInfoPresenter? { get }
-    func dataWasLoad() 
+    func dataWasLoad()
+    func showError(_ errorMessage: String)
 }
-
-protocol ChartInfoRouter {
-    func didCancel()
-}
-
 
 protocol ChartInfoPresenter: AnyObject {
     var view: ChartInfoViewFromPresenter? { get }
     var interactor: ChartInfoInteractor? { get }
-    var router: CharInfoRouter? { get }
     var title: String? { get }
     var numberOfRowsInSection: Int? { get }
-    
     var cellItems: [ChartInfoCellViewModel] { get }
-    
     func viewDidLoad()
-}
-
-protocol CharInfoRouter {
-    func didFinishModule()
 }
 
 protocol ChartInfoInteractorOutput: AnyObject {

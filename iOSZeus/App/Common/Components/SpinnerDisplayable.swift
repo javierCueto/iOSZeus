@@ -19,7 +19,7 @@ extension SpinnerDisplayable where Self: UIViewController {
         let spinnerView = UIView()
         nav.view.addSubview(spinnerView)
         spinnerView.fillSuperView()
-        spinnerView.backgroundColor = .systemBackground.withAlphaComponent(GConstants.defaultTranparency)
+        spinnerView.backgroundColor = .systemBackground.withAlphaComponent(GConstants.defaultTransparency)
         spinnerView.tag = GConstants.spinnerTag
         let spinnerIndicator = UIActivityIndicatorView.init(style: .large)
             spinnerIndicator.startAnimating()

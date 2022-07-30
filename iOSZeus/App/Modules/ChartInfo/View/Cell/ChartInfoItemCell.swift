@@ -13,7 +13,7 @@ final class ChartInfoItemCell: UITableViewCell {
     // MARK: - Private properties
     private var titleLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 30)
+        label.font = UIFont.systemFont(ofSize: GConstants.titleLabelChart)
         label.textColor = .darkGray
         return label
     }()
@@ -23,7 +23,7 @@ final class ChartInfoItemCell: UITableViewCell {
     private lazy var containerStackView: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [titleLabel, chartView])
         stackView.axis = .vertical
-        stackView.spacing = 20
+        stackView.spacing = GConstants.spacingStackViewChart
         return stackView
     }()
     
@@ -44,20 +44,26 @@ final class ChartInfoItemCell: UITableViewCell {
         backgroundColor = .clear
         selectionStyle = .none
         addSubview(containerStackView)
-        containerStackView.anchor(top: topAnchor, right: rightAnchor, bottom: bottomAnchor, left: leftAnchor, pRight: 20, pBottom: 40, pLeft: 20)
+        containerStackView.anchor(
+            top: topAnchor,
+            right: rightAnchor,
+            bottom: bottomAnchor,
+            left: leftAnchor,
+            pRight: GConstants.doublePadding,
+            pBottom: GConstants.doublePadding,
+            pLeft: GConstants.extraPadding)
         configChart()
     }
     
     private func configChart() {
         chartView.legend.form = .circle
-        chartView.legend.yEntrySpace = 15
-        chartView.legend.formSize = 14
-        chartView.legend.font = UIFont.systemFont(ofSize: 16)
-        chartView.holeRadiusPercent = 0.85
-        chartView.transparentCircleRadiusPercent = 0
+        chartView.legend.yEntrySpace = GConstants.legendYEntrySpace
+        chartView.legend.formSize = GConstants.legendFormSize
+        chartView.legend.font = UIFont.systemFont(ofSize: GConstants.titleLegendChart)
+        chartView.transparentCircleRadiusPercent = CGFloat.zero
         chartView.chartDescription?.enabled = false
-        chartView.minOffset = 0
-        chartView.holeRadiusPercent = 0.9
+        chartView.minOffset = CGFloat.zero
+        chartView.holeRadiusPercent = GConstants.holeRadiusPercent
         chartView.drawEntryLabelsEnabled = false
     }
     
@@ -76,7 +82,7 @@ final class ChartInfoItemCell: UITableViewCell {
         let set = PieChartDataSet(entries: entries, label: String())
         set.drawIconsEnabled = false
         set.drawValuesEnabled = false
-        set.selectionShift = 0
+        set.selectionShift = CGFloat.zero
         set.colors = ChartColorTemplates.joyful()+ChartColorTemplates.colorful()
         let data = PieChartData(dataSet: set)
         chartView.data = data

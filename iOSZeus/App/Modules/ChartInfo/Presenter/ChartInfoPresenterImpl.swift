@@ -8,8 +8,6 @@
 final class ChartInfoPresenterImpl: ChartInfoPresenter {
     var cellItems: [ChartInfoCellViewModel] = []
     
-    var router: CharInfoRouter?
-    
     weak var view: ChartInfoViewFromPresenter?
     
     var interactor: ChartInfoInteractor?
@@ -37,5 +35,6 @@ extension ChartInfoPresenterImpl: ChartInfoInteractorOutput {
     }
     
     func onError(errorMessage: String) {
+        view?.showError(errorMessage)
     }
 }

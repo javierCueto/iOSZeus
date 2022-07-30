@@ -25,7 +25,6 @@
 		3B16C2B328935DA10078C602 /* ChartInfoInteractorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B16C2B228935DA10078C602 /* ChartInfoInteractorImpl.swift */; };
 		3B16C2B5289360EE0078C602 /* ChartInfoPresenterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B16C2B4289360EE0078C602 /* ChartInfoPresenterImpl.swift */; };
 		3B16C2B7289361E90078C602 /* ChartInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B16C2B6289361E90078C602 /* ChartInfoViewController.swift */; };
-		3B16C2BB289363480078C602 /* ChartInfoRouterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B16C2BA289363480078C602 /* ChartInfoRouterImpl.swift */; };
 		3B16C2BD289371260078C602 /* UIViewController+CustomAlerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B16C2BC289371260078C602 /* UIViewController+CustomAlerts.swift */; };
 		3B16C2C028942C0B0078C602 /* Charts in Frameworks */ = {isa = PBXBuildFile; productRef = 3B16C2BF28942C0B0078C602 /* Charts */; };
 		3B16C2C4289433900078C602 /* ChartInfoItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B16C2C3289433900078C602 /* ChartInfoItemCell.swift */; };
@@ -100,7 +99,6 @@
 		3B16C2B228935DA10078C602 /* ChartInfoInteractorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartInfoInteractorImpl.swift; sourceTree = "<group>"; };
 		3B16C2B4289360EE0078C602 /* ChartInfoPresenterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartInfoPresenterImpl.swift; sourceTree = "<group>"; };
 		3B16C2B6289361E90078C602 /* ChartInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartInfoViewController.swift; sourceTree = "<group>"; };
-		3B16C2BA289363480078C602 /* ChartInfoRouterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartInfoRouterImpl.swift; sourceTree = "<group>"; };
 		3B16C2BC289371260078C602 /* UIViewController+CustomAlerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+CustomAlerts.swift"; sourceTree = "<group>"; };
 		3B16C2C3289433900078C602 /* ChartInfoItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartInfoItemCell.swift; sourceTree = "<group>"; };
 		3B16C2C62894465B0078C602 /* ChartInfoCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartInfoCellViewModel.swift; sourceTree = "<group>"; };
@@ -239,7 +237,6 @@
 			isa = PBXGroup;
 			children = (
 				3B16C2AC289357730078C602 /* Services */,
-				3B16C29B289342C30078C602 /* Router */,
 				3B16C29A289342A20078C602 /* Support */,
 				3B16C299289342960078C602 /* Presenter */,
 				3B16C298289342900078C602 /* Interactor */,
@@ -280,14 +277,6 @@
 				3B16C29C289342D60078C602 /* ChartInfoProtocols.swift */,
 			);
 			path = Support;
-			sourceTree = "<group>";
-		};
-		3B16C29B289342C30078C602 /* Router */ = {
-			isa = PBXGroup;
-			children = (
-				3B16C2BA289363480078C602 /* ChartInfoRouterImpl.swift */,
-			);
-			path = Router;
 			sourceTree = "<group>";
 		};
 		3B16C29E2893455F0078C602 /* Networking */ = {
@@ -787,7 +776,6 @@
 				3B16C2AE289357C80078C602 /* ChartInfoService.swift in Sources */,
 				3B16C2A7289355AB0078C602 /* Report.swift in Sources */,
 				3BA88165289580B600C8DA3A /* SeeSelfieProtocols.swift in Sources */,
-				3B16C2BB289363480078C602 /* ChartInfoRouterImpl.swift in Sources */,
 				3B16C2BD289371260078C602 /* UIViewController+CustomAlerts.swift in Sources */,
 				3BEE87E32892176B007CB88F /* HomeInteractorImpl.swift in Sources */,
 				3B16C2C72894465B0078C602 /* ChartInfoCellViewModel.swift in Sources */,

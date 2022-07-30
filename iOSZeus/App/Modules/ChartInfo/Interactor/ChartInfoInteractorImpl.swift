@@ -6,11 +6,11 @@
 //
 
 final class ChartInfoInteractorImpl: ChartInfoInteractor {
-    var numberOfCharts: Int = 0
+    var numberOfCharts: Int = Int.zero
     
     weak var presenter: ChartInfoInteractorOutput?
     
-    var title: String? = "Supervisión"
+    var title: String?
     
     private let chartInfoService: ChartInfoService
     
@@ -22,7 +22,7 @@ final class ChartInfoInteractorImpl: ChartInfoInteractor {
         chartInfoService.getDataChart { [weak self] result in
             switch result {
             case .success(let data):
-                self?.numberOfCharts = 2
+                self?.numberOfCharts = GConstants.numberOfCharts
                 self?.sendToPresenter(data)
             case .failure(let error):
                 self?.presenter?.onError(errorMessage: error.localizedDescription)
