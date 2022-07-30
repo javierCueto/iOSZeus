@@ -6,8 +6,11 @@
 //
 
 import Foundation
+import FirebaseStorage
+import UIKit
 
 final class HomeInteractorImpl: HomeInteractorInput {
+
 
     var title: String?
     var systemColor: String?
@@ -17,6 +20,7 @@ final class HomeInteractorImpl: HomeInteractorInput {
     
     private var nameField = String()
     private var photoURL = String()
+    private var imageData: Any?
     
     init(homeService: HomeService) {
         self.homeService = homeService
@@ -75,6 +79,27 @@ final class HomeInteractorImpl: HomeInteractorInput {
     func persistenName(_ name: String?) {
         nameField = name ?? String()
     }
+    
+    func persistenImage(_ image: Any) {
+        guard let image = image as? UIImage else { return }
+        guard let imageData = image.jpegData(compressionQuality: 0.75) else { return }
+             let filename = NSUUID().uuidString
+             
+             let ref = Storage.storage().reference(withPath: "/profile_images/\(filename).jpg")
+             
+             ref.putData(imageData, metadata: nil) { (metadata, error) in
+                 if let error = error {
+                     return
+                 }
+                 
+                 ref.downloadURL { (url, error) in
+                     guard let imageUrl = url?.absoluteString else {return}
+                     self.photoURL = imageUrl 
+                 }
+             }
+        
+    }
+    
     
     private func persistenUserData(){
         homeService.saveDataUser(with: nameField, with: photoURL) { error in

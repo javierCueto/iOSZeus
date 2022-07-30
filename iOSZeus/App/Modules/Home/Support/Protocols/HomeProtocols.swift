@@ -53,5 +53,6 @@ protocol HomeInteractorInput: AnyObject {
     func getColor()
     func persistenColor(_ color: String)
     func persistenName(_ name: String?)
+    func persistenImage(_ image: Any)
 }
 

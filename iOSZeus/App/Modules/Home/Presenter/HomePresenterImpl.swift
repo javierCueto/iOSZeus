@@ -77,7 +77,7 @@ extension HomePresenterImpl: HomeInteractorOutput {
 
 extension HomePresenterImpl: CameraPresenterDelegate {
     func imageTaken(image: Any) {
-        dump(image)
+        interactor?.persistenImage(image)
     }
 
 }
