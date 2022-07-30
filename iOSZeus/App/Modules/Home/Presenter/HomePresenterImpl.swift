@@ -4,6 +4,7 @@
 //
 //  Created by Javier Cueto on 27/07/22.
 //
+
 import Foundation
 
 final class HomePresenterImpl: HomePresenter {
@@ -17,9 +18,6 @@ final class HomePresenterImpl: HomePresenter {
 }
 
 extension HomePresenterImpl: HomePresenteInput {
-
-    
-    
     var title: String? {
         interactor?.title
     }
@@ -60,7 +58,6 @@ extension HomePresenterImpl: HomePresenteInput {
 
 
 extension HomePresenterImpl: HomeInteractorOutput {
-
     func updateColor(_ color: String) {
         view?.setColor(color)
     }
@@ -93,8 +90,6 @@ extension HomePresenterImpl: HomeInteractorOutput {
         view?.alertSelfie()
     }
 }
-
-
 
 extension HomePresenterImpl: CameraPresenterDelegate {
     func imageTaken(image: Any) {

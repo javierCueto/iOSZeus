@@ -10,7 +10,8 @@ struct HomeRouterImpl: HomeRouter {
     var modulesHomeFactory: ModulesHomeFactory
     
     func goToCamera(view: HomeViewFromPresenter?, parentPresenter: CameraPresenterDelegate) {
-        modulesHomeFactory.makeCameraModule(view: view, parentPresenter: parentPresenter)
+        guard let view = view as? HomeViewController, let nav = view.navigationController else { return }
+        modulesHomeFactory.makeCameraModule(navigationController: nav, parentPresenter: parentPresenter)
     }
     
     func goToChart(view: HomeViewFromPresenter?, backGroundColor: String?) {
@@ -19,6 +20,7 @@ struct HomeRouterImpl: HomeRouter {
     }
     
     func gotToSeePicture(view: HomeViewFromPresenter?, _ userDataBag: UserDataBag) {
-        modulesHomeFactory.makeSelfieModule(view: view, with: userDataBag)
+        guard let view = view as? HomeViewController, let nav = view.navigationController else { return }
+        modulesHomeFactory.makeSelfieModule(navigationController: nav, with: userDataBag)
     }
 }

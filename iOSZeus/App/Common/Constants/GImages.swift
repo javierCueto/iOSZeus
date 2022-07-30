@@ -7,5 +7,7 @@
 
 enum GImages {
     static let profile = "profile"
+    static let paintbrush = "paintbrush"
+
 }
 

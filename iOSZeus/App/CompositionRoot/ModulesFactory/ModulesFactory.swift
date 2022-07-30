@@ -16,11 +16,11 @@ protocol HomeFactory {
 }
 
 protocol SelfieFactory {
-    func makeSelfieModule(view: HomeViewFromPresenter?, with userDataBag: UserDataBag)
+    func makeSelfieModule(navigationController: UINavigationController, with userDataBag: UserDataBag)
 }
 
 protocol CameraFactory {
-    func makeCameraModule(view: HomeViewFromPresenter?, parentPresenter: CameraPresenterDelegate)
+    func makeCameraModule(navigationController: UINavigationController, parentPresenter: CameraPresenterDelegate)
 }
 
 protocol ChartFactory {

@@ -28,12 +28,11 @@ final class HomeDefaultCell: UITableViewCell {
             right: rightAnchor,
             bottom: bottomAnchor,
             left: leftAnchor,
-            pTop: 10,
-            pRight: 10,
-            pBottom: 10,
-            pLeft: 20)
+            pTop: GConstants.normalPadding,
+            pRight: GConstants.normalPadding,
+            pBottom: GConstants.normalPadding,
+            pLeft: GConstants.doublePadding)
     }
-    
     
 }
 

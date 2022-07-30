@@ -24,7 +24,6 @@ protocol HomeRouter {
     func gotToSeePicture(view: HomeViewFromPresenter?, _ userDataBag: UserDataBag)
 }
 
-
 protocol HomePresenter: AnyObject {
     var view: HomeViewFromPresenter? { get }
     var interactor: HomeInteractorInput? { get }

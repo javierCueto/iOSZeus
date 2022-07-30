@@ -21,7 +21,6 @@ final class HomeViewController: UITableViewController {
         return textField
     }()
     
-    
     private var backGroundColor: UIColor?
     
     // MARK: - Life Cycle
@@ -48,9 +47,12 @@ final class HomeViewController: UITableViewController {
         nameTextField.delegate = self
     }
     
-    
     private func addButtonBackGroundColor() {
-        let themeColor = UIBarButtonItem(image: UIImage(systemName: "paintbrush"), style: .done, target: self, action: #selector(openPickerColor))
+        let themeColor = UIBarButtonItem(
+            image: UIImage(systemName: GImages.paintbrush),
+            style: .done,
+            target: self,
+            action: #selector(openPickerColor))
         navigationItem.rightBarButtonItem = themeColor
     }
     
@@ -81,8 +83,6 @@ final class HomeViewController: UITableViewController {
         picker.delegate = self
         self.present(picker, animated: true, completion: nil)
     }
-    
-    
 }
 
 extension HomeViewController {
@@ -121,7 +121,6 @@ extension HomeViewController {
     }
 }
 
-
 extension HomeViewController: HomeViewFromPresenter {
     
     func setColor(_ color: String) {
@@ -140,14 +139,14 @@ extension HomeViewController: HomeViewFromPresenter {
     }
     
     func alertSelfie() {
-        let alert = UIAlertController(title: "Options", message: "", preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: "See current selfie", style: UIAlertAction.Style.default, handler:{ _ in
+        let alert = UIAlertController(title: GLocalizable.options, message: String(), preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: GLocalizable.currentSelfie, style: UIAlertAction.Style.default, handler:{ _ in
             self.presenter?.didButtonSeeSelfieWasPressed()
         }))
-        alert.addAction(UIAlertAction(title: "Retake selfie", style: UIAlertAction.Style.default, handler: { _ in
+        alert.addAction(UIAlertAction(title: GLocalizable.retakeSelfie, style: UIAlertAction.Style.default, handler: { _ in
             self.presenter?.didButtonRetakeWasPressed()
         }))
-        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: GLocalizable.cancel, style: UIAlertAction.Style.cancel, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
 }
@@ -172,7 +171,6 @@ extension HomeViewController: UIColorPickerViewControllerDelegate {
 
 
 extension HomeViewController: UITextFieldDelegate {
-    
     //TODO: Move this validation to interactor
     public func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         guard let regex = try? NSRegularExpression(pattern: ".*[^A-Za-z ].*", options: []) else { return false}
@@ -188,10 +186,3 @@ extension HomeViewController: UITextFieldDelegate {
         presenter?.saveName(textField.text)
     }
 }
-
-
-
-
-
-
-

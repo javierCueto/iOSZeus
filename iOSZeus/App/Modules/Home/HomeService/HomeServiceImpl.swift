@@ -19,7 +19,7 @@ struct HomeServiceImpl: HomeService  {
     let imageCDN: ImageCDN
     
     func loadColor(completion: @escaping (Result<Settings,Error>)  -> Void) {
-        let customRequest = CustomRequest(collection: "settings", documento: "theme")
+        let customRequest = CustomRequest(collection: CollectionFB.settings, documento: DocumentFB.theme)
         apiClient.request(customRequest: customRequest, type: SettingsDTO.self) { result in
             switch result {
             case .success(let data):
@@ -31,8 +31,8 @@ struct HomeServiceImpl: HomeService  {
     }
     
     func saveNewColor(with color: String,completion: @escaping (Error?) -> Void) {
-        let parameters = ["color": color]
-        let customRequest = CustomRequest(collection: "settings", documento: "theme", parameters: parameters)
+        let parameters = [KeysFB.color: color]
+        let customRequest = CustomRequest(collection: CollectionFB.settings, documento: DocumentFB.theme, parameters: parameters)
         apiClient.request(customRequest: customRequest, type: SuccessDTO.self) { result in
             switch result {
             case .success:
@@ -44,8 +44,8 @@ struct HomeServiceImpl: HomeService  {
     }
     
     func saveDataUser(with name: String, with photoURL: String, completion: @escaping (Error?) -> Void) {
-        let parameters = ["name": name, "photoURL": photoURL]
-        let customRequest = CustomRequest(collection: "userData", documento: "currentUser", parameters: parameters)
+        let parameters = [KeysFB.name: name, KeysFB.photoURL: photoURL]
+        let customRequest = CustomRequest(collection: CollectionFB.userData, documento: DocumentFB.currentUser, parameters: parameters)
         apiClient.request(customRequest: customRequest, type: SuccessDTO.self) { result in
             switch result {
             case .success:
@@ -55,7 +55,6 @@ struct HomeServiceImpl: HomeService  {
             }
         }
     }
-    
     
     func saveImageUser(with image: Any, completion: @escaping (Result<String, Error>) -> Void) {
         imageCDN.loadImage(image) { result in
@@ -69,7 +68,7 @@ struct HomeServiceImpl: HomeService  {
     }
     
     func getImageUser(completion: @escaping (Result<UserData,Error>)  -> Void) {
-        let customRequest = CustomRequest(collection: "userData", documento: "currentUser")
+        let customRequest = CustomRequest(collection: CollectionFB.userData, documento: DocumentFB.currentUser)
         apiClient.request(customRequest: customRequest, type: UserDataDTO.self) { result in
             switch result {
             case .success(let data):

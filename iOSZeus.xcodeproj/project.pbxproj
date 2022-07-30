@@ -53,6 +53,7 @@
 		3BA881722895CD4300C8DA3A /* GImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA881712895CD4300C8DA3A /* GImages.swift */; };
 		3BA881762895CE8100C8DA3A /* ModulesFactoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA881752895CE8100C8DA3A /* ModulesFactoryImpl.swift */; };
 		3BA881782895D2A700C8DA3A /* ModulesFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA881772895D2A700C8DA3A /* ModulesFactory.swift */; };
+		3BA8817B2895DBDF00C8DA3A /* CollectionDocuments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA8817A2895DBDF00C8DA3A /* CollectionDocuments.swift */; };
 		3BEE879A2891ED11007CB88F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEE87992891ED11007CB88F /* AppDelegate.swift */; };
 		3BEE879C2891ED11007CB88F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEE879B2891ED11007CB88F /* SceneDelegate.swift */; };
 		3BEE87A32891ED15007CB88F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BEE87A22891ED15007CB88F /* Assets.xcassets */; };
@@ -124,6 +125,7 @@
 		3BA881712895CD4300C8DA3A /* GImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GImages.swift; sourceTree = "<group>"; };
 		3BA881752895CE8100C8DA3A /* ModulesFactoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModulesFactoryImpl.swift; sourceTree = "<group>"; };
 		3BA881772895D2A700C8DA3A /* ModulesFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModulesFactory.swift; sourceTree = "<group>"; };
+		3BA8817A2895DBDF00C8DA3A /* CollectionDocuments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionDocuments.swift; sourceTree = "<group>"; };
 		3BEE87962891ED11007CB88F /* iOSZeus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSZeus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BEE87992891ED11007CB88F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3BEE879B2891ED11007CB88F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -358,6 +360,7 @@
 		3BA881512895649800C8DA3A /* API */ = {
 			isa = PBXGroup;
 			children = (
+				3BA881792895DBB600C8DA3A /* Constants */,
 				3BA881702895CC4600C8DA3A /* Request */,
 				3BA8816F2895CC2900C8DA3A /* Clients */,
 			);
@@ -449,6 +452,14 @@
 				3BA881772895D2A700C8DA3A /* ModulesFactory.swift */,
 			);
 			path = ModulesFactory;
+			sourceTree = "<group>";
+		};
+		3BA881792895DBB600C8DA3A /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				3BA8817A2895DBDF00C8DA3A /* CollectionDocuments.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 		3BEE878D2891ED11007CB88F = {
@@ -790,6 +801,7 @@
 				3BA881672895821600C8DA3A /* SeeSelfiePresenterImpl.swift in Sources */,
 				3B16C2AB289357220078C602 /* DataChart.swift in Sources */,
 				3BA8814E289561FC00C8DA3A /* ImageCDN.swift in Sources */,
+				3BA8817B2895DBDF00C8DA3A /* CollectionDocuments.swift in Sources */,
 				3BEE87D828921213007CB88F /* HomeViewController.swift in Sources */,
 				3BA8816A289582AB00C8DA3A /* SeeSelfieInteractorImpl.swift in Sources */,
 				3BA881452894877100C8DA3A /* SuccessDTO.swift in Sources */,

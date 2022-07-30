@@ -30,8 +30,7 @@ extension ModulesFactoryImpl: HomeFactory {
 }
 extension ModulesFactoryImpl: SelfieFactory {
     
-    func makeSelfieModule(view: HomeViewFromPresenter?, with userDataBag: UserDataBag) {
-        guard let view = view as? HomeViewController, let navigation = view.navigationController else { return }
+    func makeSelfieModule(navigationController: UINavigationController, with userDataBag: UserDataBag) {
         let presenter = SeeSelfiePresenterImpl()
         let interactor = SeeSelfieInteractorImpl()
         let controller = SeeSelfieViewController()
@@ -41,7 +40,7 @@ extension ModulesFactoryImpl: SelfieFactory {
         interactor.imageURL = userDataBag.photoUrl
         presenter.interactor = interactor
         controller.presenter = presenter
-        navigation.pushViewController(controller, animated: true)
+        navigationController.pushViewController(controller, animated: true)
     }
 }
 extension ModulesFactoryImpl: ChartFactory {
@@ -64,8 +63,7 @@ extension ModulesFactoryImpl: ChartFactory {
 
 }
 extension ModulesFactoryImpl: CameraFactory {
-    func makeCameraModule(view: HomeViewFromPresenter?, parentPresenter: CameraPresenterDelegate) {
-        guard let view = view as? HomeViewController, let navigation = view.navigationController else { return }
+    func makeCameraModule(navigationController: UINavigationController, parentPresenter: CameraPresenterDelegate) {
         let presenter = CameraPresenterImpl()
         let router = CameraRouterImpl()
         let controller = CameraViewController()
@@ -80,9 +78,8 @@ extension ModulesFactoryImpl: CameraFactory {
         presenter.view = controller
         presenter.router = router
         presenter.delegate = parentPresenter
-        navigation.navigationBar.isHidden = true
-        navigation.pushViewController(controller, animated: false)
-        
+        navigationController.navigationBar.isHidden = true
+        navigationController.pushViewController(controller, animated: false)
     }
 }
 

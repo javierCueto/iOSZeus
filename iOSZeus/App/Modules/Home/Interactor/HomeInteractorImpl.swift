@@ -8,16 +8,11 @@
 import Foundation
 
 final class HomeInteractorImpl: HomeInteractorInput {
-
-    
-    
     
     var title: String?
     var systemColor: String?
     weak var presenter: HomeInteractorOutput?
-    
     private let homeService: HomeService
-    
     private var nameField = String()
     private var photoURL = String()
     private var imageData: Any?
@@ -31,35 +26,7 @@ final class HomeInteractorImpl: HomeInteractorInput {
         getColor()
         getImageUser()
     }
-    
-    private func getImageUser() {
-        homeService.getImageUser { result in
-            self.presenter?.hideSpinner()
-            switch result {
-            case .success(let data):
-                self.photoURL = data.photoURL
-                self.nameField = data.name
-                print(self.nameField)
-            case .failure(let error):
-                guard let error = error as? RequestError, error != RequestError.noData else { return }
-                self.presenter?.onError(errorMessage: error.localizedDescription)
-            }
-        }
-    }
-    
-    private func getColor() {
-        homeService.loadColor { result in
-            switch result {
-            case .success(let theme):
-                self.systemColor = theme.color
-                self.presenter?.updateColor(theme.color)
-            case .failure(let error):
-                guard let error = error as? RequestError, error != RequestError.noData else { return }
-                self.presenter?.onError(errorMessage: error.localizedDescription)
-            }
-        }
-    }
-    
+        
     func getNumberCells() -> Int {
         HomeCellType.allCases.count
     }
@@ -84,7 +51,6 @@ final class HomeInteractorImpl: HomeInteractorInput {
             }else {
                 persistenUserData()
             }
-            
         }
     }
     
@@ -99,7 +65,6 @@ final class HomeInteractorImpl: HomeInteractorInput {
         }
     }
     
-    
     func persistenName(_ name: String?) {
         nameField = name ?? String()
     }
@@ -108,6 +73,9 @@ final class HomeInteractorImpl: HomeInteractorInput {
         imageData = image
     }
     
+    func userDataBag() -> UserDataBag {
+        UserDataBag(name: nameField, image: imageData, photoUrl: photoURL, systemColor: systemColor)
+    }
     
     private func persistenUserData(){
         guard
@@ -141,26 +109,47 @@ final class HomeInteractorImpl: HomeInteractorInput {
         }
     }
     
-    func userDataBag() -> UserDataBag {
-        UserDataBag(name: nameField, image: imageData, photoUrl: photoURL, systemColor: systemColor)
+    private func getImageUser() {
+        homeService.getImageUser { result in
+            self.presenter?.hideSpinner()
+            switch result {
+            case .success(let data):
+                self.photoURL = data.photoURL
+                self.nameField = data.name
+                print(self.nameField)
+            case .failure(let error):
+                guard let error = error as? RequestError, error != RequestError.noData else { return }
+                self.presenter?.onError(errorMessage: error.localizedDescription)
+            }
+        }
     }
     
+    private func getColor() {
+        homeService.loadColor { result in
+            switch result {
+            case .success(let theme):
+                self.systemColor = theme.color
+                self.presenter?.updateColor(theme.color)
+            case .failure(let error):
+                guard let error = error as? RequestError, error != RequestError.noData else { return }
+                self.presenter?.onError(errorMessage: error.localizedDescription)
+            }
+        }
+    }
     
 }
 
 extension HomeInteractorImpl  {
     private func openCamera() {
-        
-#if IOS_SIMULATOR
+        #if IOS_SIMULATOR
         presenter?.onError(errorMessage: GLocalizable.needRealDevice)
-#else
+        #else
         if  photoURL != String() || imageData != nil {
             presenter?.showAlertSelfie()
         } else{
             presenter?.goToCameraModule()
         }
-        
-#endif
+        #endif
     }
     
     private func openChart(){
