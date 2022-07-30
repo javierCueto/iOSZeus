@@ -13,7 +13,8 @@ final class HomeInteractorImpl: HomeInteractorInput {
     var systemColor: String?
     weak var presenter: HomeInteractorOutput?
     private let homeService: HomeService
-    private var nameField = String()
+    private var name = String()
+    private var nameFromField = String()
     private var photoURL = String()
     private var imageData: Any?
     
@@ -46,7 +47,7 @@ final class HomeInteractorImpl: HomeInteractorInput {
         case .chartText:
             openChart()
         case .buttonCell:
-            if nameField == "" {
+            if nameFromField == "" {
                 presenter?.onError(errorMessage: GLocalizable.nameRequired)
             }else {
                 persistenUserData()
@@ -66,7 +67,7 @@ final class HomeInteractorImpl: HomeInteractorInput {
     }
     
     func persistenName(_ name: String?) {
-        nameField = name ?? String()
+        nameFromField = name ?? String()
     }
     
     func persistenImage(_ image: Any){
@@ -74,7 +75,7 @@ final class HomeInteractorImpl: HomeInteractorInput {
     }
     
     func userDataBag() -> UserDataBag {
-        UserDataBag(name: nameField, image: imageData, photoUrl: photoURL, systemColor: systemColor)
+        UserDataBag(name: name, image: imageData, photoUrl: photoURL, systemColor: systemColor)
     }
     
     private func persistenUserData(){
@@ -99,8 +100,10 @@ final class HomeInteractorImpl: HomeInteractorInput {
     }
     
     private func saveDataUser() {
-        homeService.saveDataUser(with: nameField, with: photoURL) { error in
+        homeService.saveDataUser(with: nameFromField, with: photoURL) { error in
             self.presenter?.hideSpinner()
+            self.name = self.nameFromField
+            self.nameFromField = String()
             if let error = error {
                 self.presenter?.onError(errorMessage: error.localizedDescription)
             }else{
@@ -115,8 +118,7 @@ final class HomeInteractorImpl: HomeInteractorInput {
             switch result {
             case .success(let data):
                 self.photoURL = data.photoURL
-                self.nameField = data.name
-                print(self.nameField)
+                self.name = data.name
             case .failure(let error):
                 guard let error = error as? RequestError, error != RequestError.noData else { return }
                 self.presenter?.onError(errorMessage: error.localizedDescription)
