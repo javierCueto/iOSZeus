@@ -61,8 +61,8 @@ extension ChartInfoViewController {
 
 extension ChartInfoViewController: ChartInfoViewFromPresenter {
     func dataWasLoad() {
-        DispatchQueue.main.async {
-            self.tableView.reloadData()
+        DispatchQueue.main.async { [weak self] in
+            self?.tableView.reloadData()
         }
     }
     

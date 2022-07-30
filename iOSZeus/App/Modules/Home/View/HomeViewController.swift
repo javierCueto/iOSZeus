@@ -108,7 +108,6 @@ extension HomeViewController {
         default:
             return UITableView.automaticDimension
         }
-        
     }
     
 }
@@ -125,8 +124,8 @@ extension HomeViewController: HomeViewFromPresenter {
     
     func setColor(_ color: String) {
         backGroundColor = hexStringToUIColor(hex: color)
-        DispatchQueue.main.async {
-            self.view.backgroundColor = self.backGroundColor
+        DispatchQueue.main.async { [weak self] in
+            self?.view.backgroundColor = self?.backGroundColor
         }
     }
     
@@ -140,14 +139,14 @@ extension HomeViewController: HomeViewFromPresenter {
     
     func alertSelfie() {
         let alert = UIAlertController(title: GLocalizable.options, message: String(), preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: GLocalizable.currentSelfie, style: UIAlertAction.Style.default, handler:{ _ in
-            self.presenter?.didButtonSeeSelfieWasPressed()
+        alert.addAction(UIAlertAction(title: GLocalizable.currentSelfie, style: UIAlertAction.Style.default, handler:{ [weak self] _ in
+            self?.presenter?.didButtonSeeSelfieWasPressed()
         }))
-        alert.addAction(UIAlertAction(title: GLocalizable.retakeSelfie, style: UIAlertAction.Style.default, handler: { _ in
-            self.presenter?.didButtonRetakeWasPressed()
+        alert.addAction(UIAlertAction(title: GLocalizable.retakeSelfie, style: UIAlertAction.Style.default, handler: { [weak self] _ in
+            self?.presenter?.didButtonRetakeWasPressed()
         }))
         alert.addAction(UIAlertAction(title: GLocalizable.cancel, style: UIAlertAction.Style.cancel, handler: nil))
-        self.present(alert, animated: true, completion: nil)
+        present(alert, animated: true, completion: nil)
     }
 }
 
@@ -165,7 +164,7 @@ extension HomeViewController: UIColorPickerViewControllerDelegate {
     func colorPickerViewControllerDidFinish(_ viewController: UIColorPickerViewController) {
         let color = viewController.selectedColor
         presenter?.saveColor(hexStringFromColor(color: color))
-        self.view.backgroundColor = color
+        view.backgroundColor = color
     }
 }
 
@@ -175,7 +174,6 @@ extension HomeViewController: UITextFieldDelegate {
     public func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         guard let regex = try? NSRegularExpression(pattern: ".*[^A-Za-z ].*", options: []) else { return false}
         if regex.firstMatch(in: string, options: [], range: NSMakeRange(0, string.count)) != nil {
-            
             return false
         }
         return true

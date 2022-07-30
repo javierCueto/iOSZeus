@@ -58,10 +58,10 @@ final class HomeInteractorImpl: HomeInteractorInput {
     func persistenColor(_ color: String) {
         systemColor = color
         presenter?.showSpinner()
-        homeService.saveNewColor(with: color) { error in
-            self.presenter?.hideSpinner()
+        homeService.saveNewColor(with: color) { [weak self] error in
+            self?.presenter?.hideSpinner()
             if let error = error {
-                self.presenter?.onError(errorMessage: error.localizedDescription)
+                self?.presenter?.onError(errorMessage: error.localizedDescription)
             }
         }
     }
@@ -86,21 +86,22 @@ final class HomeInteractorImpl: HomeInteractorInput {
             return
         }
         presenter?.showSpinner()
-        homeService.saveImageUser(with: imageData) { result in
+        homeService.saveImageUser(with: imageData) { [weak self] result in
             switch result {
             case .success(let photoURL):
-                self.photoURL = photoURL
-                self.saveDataUser()
+                self?.photoURL = photoURL
+                self?.saveDataUser()
             case .failure(let error):
-                self.presenter?.hideSpinner()
-                self.presenter?.onError(errorMessage: error.localizedDescription)
+                self?.presenter?.hideSpinner()
+                self?.presenter?.onError(errorMessage: error.localizedDescription)
             }
         }
         
     }
     
     private func saveDataUser() {
-        homeService.saveDataUser(with: nameFromField, with: photoURL) { error in
+        homeService.saveDataUser(with: nameFromField, with: photoURL) { [weak self] error in
+            guard let self = self else { return }
             self.presenter?.hideSpinner()
             self.name = self.nameFromField
             self.nameFromField = String()
@@ -113,7 +114,8 @@ final class HomeInteractorImpl: HomeInteractorInput {
     }
     
     private func getImageUser() {
-        homeService.getImageUser { result in
+        homeService.getImageUser { [weak self] result in
+            guard let self = self else { return }
             self.presenter?.hideSpinner()
             switch result {
             case .success(let data):
@@ -127,7 +129,8 @@ final class HomeInteractorImpl: HomeInteractorInput {
     }
     
     private func getColor() {
-        homeService.loadColor { result in
+        homeService.loadColor { [weak self] result in
+            guard let self = self else { return }
             switch result {
             case .success(let theme):
                 self.systemColor = theme.color
