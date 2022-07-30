@@ -8,13 +8,16 @@ import Foundation
 
 final class HomePresenterImpl: HomePresenter {
 
-    
-
     weak var view: HomeViewFromPresenter?
     
     var interactor: HomeInteractorInput?
     
     var router: HomeRouter?
+    
+}
+
+extension HomePresenterImpl: HomePresenteInput {
+
     
     var title: String? {
         interactor?.title
@@ -40,9 +43,15 @@ final class HomePresenterImpl: HomePresenter {
         interactor?.persistenColor(color)
     }
     
+    func saveName(_ name: String?) {
+        interactor?.persistenName(name)
+    }
 }
 
+
 extension HomePresenterImpl: HomeInteractorOutput {
+
+    
     func updateColor(_ color: String) {
         view?.setColor(color)
     }
@@ -57,6 +66,10 @@ extension HomePresenterImpl: HomeInteractorOutput {
     
     func goToChartModule(backgroundColor: String?) {
         router?.goToChart(view: view, backGroundColor: backgroundColor)
+    }
+    
+    func userDataLoaded() {
+        view?.clearField()
     }
 }
 

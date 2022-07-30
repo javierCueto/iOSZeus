@@ -7,16 +7,6 @@
 
 import UIKit
 
-extension UIViewController: UITextFieldDelegate {
-    public func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        guard let regex = try? NSRegularExpression(pattern: ".*[^A-Za-z ].*", options: []) else { return false}
-        if regex.firstMatch(in: string, options: [], range: NSMakeRange(0, string.count)) != nil {
-            return false
-        }
-        return true
-    }
-}
-
 extension UIViewController {
     func hexStringToUIColor(hex: String?) -> UIColor {
         guard let hex = hex else { return UIColor.systemBackground }

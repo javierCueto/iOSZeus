@@ -26,7 +26,7 @@ struct ApiClient: Requester {
     
 
     func request<T: Decodable>(
-        parameters: [String: Any]? = nil,
+        customRequest: CustomRequest?,
         type: T.Type,
         completion: @escaping (Result<T,Error>) -> Void
     ) {

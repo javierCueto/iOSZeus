@@ -8,14 +8,15 @@
 import Foundation
 
 final class HomeInteractorImpl: HomeInteractorInput {
-    
-    
-    
+
     var title: String?
     var systemColor: String?
     weak var presenter: HomeInteractorOutput?
     
     private let homeService: HomeService
+    
+    private var nameField = String()
+    private var photoURL = String()
     
     init(homeService: HomeService) {
         self.homeService = homeService
@@ -24,7 +25,6 @@ final class HomeInteractorImpl: HomeInteractorInput {
     func getColor() {
         homeService.loadColor { result in
             switch result {
-                
             case .success(let theme):
                 self.systemColor = theme.color
                 self.presenter?.updateColor(theme.color)
@@ -53,7 +53,12 @@ final class HomeInteractorImpl: HomeInteractorInput {
         case .chartText:
             openChart()
         case .buttonCell:
-            print("data loading")
+            if nameField == "" {
+                presenter?.onError(errorMessage: GLocalizable.nameRequired)
+            }else {
+                persistenUserData()
+            }
+         
         }
     }
     
@@ -67,7 +72,22 @@ final class HomeInteractorImpl: HomeInteractorInput {
     }
     
 
-
+    func persistenName(_ name: String?) {
+        nameField = name ?? String()
+    }
+    
+    private func persistenUserData(){
+        homeService.saveDataUser(with: nameField, with: photoURL) { error in
+            if let error = error {
+                self.presenter?.onError(errorMessage: error.localizedDescription)
+            }else{
+                self.nameField = ""
+                self.presenter?.userDataLoaded()
+            }
+  
+        }
+    }
+    
     
 }
 

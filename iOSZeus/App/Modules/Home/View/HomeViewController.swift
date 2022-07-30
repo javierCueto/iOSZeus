@@ -10,7 +10,7 @@ import UIKit
 final class HomeViewController: UITableViewController {
     
     // MARK: - Public properties
-    var presenter: HomePresenter?
+    var presenter: HomePresenteInput?
     
     // MARK: - Private properties
     private let nameTextField: UITextField = {
@@ -82,6 +82,7 @@ final class HomeViewController: UITableViewController {
         self.present(picker, animated: true, completion: nil)
     }
     
+    
 }
 
 extension HomeViewController {
@@ -132,6 +133,10 @@ extension HomeViewController: HomeViewFromPresenter {
     func showError(errorMessage: String) {
         presentAlert(alertText: GLocalizable.errorTitle, alertMessage: errorMessage)
     }
+    
+    func clearField() {
+        nameTextField.text = String()
+    }
 }
 
 extension HomeViewController: UIColorPickerViewControllerDelegate {
@@ -139,6 +144,25 @@ extension HomeViewController: UIColorPickerViewControllerDelegate {
         let color = viewController.selectedColor
         presenter?.saveColor(hexStringFromColor(color: color))
         self.view.backgroundColor = color
+    }
+}
+
+
+extension HomeViewController: UITextFieldDelegate {
+    
+    //TODO: Move this validation to interactor
+    public func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        guard let regex = try? NSRegularExpression(pattern: ".*[^A-Za-z ].*", options: []) else { return false}
+        if regex.firstMatch(in: string, options: [], range: NSMakeRange(0, string.count)) != nil {
+     
+            return false
+        }
+        return true
+    }
+    
+    
+    public func textFieldDidChangeSelection(_ textField: UITextField) {
+        presenter?.saveName(textField.text)
     }
 }
 

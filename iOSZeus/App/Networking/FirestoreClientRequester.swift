@@ -7,6 +7,18 @@
 
 import FirebaseFirestore
 
+struct CustomRequest {
+    let collection: String?
+    let document: String?
+    let parameters: [String: Any]?
+    
+    init(collection: String? = nil, documento: String? = nil, parameters: [String: Any]? = nil) {
+        self.collection = collection
+        self.document = documento
+        self.parameters = parameters
+    }
+}
+
 final class FirestoreClientRequester: Requester {
     private let decoder: JSONDecoder = {
         let decoder = JSONDecoder()
@@ -16,15 +28,20 @@ final class FirestoreClientRequester: Requester {
     
     
     let db = Firestore.firestore()
-    lazy var task = db.collection("settings").document("theme")
+    var task: DocumentReference?
     
     func request<T: Decodable>(
-        parameters: [String: Any]? = nil,
+        customRequest: CustomRequest?,
         type: T.Type,
         completion: @escaping (Result<T, Error>
         ) -> Void) {
-        
-        if let parameters = parameters {
+        guard
+            let customRequest = customRequest,
+            let collection =  customRequest.collection,
+            let document =  customRequest.document
+        else { return }
+        task = db.collection(collection).document(document)
+        if let parameters = customRequest.parameters {
             saveData(parameters: parameters,type: type, completion: completion)
         }
         loadData(type: type, completion: completion)
@@ -34,7 +51,7 @@ final class FirestoreClientRequester: Requester {
         type: T.Type,
         completion: @escaping (Result<T, Error>
         ) -> Void) {
-        task.getDocument { (document, error) in
+        task?.getDocument { (document, error) in
             if let document = document, document.exists {
                 guard let dataDescription = document.data() else { return }
                 
@@ -57,7 +74,7 @@ final class FirestoreClientRequester: Requester {
         type: T.Type,
         completion: @escaping (Result<T, Error>
         ) -> Void) {
-        task.setData(parameters) { err in
+        task?.setData(parameters) { err in
             if let err = err {
                 completion(.failure(err))
             } else {
