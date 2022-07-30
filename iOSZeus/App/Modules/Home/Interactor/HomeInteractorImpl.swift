@@ -8,6 +8,8 @@
 import Foundation
 
 final class HomeInteractorImpl: HomeInteractorInput {
+
+    
     
     
     var title: String?
@@ -137,6 +139,10 @@ final class HomeInteractorImpl: HomeInteractorInput {
                 self.presenter?.userDataLoaded()
             }
         }
+    }
+    
+    func userDataBag() -> UserDataBag {
+        UserDataBag(name: nameField, image: imageData, photoUrl: photoURL, systemColor: systemColor)
     }
     
     

@@ -20,6 +20,7 @@ protocol HomeViewFromPresenter: AnyObject {
 protocol HomeRouter {
     func goToChart(view: HomeViewFromPresenter?, backGroundColor: String?)
     func goToCamera(view: HomeViewFromPresenter?, parentPresenter: CameraPresenterDelegate)
+    func gotToSeePicture(view: HomeViewFromPresenter?, _ userDataBag: UserDataBag)
 }
 
 
@@ -38,6 +39,7 @@ protocol HomePresenteInput: AnyObject {
     func saveColor(_ color: String)
     func saveName(_ name: String?)
     func didButtonRetakeWasPressed()
+    func didButtonSeeSelfieWasPressed()
 }
 
 protocol HomeInteractorOutput: AnyObject {
@@ -61,5 +63,6 @@ protocol HomeInteractorInput: AnyObject {
     func persistenColor(_ color: String)
     func persistenName(_ name: String?)
     func persistenImage(_ image: Any)
+    func userDataBag() -> UserDataBag
 }
 

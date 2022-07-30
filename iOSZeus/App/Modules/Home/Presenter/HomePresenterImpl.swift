@@ -17,6 +17,8 @@ final class HomePresenterImpl: HomePresenter {
 }
 
 extension HomePresenterImpl: HomePresenteInput {
+
+    
     
     var title: String? {
         interactor?.title
@@ -48,6 +50,11 @@ extension HomePresenterImpl: HomePresenteInput {
     
     func didButtonRetakeWasPressed() {
         goToCameraModule()
+    }
+    
+    func didButtonSeeSelfieWasPressed() {
+        guard let userDataBag = interactor?.userDataBag() else { return }
+        router?.gotToSeePicture(view: view, userDataBag)
     }
 }
 

@@ -46,6 +46,12 @@
 		3BA88154289568D800C8DA3A /* SpinnerDisplayable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA88153289568D800C8DA3A /* SpinnerDisplayable.swift */; };
 		3BA881562895778A00C8DA3A /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA881552895778A00C8DA3A /* UserData.swift */; };
 		3BA88158289577CF00C8DA3A /* UserDataDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA88157289577CF00C8DA3A /* UserDataDTO.swift */; };
+		3BA8815A28957E2B00C8DA3A /* UserDataBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA8815928957E2B00C8DA3A /* UserDataBag.swift */; };
+		3BA8816128957FD400C8DA3A /* SeeSelfieFactoryModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA8816028957FD400C8DA3A /* SeeSelfieFactoryModule.swift */; };
+		3BA881632895809000C8DA3A /* SeeSelfieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA881622895809000C8DA3A /* SeeSelfieViewController.swift */; };
+		3BA88165289580B600C8DA3A /* SeeSelfieProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA88164289580B600C8DA3A /* SeeSelfieProtocols.swift */; };
+		3BA881672895821600C8DA3A /* SeeSelfiePresenterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA881662895821600C8DA3A /* SeeSelfiePresenterImpl.swift */; };
+		3BA8816A289582AB00C8DA3A /* SeeSelfieInteractorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA88169289582AB00C8DA3A /* SeeSelfieInteractorImpl.swift */; };
 		3BEE879A2891ED11007CB88F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEE87992891ED11007CB88F /* AppDelegate.swift */; };
 		3BEE879C2891ED11007CB88F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEE879B2891ED11007CB88F /* SceneDelegate.swift */; };
 		3BEE87A32891ED15007CB88F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BEE87A22891ED15007CB88F /* Assets.xcassets */; };
@@ -112,6 +118,12 @@
 		3BA88153289568D800C8DA3A /* SpinnerDisplayable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerDisplayable.swift; sourceTree = "<group>"; };
 		3BA881552895778A00C8DA3A /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		3BA88157289577CF00C8DA3A /* UserDataDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataDTO.swift; sourceTree = "<group>"; };
+		3BA8815928957E2B00C8DA3A /* UserDataBag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataBag.swift; sourceTree = "<group>"; };
+		3BA8816028957FD400C8DA3A /* SeeSelfieFactoryModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeeSelfieFactoryModule.swift; sourceTree = "<group>"; };
+		3BA881622895809000C8DA3A /* SeeSelfieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeeSelfieViewController.swift; sourceTree = "<group>"; };
+		3BA88164289580B600C8DA3A /* SeeSelfieProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeeSelfieProtocols.swift; sourceTree = "<group>"; };
+		3BA881662895821600C8DA3A /* SeeSelfiePresenterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeeSelfiePresenterImpl.swift; sourceTree = "<group>"; };
+		3BA88169289582AB00C8DA3A /* SeeSelfieInteractorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeeSelfieInteractorImpl.swift; sourceTree = "<group>"; };
 		3BEE87962891ED11007CB88F /* iOSZeus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSZeus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BEE87992891ED11007CB88F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3BEE879B2891ED11007CB88F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -295,6 +307,7 @@
 				3B16C2AA289357220078C602 /* DataChart.swift */,
 				3BA88146289489F700C8DA3A /* Settings.swift */,
 				3BA881552895778A00C8DA3A /* UserData.swift */,
+				3BA8815928957E2B00C8DA3A /* UserDataBag.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -381,6 +394,50 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		3BA8815B28957F8B00C8DA3A /* SeeSelfie */ = {
+			isa = PBXGroup;
+			children = (
+				3BA881682895828400C8DA3A /* Interactor */,
+				3BA8815E28957FB800C8DA3A /* Support */,
+				3BA8815D28957FB100C8DA3A /* Presenter */,
+				3BA8815C28957F9A00C8DA3A /* View */,
+			);
+			path = SeeSelfie;
+			sourceTree = "<group>";
+		};
+		3BA8815C28957F9A00C8DA3A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3BA881622895809000C8DA3A /* SeeSelfieViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3BA8815D28957FB100C8DA3A /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				3BA881662895821600C8DA3A /* SeeSelfiePresenterImpl.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		3BA8815E28957FB800C8DA3A /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				3BA8816028957FD400C8DA3A /* SeeSelfieFactoryModule.swift */,
+				3BA88164289580B600C8DA3A /* SeeSelfieProtocols.swift */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		3BA881682895828400C8DA3A /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				3BA88169289582AB00C8DA3A /* SeeSelfieInteractorImpl.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
 		3BEE878D2891ED11007CB88F = {
 			isa = PBXGroup;
 			children = (
@@ -450,6 +507,7 @@
 		3BEE87CC28920FF9007CB88F /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				3BA8815B28957F8B00C8DA3A /* SeeSelfie */,
 				3B16C296289342710078C602 /* ChartInfo */,
 				3B16C2812892E0620078C602 /* Camera */,
 				3BEE87CE28921130007CB88F /* Home */,
@@ -704,12 +762,14 @@
 				3B16C2A0289345AB0078C602 /* ApiClient.swift in Sources */,
 				3B16C2AE289357C80078C602 /* ChartInfoService.swift in Sources */,
 				3B16C2A7289355AB0078C602 /* Report.swift in Sources */,
+				3BA88165289580B600C8DA3A /* SeeSelfieProtocols.swift in Sources */,
 				3B16C2BB289363480078C602 /* ChartInfoRouterImpl.swift in Sources */,
 				3B16C2BD289371260078C602 /* UIViewController+CustomAlerts.swift in Sources */,
 				3BEE87E32892176B007CB88F /* HomeInteractorImpl.swift in Sources */,
 				3B16C2C72894465B0078C602 /* ChartInfoCellViewModel.swift in Sources */,
 				3B16C28A2892E1160078C602 /* CameraViewController.swift in Sources */,
 				3BA8814C2895610900C8DA3A /* FirestoreImageCDN.swift in Sources */,
+				3BA8816128957FD400C8DA3A /* SeeSelfieFactoryModule.swift in Sources */,
 				3B16C28E2892E2F90078C602 /* CameraPresenterImpl.swift in Sources */,
 				3B16C2922892E3300078C602 /* CameraProtocols.swift in Sources */,
 				3BEE87F028923B8B007CB88F /* UIView+Constraints.swift in Sources */,
@@ -723,13 +783,16 @@
 				3BEE87D6289211BD007CB88F /* HomeModuleFactory.swift in Sources */,
 				3B16C29528933C3E0078C602 /* GLocalizable.swift in Sources */,
 				3BEE87ED28923AB6007CB88F /* HomeDefaultCell.swift in Sources */,
+				3BA881672895821600C8DA3A /* SeeSelfiePresenterImpl.swift in Sources */,
 				3B16C2AB289357220078C602 /* DataChart.swift in Sources */,
 				3BA8814E289561FC00C8DA3A /* ImageCDN.swift in Sources */,
 				3BEE87D828921213007CB88F /* HomeViewController.swift in Sources */,
+				3BA8816A289582AB00C8DA3A /* SeeSelfieInteractorImpl.swift in Sources */,
 				3BA881452894877100C8DA3A /* SuccessDTO.swift in Sources */,
 				3B16C2B1289359890078C602 /* DataChartDTO+Mapping.swift in Sources */,
 				3BA88142289481CF00C8DA3A /* FirestoreClientRequester.swift in Sources */,
 				3BEE87DF2892156D007CB88F /* HomeProtocols.swift in Sources */,
+				3BA8815A28957E2B00C8DA3A /* UserDataBag.swift in Sources */,
 				3B16C2A9289356370078C602 /* Company.swift in Sources */,
 				3BEE87F528924257007CB88F /* Reusable.swift in Sources */,
 				3B16C2B7289361E90078C602 /* ChartInfoViewController.swift in Sources */,
@@ -741,6 +804,7 @@
 				3BEE87F228923FA0007CB88F /* UIViewController+Utils.swift in Sources */,
 				3BA8814928948A6C00C8DA3A /* SettingsDTO.swift in Sources */,
 				3BEE87DC289212F0007CB88F /* AppFactory.swift in Sources */,
+				3BA881632895809000C8DA3A /* SeeSelfieViewController.swift in Sources */,
 				3B16C2B9289362560078C602 /* ChartInfoModuleFactory.swift in Sources */,
 				3BEE87E1289216C3007CB88F /* HomePresenterImpl.swift in Sources */,
 				3B16C2B5289360EE0078C602 /* ChartInfoPresenterImpl.swift in Sources */,

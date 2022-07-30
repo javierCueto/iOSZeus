@@ -141,7 +141,9 @@ extension HomeViewController: HomeViewFromPresenter {
     
     func alertSelfie() {
         let alert = UIAlertController(title: "Options", message: "", preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: "See current selfie", style: UIAlertAction.Style.default, handler: nil))
+        alert.addAction(UIAlertAction(title: "See current selfie", style: UIAlertAction.Style.default, handler:{ _ in
+            self.presenter?.didButtonSeeSelfieWasPressed()
+        }))
         alert.addAction(UIAlertAction(title: "Retake selfie", style: UIAlertAction.Style.default, handler: { _ in
             self.presenter?.didButtonRetakeWasPressed()
         }))
