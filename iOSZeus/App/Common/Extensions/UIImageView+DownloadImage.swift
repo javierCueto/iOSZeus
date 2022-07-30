@@ -10,11 +10,7 @@ import UIKit
 extension UIImageView {
     func setImageFromNetwork(withURL url: URL?) {
         addDefaultImage()
-        guard
-            let url = url
-        else {
-            return
-        }
+        guard let url = url else { return }
         downLoadImage(with: url)
     }
     
@@ -38,7 +34,7 @@ extension UIImageView {
     }
     
     private func addDefaultImage() {
-        let defaultImage: UIImage? = UIImage(named: "profile")
+        let defaultImage: UIImage? = UIImage(named: GImages.profile)
         image = defaultImage
     }
     

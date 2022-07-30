@@ -16,9 +16,9 @@ extension ErrorImageCDN: LocalizedError {
     var errorDescription: String? {
         switch self {
         case .imageDoesNotExist:
-            return "There is no image to load"
+            return GLocalizable.imageDoesNotExist
         case .imageReducing:
-            return "Error compressing image"
+            return GLocalizable.imageReducing
         }
     }
 }

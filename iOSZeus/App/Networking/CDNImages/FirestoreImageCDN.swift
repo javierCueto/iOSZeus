@@ -5,7 +5,7 @@
 //  Created by Javier Cueto on 30/07/22.
 //
 
-import UIKit
+import UIKit.UIImage
 import FirebaseStorage
 
 

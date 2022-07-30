@@ -14,10 +14,10 @@ extension UIView {
         right: NSLayoutXAxisAnchor? = nil,
         bottom: NSLayoutYAxisAnchor? = nil,
         left: NSLayoutXAxisAnchor? = nil,
-        pTop: CGFloat = 0,
-        pRight: CGFloat = 0,
-        pBottom: CGFloat = 0,
-        pLeft: CGFloat = 0
+        pTop: CGFloat = CGFloat.zero,
+        pRight: CGFloat = CGFloat.zero,
+        pBottom: CGFloat = CGFloat.zero,
+        pLeft: CGFloat = CGFloat.zero
     ){
         translatesAutoresizingMaskIntoConstraints = false
         
@@ -51,13 +51,15 @@ extension UIView {
     
     
     func centerY() {
+        guard let superview = self.superview else { return }
         translatesAutoresizingMaskIntoConstraints = false
-        centerYAnchor.constraint(equalTo: self.superview!.centerYAnchor).isActive = true
+        centerYAnchor.constraint(equalTo: superview.centerYAnchor).isActive = true
     }
     
     func centerX() {
+        guard let superview = self.superview else { return }
         translatesAutoresizingMaskIntoConstraints = false
-        centerXAnchor.constraint(equalTo: self.superview!.centerXAnchor).isActive = true
+        centerXAnchor.constraint(equalTo: superview.centerXAnchor).isActive = true
     }
     
     func fillSuperView() {
