@@ -7,14 +7,11 @@
 
 
 final class CameraPresenterImpl: CameraPresenter {
-
-    
     weak var view: CameraViewFromPresenter?
     
     weak var delegate: CameraPresenterDelegate?
     
     var router: CameraRouter?
-    
 }
 
 extension CameraPresenterImpl: CameraPresenterInputFromView {

@@ -179,7 +179,6 @@
 			children = (
 				3B16C2862892E0A20078C602 /* Router */,
 				3B16C2852892E0990078C602 /* Presenter */,
-				3B16C2842892E08A0078C602 /* Interactor */,
 				3B16C2832892E0830078C602 /* View */,
 				3B16C2822892E07B0078C602 /* Support */,
 			);
@@ -200,13 +199,6 @@
 				3B16C2892892E1160078C602 /* CameraViewController.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		3B16C2842892E08A0078C602 /* Interactor */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Interactor;
 			sourceTree = "<group>";
 		};
 		3B16C2852892E0990078C602 /* Presenter */ = {
