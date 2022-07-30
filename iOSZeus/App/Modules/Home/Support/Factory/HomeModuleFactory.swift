@@ -14,7 +14,8 @@ protocol HomeModuleFactory {
 struct HomeModuleFactoryImpl: HomeModuleFactory {
     func makeModule() -> UIViewController {
         let apiClient = FirestoreClientRequester()
-        let service = HomeServiceImpl(apiClient: apiClient)
+        let imageCDN = FirestoreImageCDN()
+        let service = HomeServiceImpl(apiClient: apiClient, imageCDN: imageCDN)
         let interactor = HomeInteractorImpl(homeService: service)
         let presenter  = HomePresenterImpl()
         let router = HomeRouterImpl()

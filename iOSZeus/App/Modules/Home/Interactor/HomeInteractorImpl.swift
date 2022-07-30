@@ -6,12 +6,10 @@
 //
 
 import Foundation
-import FirebaseStorage
-import UIKit
 
 final class HomeInteractorImpl: HomeInteractorInput {
-
-
+    
+    
     var title: String?
     var systemColor: String?
     weak var presenter: HomeInteractorOutput?
@@ -62,7 +60,7 @@ final class HomeInteractorImpl: HomeInteractorInput {
             }else {
                 persistenUserData()
             }
-         
+            
         }
     }
     
@@ -75,33 +73,37 @@ final class HomeInteractorImpl: HomeInteractorInput {
         }
     }
     
-
+    
     func persistenName(_ name: String?) {
         nameField = name ?? String()
     }
     
-    func persistenImage(_ image: Any) {
-        guard let image = image as? UIImage else { return }
-        guard let imageData = image.jpegData(compressionQuality: 0.75) else { return }
-             let filename = NSUUID().uuidString
-             
-             let ref = Storage.storage().reference(withPath: "/profile_images/\(filename).jpg")
-             
-             ref.putData(imageData, metadata: nil) { (metadata, error) in
-                 if let error = error {
-                     return
-                 }
-                 
-                 ref.downloadURL { (url, error) in
-                     guard let imageUrl = url?.absoluteString else {return}
-                     self.photoURL = imageUrl 
-                 }
-             }
-        
+    func persistenImage(_ image: Any){
+        imageData = image
     }
     
     
     private func persistenUserData(){
+        guard
+            let imageData = imageData else
+        {
+            presenter?.onError(errorMessage: GLocalizable.imageRequired)
+            return
+        }
+        
+        homeService.saveImageUser(with: imageData) { result in
+            switch result {
+            case .success(let photoURL):
+                self.photoURL = photoURL
+                self.saveDataUser()
+            case .failure(let error):
+                self.presenter?.onError(errorMessage: error.localizedDescription)
+            }
+        }
+        
+    }
+    
+    private func saveDataUser() {
         homeService.saveDataUser(with: nameField, with: photoURL) { error in
             if let error = error {
                 self.presenter?.onError(errorMessage: error.localizedDescription)
@@ -109,7 +111,6 @@ final class HomeInteractorImpl: HomeInteractorInput {
                 self.nameField = ""
                 self.presenter?.userDataLoaded()
             }
-  
         }
     }
     
@@ -118,11 +119,11 @@ final class HomeInteractorImpl: HomeInteractorInput {
 
 extension HomeInteractorImpl  {
     private func openCamera() {
-        #if IOS_SIMULATOR
+#if IOS_SIMULATOR
         presenter?.onError(errorMessage: GLocalizable.needRealDevice)
-        #else
+#else
         presenter?.goToCameraModule()
-        #endif
+#endif
     }
     
     private func openChart(){

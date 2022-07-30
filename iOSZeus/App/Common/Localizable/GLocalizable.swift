@@ -11,5 +11,6 @@ enum GLocalizable {
     static let accept = "Accept"
     static let needRealDevice = "This feature required a real iPhone not a simulator"
     static let nameRequired = "The field name is required"
+    static let imageRequired = "The selfie is required"
 }
 

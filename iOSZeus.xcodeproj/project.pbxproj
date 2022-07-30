@@ -40,6 +40,9 @@
 		3BA881452894877100C8DA3A /* SuccessDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA881442894877100C8DA3A /* SuccessDTO.swift */; };
 		3BA88147289489F700C8DA3A /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA88146289489F700C8DA3A /* Settings.swift */; };
 		3BA8814928948A6C00C8DA3A /* SettingsDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA8814828948A6C00C8DA3A /* SettingsDTO.swift */; };
+		3BA8814C2895610900C8DA3A /* FirestoreImageCDN.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA8814B2895610900C8DA3A /* FirestoreImageCDN.swift */; };
+		3BA8814E289561FC00C8DA3A /* ImageCDN.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA8814D289561FC00C8DA3A /* ImageCDN.swift */; };
+		3BA881502895626700C8DA3A /* ErrorImageCDN.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA8814F2895626700C8DA3A /* ErrorImageCDN.swift */; };
 		3BEE879A2891ED11007CB88F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEE87992891ED11007CB88F /* AppDelegate.swift */; };
 		3BEE879C2891ED11007CB88F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEE879B2891ED11007CB88F /* SceneDelegate.swift */; };
 		3BEE87A32891ED15007CB88F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BEE87A22891ED15007CB88F /* Assets.xcassets */; };
@@ -100,6 +103,9 @@
 		3BA881442894877100C8DA3A /* SuccessDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessDTO.swift; sourceTree = "<group>"; };
 		3BA88146289489F700C8DA3A /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		3BA8814828948A6C00C8DA3A /* SettingsDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsDTO.swift; sourceTree = "<group>"; };
+		3BA8814B2895610900C8DA3A /* FirestoreImageCDN.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreImageCDN.swift; sourceTree = "<group>"; };
+		3BA8814D289561FC00C8DA3A /* ImageCDN.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCDN.swift; sourceTree = "<group>"; };
+		3BA8814F2895626700C8DA3A /* ErrorImageCDN.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorImageCDN.swift; sourceTree = "<group>"; };
 		3BEE87962891ED11007CB88F /* iOSZeus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSZeus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BEE87992891ED11007CB88F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3BEE879B2891ED11007CB88F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -269,10 +275,8 @@
 		3B16C29E2893455F0078C602 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				3B16C29F289345AB0078C602 /* ApiClient.swift */,
-				3B16C2A1289345B40078C602 /* Requester.swift */,
-				3B16C2A3289345FE0078C602 /* RequestError.swift */,
-				3BA88141289481CF00C8DA3A /* FirestoreClientRequester.swift */,
+				3BA881512895649800C8DA3A /* API */,
+				3BA8814A289560E100C8DA3A /* CDNImages */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -338,6 +342,27 @@
 				3BA8814828948A6C00C8DA3A /* SettingsDTO.swift */,
 			);
 			path = DataMapping;
+			sourceTree = "<group>";
+		};
+		3BA8814A289560E100C8DA3A /* CDNImages */ = {
+			isa = PBXGroup;
+			children = (
+				3BA8814B2895610900C8DA3A /* FirestoreImageCDN.swift */,
+				3BA8814D289561FC00C8DA3A /* ImageCDN.swift */,
+				3BA8814F2895626700C8DA3A /* ErrorImageCDN.swift */,
+			);
+			path = CDNImages;
+			sourceTree = "<group>";
+		};
+		3BA881512895649800C8DA3A /* API */ = {
+			isa = PBXGroup;
+			children = (
+				3B16C29F289345AB0078C602 /* ApiClient.swift */,
+				3B16C2A1289345B40078C602 /* Requester.swift */,
+				3B16C2A3289345FE0078C602 /* RequestError.swift */,
+				3BA88141289481CF00C8DA3A /* FirestoreClientRequester.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 		3BEE878D2891ED11007CB88F = {
@@ -655,6 +680,7 @@
 			files = (
 				3B16C29D289342D60078C602 /* ChartInfoProtocols.swift in Sources */,
 				3BEE879A2891ED11007CB88F /* AppDelegate.swift in Sources */,
+				3BA881502895626700C8DA3A /* ErrorImageCDN.swift in Sources */,
 				3B16C2A2289345B40078C602 /* Requester.swift in Sources */,
 				3B16C2802892D52D0078C602 /* GConstants.swift in Sources */,
 				3BA881402894818700C8DA3A /* HomeServiceImpl.swift in Sources */,
@@ -666,6 +692,7 @@
 				3BEE87E32892176B007CB88F /* HomeInteractorImpl.swift in Sources */,
 				3B16C2C72894465B0078C602 /* ChartInfoCellViewModel.swift in Sources */,
 				3B16C28A2892E1160078C602 /* CameraViewController.swift in Sources */,
+				3BA8814C2895610900C8DA3A /* FirestoreImageCDN.swift in Sources */,
 				3B16C28E2892E2F90078C602 /* CameraPresenterImpl.swift in Sources */,
 				3B16C2922892E3300078C602 /* CameraProtocols.swift in Sources */,
 				3BEE87F028923B8B007CB88F /* UIView+Constraints.swift in Sources */,
@@ -679,6 +706,7 @@
 				3B16C29528933C3E0078C602 /* GLocalizable.swift in Sources */,
 				3BEE87ED28923AB6007CB88F /* HomeDefaultCell.swift in Sources */,
 				3B16C2AB289357220078C602 /* DataChart.swift in Sources */,
+				3BA8814E289561FC00C8DA3A /* ImageCDN.swift in Sources */,
 				3BEE87D828921213007CB88F /* HomeViewController.swift in Sources */,
 				3BA881452894877100C8DA3A /* SuccessDTO.swift in Sources */,
 				3B16C2B1289359890078C602 /* DataChartDTO+Mapping.swift in Sources */,
