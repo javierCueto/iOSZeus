@@ -17,11 +17,11 @@ extension RequestError: LocalizedError {
     var errorDescription: String? {
         switch self {
         case .errorParsing:
-            return "Error parsing data"
+            return GLocalizable.errorParsing
         case .errorLoadingData:
-            return "Error loading data in the service"
+            return GLocalizable.errorLoadingData
         case .noData:
-            return "There is no data saved in service"
+            return GLocalizable.noData
         }
     }
 }
