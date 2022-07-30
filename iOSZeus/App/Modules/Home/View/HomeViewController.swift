@@ -21,6 +21,7 @@ final class HomeViewController: UITableViewController {
         return textField
     }()
     
+
     private var backGroundColor: UIColor?
     
     // MARK: - Life Cycle
@@ -54,7 +55,7 @@ final class HomeViewController: UITableViewController {
     }
     
     private func configCell(with cell: HomeDefaultCell, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
-        let homeCellType = presenter?.cellType(cellForRowAt: indexPath)
+        guard let homeCellType = presenter?.cellType(cellForRowAt: indexPath) else { return UITableViewCell() }
         
         switch homeCellType {
         case .textFieldCell:
@@ -63,7 +64,8 @@ final class HomeViewController: UITableViewController {
             let selfieLabel: UILabel = {
                 let label = UILabel()
                 label.textAlignment = .center
-                label.text = homeCellType?.description
+                label.text = homeCellType.description
+                label.textColor = homeCellType.isButton ? .systemBlue : .label
                 label.numberOfLines = Int.zero
                 return label
             }()

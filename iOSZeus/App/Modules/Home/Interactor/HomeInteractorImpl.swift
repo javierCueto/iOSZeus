@@ -52,6 +52,8 @@ final class HomeInteractorImpl: HomeInteractorInput {
             openCamera()
         case .chartText:
             openChart()
+        case .buttonCell:
+            print("data loading")
         }
     }
     
