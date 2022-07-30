@@ -14,6 +14,7 @@ protocol HomeViewFromPresenter: AnyObject {
     func clearField()
     func displaySpinner()
     func removeSpinner()
+    func alertSelfie()
 }
 
 protocol HomeRouter {
@@ -36,6 +37,7 @@ protocol HomePresenteInput: AnyObject {
     func didSelectRowAt(indexPath: IndexPath)
     func saveColor(_ color: String)
     func saveName(_ name: String?)
+    func didButtonRetakeWasPressed()
 }
 
 protocol HomeInteractorOutput: AnyObject {
@@ -46,6 +48,7 @@ protocol HomeInteractorOutput: AnyObject {
     func userDataLoaded()
     func showSpinner()
     func hideSpinner()
+    func showAlertSelfie()
 }
 
 protocol HomeInteractorInput: AnyObject {
@@ -54,7 +57,7 @@ protocol HomeInteractorInput: AnyObject {
     func cellType(cellForRowAt indexPath: IndexPath) -> HomeCellType
     func getNumberCells() -> Int
     func goToModule(indexPath: IndexPath)
-    func getColor()
+    func getDataUser()
     func persistenColor(_ color: String)
     func persistenName(_ name: String?)
     func persistenImage(_ image: Any)

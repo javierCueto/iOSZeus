@@ -17,14 +17,13 @@ final class HomePresenterImpl: HomePresenter {
 }
 
 extension HomePresenterImpl: HomePresenteInput {
-
     
     var title: String? {
         interactor?.title
     }
     
     func viewDidLoad() {
-        interactor?.getColor()
+        interactor?.getDataUser()
     }
     
     func didSelectRowAt(indexPath: IndexPath) {
@@ -45,6 +44,10 @@ extension HomePresenterImpl: HomePresenteInput {
     
     func saveName(_ name: String?) {
         interactor?.persistenName(name)
+    }
+    
+    func didButtonRetakeWasPressed() {
+        goToCameraModule()
     }
 }
 
@@ -79,6 +82,9 @@ extension HomePresenterImpl: HomeInteractorOutput {
         view?.removeSpinner()
     }
     
+    func showAlertSelfie() {
+        view?.alertSelfie()
+    }
 }
 
 

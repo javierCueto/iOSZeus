@@ -24,15 +24,34 @@ final class HomeInteractorImpl: HomeInteractorInput {
         self.homeService = homeService
     }
     
-    func getColor() {
+    func getDataUser() {
         presenter?.showSpinner()
-        homeService.loadColor { result in
+        getColor()
+        getImageUser()
+    }
+    
+    private func getImageUser() {
+        homeService.getImageUser { result in
             self.presenter?.hideSpinner()
+            switch result {
+            case .success(let data):
+                self.photoURL = data.photoURL
+                self.nameField = data.name
+            case .failure(let error):
+                guard let error = error as? RequestError, error != RequestError.noData else { return }
+                self.presenter?.onError(errorMessage: error.localizedDescription)
+            }
+        }
+    }
+    
+    private func getColor() {
+        homeService.loadColor { result in
             switch result {
             case .success(let theme):
                 self.systemColor = theme.color
                 self.presenter?.updateColor(theme.color)
             case .failure(let error):
+                guard let error = error as? RequestError, error != RequestError.noData else { return }
                 self.presenter?.onError(errorMessage: error.localizedDescription)
             }
         }
@@ -125,10 +144,16 @@ final class HomeInteractorImpl: HomeInteractorInput {
 
 extension HomeInteractorImpl  {
     private func openCamera() {
+        
 #if IOS_SIMULATOR
         presenter?.onError(errorMessage: GLocalizable.needRealDevice)
 #else
-        presenter?.goToCameraModule()
+        if  photoURL != String() || imageData != nil {
+            presenter?.showAlertSelfie()
+        } else{
+            presenter?.goToCameraModule()
+        }
+        
 #endif
     }
     

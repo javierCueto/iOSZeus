@@ -10,6 +10,7 @@ import Foundation
 enum RequestError {
     case errorParsing
     case errorLoadingData
+    case noData
 }
 
 extension RequestError: LocalizedError {
@@ -19,6 +20,8 @@ extension RequestError: LocalizedError {
             return "Error parsing data"
         case .errorLoadingData:
             return "Error loading data in the service"
+        case .noData:
+            return "There is no data saved in service"
         }
     }
 }

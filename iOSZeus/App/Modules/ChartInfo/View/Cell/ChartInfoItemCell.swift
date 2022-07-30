@@ -42,6 +42,7 @@ final class ChartInfoItemCell: UITableViewCell {
     
     private func configUI() {
         backgroundColor = .clear
+        selectionStyle = .none
         addSubview(containerStackView)
         containerStackView.anchor(top: topAnchor, right: rightAnchor, bottom: bottomAnchor, left: leftAnchor, pRight: 20, pBottom: 40, pLeft: 20)
         configChart()

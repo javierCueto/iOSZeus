@@ -53,7 +53,7 @@ final class FirestoreClientRequester: Requester {
         ) -> Void) {
         task?.getDocument { (document, error) in
             if let document = document, document.exists {
-                guard let dataDescription = document.data() else { return }
+                guard let dataDescription = document.data() else { return completion(.failure(RequestError.noData)) }
                 
                 do {
                     let jsonData = try JSONSerialization.data(withJSONObject:dataDescription)
@@ -63,7 +63,8 @@ final class FirestoreClientRequester: Requester {
                     completion(Result.failure(RequestError.errorParsing))
                 }
             } else {
-                guard let error = error else { return }
+
+                guard let error = error else { return completion(.failure(RequestError.noData)) }
                 completion(.failure(error))
             }
         }

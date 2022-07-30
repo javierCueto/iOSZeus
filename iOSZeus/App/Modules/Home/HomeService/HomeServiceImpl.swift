@@ -10,6 +10,7 @@ protocol HomeService {
     func saveNewColor(with color: String,completion: @escaping (Error?) -> Void)
     func saveDataUser(with name: String, with photoURL: String ,completion: @escaping (Error?) -> Void)
     func saveImageUser(with image: Any ,completion: @escaping (Result<String,Error>) -> Void)
+    func getImageUser(completion: @escaping (Result<UserData,Error>)  -> Void)
 }
 
 struct HomeServiceImpl: HomeService  {
@@ -61,6 +62,18 @@ struct HomeServiceImpl: HomeService  {
             switch result {
             case .success(let imageURL):
                 completion(.success(imageURL))
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
+    }
+    
+    func getImageUser(completion: @escaping (Result<UserData,Error>)  -> Void) {
+        let customRequest = CustomRequest(collection: "userData", documento: "currentUser")
+        apiClient.request(customRequest: customRequest, type: UserDataDTO.self) { result in
+            switch result {
+            case .success(let data):
+                completion(.success(data.toDomain()))
             case .failure(let error):
                 completion(.failure(error))
             }

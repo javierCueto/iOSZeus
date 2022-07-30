@@ -21,7 +21,7 @@ final class HomeViewController: UITableViewController {
         return textField
     }()
     
-
+    
     private var backGroundColor: UIColor?
     
     // MARK: - Life Cycle
@@ -123,7 +123,7 @@ extension HomeViewController {
 
 
 extension HomeViewController: HomeViewFromPresenter {
-
+    
     func setColor(_ color: String) {
         backGroundColor = hexStringToUIColor(hex: color)
         DispatchQueue.main.async {
@@ -137,6 +137,16 @@ extension HomeViewController: HomeViewFromPresenter {
     
     func clearField() {
         nameTextField.text = String()
+    }
+    
+    func alertSelfie() {
+        let alert = UIAlertController(title: "Options", message: "", preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "See current selfie", style: UIAlertAction.Style.default, handler: nil))
+        alert.addAction(UIAlertAction(title: "Retake selfie", style: UIAlertAction.Style.default, handler: { _ in
+            self.presenter?.didButtonRetakeWasPressed()
+        }))
+        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
 }
 
@@ -165,7 +175,7 @@ extension HomeViewController: UITextFieldDelegate {
     public func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         guard let regex = try? NSRegularExpression(pattern: ".*[^A-Za-z ].*", options: []) else { return false}
         if regex.firstMatch(in: string, options: [], range: NSMakeRange(0, string.count)) != nil {
-     
+            
             return false
         }
         return true

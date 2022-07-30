@@ -44,6 +44,8 @@
 		3BA8814E289561FC00C8DA3A /* ImageCDN.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA8814D289561FC00C8DA3A /* ImageCDN.swift */; };
 		3BA881502895626700C8DA3A /* ErrorImageCDN.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA8814F2895626700C8DA3A /* ErrorImageCDN.swift */; };
 		3BA88154289568D800C8DA3A /* SpinnerDisplayable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA88153289568D800C8DA3A /* SpinnerDisplayable.swift */; };
+		3BA881562895778A00C8DA3A /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA881552895778A00C8DA3A /* UserData.swift */; };
+		3BA88158289577CF00C8DA3A /* UserDataDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA88157289577CF00C8DA3A /* UserDataDTO.swift */; };
 		3BEE879A2891ED11007CB88F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEE87992891ED11007CB88F /* AppDelegate.swift */; };
 		3BEE879C2891ED11007CB88F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEE879B2891ED11007CB88F /* SceneDelegate.swift */; };
 		3BEE87A32891ED15007CB88F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BEE87A22891ED15007CB88F /* Assets.xcassets */; };
@@ -108,6 +110,8 @@
 		3BA8814D289561FC00C8DA3A /* ImageCDN.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCDN.swift; sourceTree = "<group>"; };
 		3BA8814F2895626700C8DA3A /* ErrorImageCDN.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorImageCDN.swift; sourceTree = "<group>"; };
 		3BA88153289568D800C8DA3A /* SpinnerDisplayable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerDisplayable.swift; sourceTree = "<group>"; };
+		3BA881552895778A00C8DA3A /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		3BA88157289577CF00C8DA3A /* UserDataDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataDTO.swift; sourceTree = "<group>"; };
 		3BEE87962891ED11007CB88F /* iOSZeus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSZeus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BEE87992891ED11007CB88F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3BEE879B2891ED11007CB88F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -290,6 +294,7 @@
 				3B16C2A8289356370078C602 /* Company.swift */,
 				3B16C2AA289357220078C602 /* DataChart.swift */,
 				3BA88146289489F700C8DA3A /* Settings.swift */,
+				3BA881552895778A00C8DA3A /* UserData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -342,6 +347,7 @@
 			children = (
 				3BA881442894877100C8DA3A /* SuccessDTO.swift */,
 				3BA8814828948A6C00C8DA3A /* SettingsDTO.swift */,
+				3BA88157289577CF00C8DA3A /* UserDataDTO.swift */,
 			);
 			path = DataMapping;
 			sourceTree = "<group>";
@@ -707,6 +713,7 @@
 				3B16C28E2892E2F90078C602 /* CameraPresenterImpl.swift in Sources */,
 				3B16C2922892E3300078C602 /* CameraProtocols.swift in Sources */,
 				3BEE87F028923B8B007CB88F /* UIView+Constraints.swift in Sources */,
+				3BA881562895778A00C8DA3A /* UserData.swift in Sources */,
 				3B16C2902892E30C0078C602 /* CameraRouterImpl.swift in Sources */,
 				3B16C2A4289345FE0078C602 /* RequestError.swift in Sources */,
 				3BA88147289489F700C8DA3A /* Settings.swift in Sources */,
@@ -728,6 +735,7 @@
 				3B16C2B7289361E90078C602 /* ChartInfoViewController.swift in Sources */,
 				3B16C2882892E0CF0078C602 /* CameraFactoryModule.swift in Sources */,
 				3BA88154289568D800C8DA3A /* SpinnerDisplayable.swift in Sources */,
+				3BA88158289577CF00C8DA3A /* UserDataDTO.swift in Sources */,
 				3BEE87E528921949007CB88F /* HomeRouterImpl.swift in Sources */,
 				3B16C2C4289433900078C602 /* ChartInfoItemCell.swift in Sources */,
 				3BEE87F228923FA0007CB88F /* UIViewController+Utils.swift in Sources */,
