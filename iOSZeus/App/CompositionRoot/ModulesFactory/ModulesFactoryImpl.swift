@@ -28,6 +28,7 @@ extension ModulesFactoryImpl: HomeFactory {
         return controller
     }
 }
+
 extension ModulesFactoryImpl: SelfieFactory {
     
     func makeSelfieModule(navigationController: UINavigationController, with userDataBag: UserDataBag) {
@@ -43,6 +44,7 @@ extension ModulesFactoryImpl: SelfieFactory {
         navigationController.pushViewController(controller, animated: true)
     }
 }
+
 extension ModulesFactoryImpl: ChartFactory {
     func makeChartModule(navigationController: UINavigationController, backGroundColor: String?) {
         let apiClient = ApiClient()
@@ -62,6 +64,7 @@ extension ModulesFactoryImpl: ChartFactory {
     }
 
 }
+
 extension ModulesFactoryImpl: CameraFactory {
     func makeCameraModule(navigationController: UINavigationController, parentPresenter: CameraPresenterDelegate) {
         let presenter = CameraPresenterImpl()
