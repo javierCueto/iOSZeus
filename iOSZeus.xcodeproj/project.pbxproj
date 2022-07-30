@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		3B16C2802892D52D0078C602 /* GConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B16C27F2892D52D0078C602 /* GConstants.swift */; };
-		3B16C2882892E0CF0078C602 /* CameraFactoryModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B16C2872892E0CF0078C602 /* CameraFactoryModule.swift */; };
 		3B16C28A2892E1160078C602 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B16C2892892E1160078C602 /* CameraViewController.swift */; };
 		3B16C28E2892E2F90078C602 /* CameraPresenterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B16C28D2892E2F90078C602 /* CameraPresenterImpl.swift */; };
 		3B16C2902892E30C0078C602 /* CameraRouterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B16C28F2892E30C0078C602 /* CameraRouterImpl.swift */; };
@@ -26,7 +25,6 @@
 		3B16C2B328935DA10078C602 /* ChartInfoInteractorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B16C2B228935DA10078C602 /* ChartInfoInteractorImpl.swift */; };
 		3B16C2B5289360EE0078C602 /* ChartInfoPresenterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B16C2B4289360EE0078C602 /* ChartInfoPresenterImpl.swift */; };
 		3B16C2B7289361E90078C602 /* ChartInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B16C2B6289361E90078C602 /* ChartInfoViewController.swift */; };
-		3B16C2B9289362560078C602 /* ChartInfoModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B16C2B8289362560078C602 /* ChartInfoModuleFactory.swift */; };
 		3B16C2BB289363480078C602 /* ChartInfoRouterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B16C2BA289363480078C602 /* ChartInfoRouterImpl.swift */; };
 		3B16C2BD289371260078C602 /* UIViewController+CustomAlerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B16C2BC289371260078C602 /* UIViewController+CustomAlerts.swift */; };
 		3B16C2C028942C0B0078C602 /* Charts in Frameworks */ = {isa = PBXBuildFile; productRef = 3B16C2BF28942C0B0078C602 /* Charts */; };
@@ -47,7 +45,6 @@
 		3BA881562895778A00C8DA3A /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA881552895778A00C8DA3A /* UserData.swift */; };
 		3BA88158289577CF00C8DA3A /* UserDataDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA88157289577CF00C8DA3A /* UserDataDTO.swift */; };
 		3BA8815A28957E2B00C8DA3A /* UserDataBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA8815928957E2B00C8DA3A /* UserDataBag.swift */; };
-		3BA8816128957FD400C8DA3A /* SeeSelfieFactoryModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA8816028957FD400C8DA3A /* SeeSelfieFactoryModule.swift */; };
 		3BA881632895809000C8DA3A /* SeeSelfieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA881622895809000C8DA3A /* SeeSelfieViewController.swift */; };
 		3BA88165289580B600C8DA3A /* SeeSelfieProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA88164289580B600C8DA3A /* SeeSelfieProtocols.swift */; };
 		3BA881672895821600C8DA3A /* SeeSelfiePresenterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA881662895821600C8DA3A /* SeeSelfiePresenterImpl.swift */; };
@@ -55,14 +52,14 @@
 		3BA8816C2895880B00C8DA3A /* UIImageView+DownloadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA8816B2895880B00C8DA3A /* UIImageView+DownloadImage.swift */; };
 		3BA8816E28958E5900C8DA3A /* CustomRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA8816D28958E5900C8DA3A /* CustomRequester.swift */; };
 		3BA881722895CD4300C8DA3A /* GImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA881712895CD4300C8DA3A /* GImages.swift */; };
+		3BA881762895CE8100C8DA3A /* ModulesFactoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA881752895CE8100C8DA3A /* ModulesFactoryImpl.swift */; };
+		3BA881782895D2A700C8DA3A /* ModulesFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA881772895D2A700C8DA3A /* ModulesFactory.swift */; };
 		3BEE879A2891ED11007CB88F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEE87992891ED11007CB88F /* AppDelegate.swift */; };
 		3BEE879C2891ED11007CB88F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEE879B2891ED11007CB88F /* SceneDelegate.swift */; };
 		3BEE87A32891ED15007CB88F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BEE87A22891ED15007CB88F /* Assets.xcassets */; };
 		3BEE87A62891ED15007CB88F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BEE87A42891ED15007CB88F /* LaunchScreen.storyboard */; };
 		3BEE87B12891ED15007CB88F /* iOSZeusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEE87B02891ED15007CB88F /* iOSZeusTests.swift */; };
-		3BEE87D6289211BD007CB88F /* HomeModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEE87D5289211BD007CB88F /* HomeModuleFactory.swift */; };
 		3BEE87D828921213007CB88F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEE87D728921213007CB88F /* HomeViewController.swift */; };
-		3BEE87DC289212F0007CB88F /* AppFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEE87DB289212F0007CB88F /* AppFactory.swift */; };
 		3BEE87DF2892156D007CB88F /* HomeProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEE87DE2892156D007CB88F /* HomeProtocols.swift */; };
 		3BEE87E1289216C3007CB88F /* HomePresenterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEE87E0289216C3007CB88F /* HomePresenterImpl.swift */; };
 		3BEE87E32892176B007CB88F /* HomeInteractorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEE87E22892176B007CB88F /* HomeInteractorImpl.swift */; };
@@ -86,7 +83,6 @@
 
 /* Begin PBXFileReference section */
 		3B16C27F2892D52D0078C602 /* GConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GConstants.swift; sourceTree = "<group>"; };
-		3B16C2872892E0CF0078C602 /* CameraFactoryModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraFactoryModule.swift; sourceTree = "<group>"; };
 		3B16C2892892E1160078C602 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		3B16C28D2892E2F90078C602 /* CameraPresenterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPresenterImpl.swift; sourceTree = "<group>"; };
 		3B16C28F2892E30C0078C602 /* CameraRouterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraRouterImpl.swift; sourceTree = "<group>"; };
@@ -104,7 +100,6 @@
 		3B16C2B228935DA10078C602 /* ChartInfoInteractorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartInfoInteractorImpl.swift; sourceTree = "<group>"; };
 		3B16C2B4289360EE0078C602 /* ChartInfoPresenterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartInfoPresenterImpl.swift; sourceTree = "<group>"; };
 		3B16C2B6289361E90078C602 /* ChartInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartInfoViewController.swift; sourceTree = "<group>"; };
-		3B16C2B8289362560078C602 /* ChartInfoModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartInfoModuleFactory.swift; sourceTree = "<group>"; };
 		3B16C2BA289363480078C602 /* ChartInfoRouterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartInfoRouterImpl.swift; sourceTree = "<group>"; };
 		3B16C2BC289371260078C602 /* UIViewController+CustomAlerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+CustomAlerts.swift"; sourceTree = "<group>"; };
 		3B16C2C3289433900078C602 /* ChartInfoItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartInfoItemCell.swift; sourceTree = "<group>"; };
@@ -122,7 +117,6 @@
 		3BA881552895778A00C8DA3A /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		3BA88157289577CF00C8DA3A /* UserDataDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataDTO.swift; sourceTree = "<group>"; };
 		3BA8815928957E2B00C8DA3A /* UserDataBag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataBag.swift; sourceTree = "<group>"; };
-		3BA8816028957FD400C8DA3A /* SeeSelfieFactoryModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeeSelfieFactoryModule.swift; sourceTree = "<group>"; };
 		3BA881622895809000C8DA3A /* SeeSelfieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeeSelfieViewController.swift; sourceTree = "<group>"; };
 		3BA88164289580B600C8DA3A /* SeeSelfieProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeeSelfieProtocols.swift; sourceTree = "<group>"; };
 		3BA881662895821600C8DA3A /* SeeSelfiePresenterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeeSelfiePresenterImpl.swift; sourceTree = "<group>"; };
@@ -130,6 +124,8 @@
 		3BA8816B2895880B00C8DA3A /* UIImageView+DownloadImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+DownloadImage.swift"; sourceTree = "<group>"; };
 		3BA8816D28958E5900C8DA3A /* CustomRequester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomRequester.swift; sourceTree = "<group>"; };
 		3BA881712895CD4300C8DA3A /* GImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GImages.swift; sourceTree = "<group>"; };
+		3BA881752895CE8100C8DA3A /* ModulesFactoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModulesFactoryImpl.swift; sourceTree = "<group>"; };
+		3BA881772895D2A700C8DA3A /* ModulesFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModulesFactory.swift; sourceTree = "<group>"; };
 		3BEE87962891ED11007CB88F /* iOSZeus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSZeus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BEE87992891ED11007CB88F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3BEE879B2891ED11007CB88F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -138,9 +134,7 @@
 		3BEE87A72891ED15007CB88F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3BEE87AC2891ED15007CB88F /* iOSZeusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSZeusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BEE87B02891ED15007CB88F /* iOSZeusTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSZeusTests.swift; sourceTree = "<group>"; };
-		3BEE87D5289211BD007CB88F /* HomeModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModuleFactory.swift; sourceTree = "<group>"; };
 		3BEE87D728921213007CB88F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		3BEE87DB289212F0007CB88F /* AppFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFactory.swift; sourceTree = "<group>"; };
 		3BEE87DE2892156D007CB88F /* HomeProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProtocols.swift; sourceTree = "<group>"; };
 		3BEE87E0289216C3007CB88F /* HomePresenterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenterImpl.swift; sourceTree = "<group>"; };
 		3BEE87E22892176B007CB88F /* HomeInteractorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractorImpl.swift; sourceTree = "<group>"; };
@@ -197,7 +191,6 @@
 		3B16C2822892E07B0078C602 /* Support */ = {
 			isa = PBXGroup;
 			children = (
-				3B16C2872892E0CF0078C602 /* CameraFactoryModule.swift */,
 				3B16C2912892E3300078C602 /* CameraProtocols.swift */,
 			);
 			path = Support;
@@ -324,7 +317,6 @@
 			children = (
 				3B16C2AF289359320078C602 /* DataMapping */,
 				3B16C2AD289357C80078C602 /* ChartInfoService.swift */,
-				3B16C2B8289362560078C602 /* ChartInfoModuleFactory.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -429,7 +421,6 @@
 		3BA8815E28957FB800C8DA3A /* Support */ = {
 			isa = PBXGroup;
 			children = (
-				3BA8816028957FD400C8DA3A /* SeeSelfieFactoryModule.swift */,
 				3BA88164289580B600C8DA3A /* SeeSelfieProtocols.swift */,
 			);
 			path = Support;
@@ -460,6 +451,23 @@
 				3B16C2A1289345B40078C602 /* Requester.swift */,
 			);
 			path = Request;
+			sourceTree = "<group>";
+		};
+		3BA881732895CDBC00C8DA3A /* CompositionRoot */ = {
+			isa = PBXGroup;
+			children = (
+				3BA881742895CE6100C8DA3A /* ModulesFactory */,
+			);
+			path = CompositionRoot;
+			sourceTree = "<group>";
+		};
+		3BA881742895CE6100C8DA3A /* ModulesFactory */ = {
+			isa = PBXGroup;
+			children = (
+				3BA881752895CE8100C8DA3A /* ModulesFactoryImpl.swift */,
+				3BA881772895D2A700C8DA3A /* ModulesFactory.swift */,
+			);
+			path = ModulesFactory;
 			sourceTree = "<group>";
 		};
 		3BEE878D2891ED11007CB88F = {
@@ -501,6 +509,7 @@
 		3BEE87C928920FA4007CB88F /* App */ = {
 			isa = PBXGroup;
 			children = (
+				3BA881732895CDBC00C8DA3A /* CompositionRoot */,
 				3B16C2A5289354EC0078C602 /* Models */,
 				3B16C29E2893455F0078C602 /* Networking */,
 				3BEE87D9289212CE007CB88F /* Common */,
@@ -597,7 +606,6 @@
 		3BEE87D328921187007CB88F /* Factory */ = {
 			isa = PBXGroup;
 			children = (
-				3BEE87D5289211BD007CB88F /* HomeModuleFactory.swift */,
 			);
 			path = Factory;
 			sourceTree = "<group>";
@@ -620,17 +628,8 @@
 				3B16C27E2892D51E0078C602 /* Constants */,
 				3BEE87F328924248007CB88F /* Protocols */,
 				3BEE87EE28923B7A007CB88F /* Extensions */,
-				3BEE87DA289212D8007CB88F /* AppFactory */,
 			);
 			path = Common;
-			sourceTree = "<group>";
-		};
-		3BEE87DA289212D8007CB88F /* AppFactory */ = {
-			isa = PBXGroup;
-			children = (
-				3BEE87DB289212F0007CB88F /* AppFactory.swift */,
-			);
-			path = AppFactory;
 			sourceTree = "<group>";
 		};
 		3BEE87DD2892155A007CB88F /* Protocols */ = {
@@ -792,9 +791,9 @@
 				3B16C2BD289371260078C602 /* UIViewController+CustomAlerts.swift in Sources */,
 				3BEE87E32892176B007CB88F /* HomeInteractorImpl.swift in Sources */,
 				3B16C2C72894465B0078C602 /* ChartInfoCellViewModel.swift in Sources */,
+				3BA881762895CE8100C8DA3A /* ModulesFactoryImpl.swift in Sources */,
 				3B16C28A2892E1160078C602 /* CameraViewController.swift in Sources */,
 				3BA8814C2895610900C8DA3A /* FirestoreImageCDN.swift in Sources */,
-				3BA8816128957FD400C8DA3A /* SeeSelfieFactoryModule.swift in Sources */,
 				3B16C28E2892E2F90078C602 /* CameraPresenterImpl.swift in Sources */,
 				3B16C2922892E3300078C602 /* CameraProtocols.swift in Sources */,
 				3BEE87F028923B8B007CB88F /* UIView+Constraints.swift in Sources */,
@@ -805,7 +804,6 @@
 				3BEE87F72892466A007CB88F /* HomeCellType.swift in Sources */,
 				3B16C2B328935DA10078C602 /* ChartInfoInteractorImpl.swift in Sources */,
 				3BEE879C2891ED11007CB88F /* SceneDelegate.swift in Sources */,
-				3BEE87D6289211BD007CB88F /* HomeModuleFactory.swift in Sources */,
 				3BA8816C2895880B00C8DA3A /* UIImageView+DownloadImage.swift in Sources */,
 				3B16C29528933C3E0078C602 /* GLocalizable.swift in Sources */,
 				3BEE87ED28923AB6007CB88F /* HomeDefaultCell.swift in Sources */,
@@ -818,22 +816,20 @@
 				3B16C2B1289359890078C602 /* DataChartDTO+Mapping.swift in Sources */,
 				3BA88142289481CF00C8DA3A /* FirestoreClientRequester.swift in Sources */,
 				3BEE87DF2892156D007CB88F /* HomeProtocols.swift in Sources */,
+				3BA881782895D2A700C8DA3A /* ModulesFactory.swift in Sources */,
 				3BA8815A28957E2B00C8DA3A /* UserDataBag.swift in Sources */,
 				3B16C2A9289356370078C602 /* Company.swift in Sources */,
 				3BEE87F528924257007CB88F /* Reusable.swift in Sources */,
 				3BA8816E28958E5900C8DA3A /* CustomRequester.swift in Sources */,
 				3B16C2B7289361E90078C602 /* ChartInfoViewController.swift in Sources */,
 				3BA881722895CD4300C8DA3A /* GImages.swift in Sources */,
-				3B16C2882892E0CF0078C602 /* CameraFactoryModule.swift in Sources */,
 				3BA88154289568D800C8DA3A /* SpinnerDisplayable.swift in Sources */,
 				3BA88158289577CF00C8DA3A /* UserDataDTO.swift in Sources */,
 				3BEE87E528921949007CB88F /* HomeRouterImpl.swift in Sources */,
 				3B16C2C4289433900078C602 /* ChartInfoItemCell.swift in Sources */,
 				3BEE87F228923FA0007CB88F /* UIViewController+Utils.swift in Sources */,
 				3BA8814928948A6C00C8DA3A /* SettingsDTO.swift in Sources */,
-				3BEE87DC289212F0007CB88F /* AppFactory.swift in Sources */,
 				3BA881632895809000C8DA3A /* SeeSelfieViewController.swift in Sources */,
-				3B16C2B9289362560078C602 /* ChartInfoModuleFactory.swift in Sources */,
 				3BEE87E1289216C3007CB88F /* HomePresenterImpl.swift in Sources */,
 				3B16C2B5289360EE0078C602 /* ChartInfoPresenterImpl.swift in Sources */,
 			);

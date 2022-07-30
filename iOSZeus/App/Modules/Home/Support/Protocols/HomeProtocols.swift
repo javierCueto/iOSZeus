@@ -18,6 +18,7 @@ protocol HomeViewFromPresenter: AnyObject {
 }
 
 protocol HomeRouter {
+    var modulesHomeFactory: ModulesHomeFactory { get }
     func goToChart(view: HomeViewFromPresenter?, backGroundColor: String?)
     func goToCamera(view: HomeViewFromPresenter?, parentPresenter: CameraPresenterDelegate)
     func gotToSeePicture(view: HomeViewFromPresenter?, _ userDataBag: UserDataBag)
