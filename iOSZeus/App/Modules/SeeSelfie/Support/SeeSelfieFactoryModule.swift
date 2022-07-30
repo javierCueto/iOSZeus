@@ -14,6 +14,7 @@ struct SeeSelfieFactoryModule {
         interactor.title = userDataBag.name
         interactor.imageData = userDataBag.image
         interactor.backgroundColor = userDataBag.systemColor
+        interactor.imageURL = userDataBag.photoUrl
         presenter.interactor = interactor
         controller.presenter = presenter
         navigation.pushViewController(controller, animated: true)

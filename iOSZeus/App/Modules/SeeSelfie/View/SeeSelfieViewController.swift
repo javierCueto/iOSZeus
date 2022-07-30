@@ -38,8 +38,13 @@ final class SeeSelfieViewController: UIViewController {
     }
     
     private func updateImage(){
-        guard let image = presenter?.userImageData as? UIImage else { return }
-        userImageView.image = image
+        if let image = presenter?.userImageData as? UIImage {
+            userImageView.image = image
+        }else{
+            let imageURL = URL(string: presenter?.imageURL ?? String() )
+            userImageView.setImageFromNetwork(withURL: imageURL)
+        }
+
     }
 
 }

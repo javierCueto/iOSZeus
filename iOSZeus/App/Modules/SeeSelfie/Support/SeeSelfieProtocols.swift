@@ -17,6 +17,7 @@ protocol SeeSelfiePresenterInputFromView: AnyObject {
     var interactor: SeeSelfieInteractorInput? { get }
     var title: String? { get }
     var userImageData: Any? { get }
+    var imageURL: String? { get }
     var backgroundColor: String? { get }
     
 }
@@ -24,5 +25,6 @@ protocol SeeSelfiePresenterInputFromView: AnyObject {
 protocol SeeSelfieInteractorInput: AnyObject {
     var title: String? { get }
     var imageData: Any? { get }
+    var imageURL: String? { get }
     var backgroundColor: String? { get }
 }

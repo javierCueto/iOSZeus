@@ -39,6 +39,7 @@ final class HomeInteractorImpl: HomeInteractorInput {
             case .success(let data):
                 self.photoURL = data.photoURL
                 self.nameField = data.name
+                print(self.nameField)
             case .failure(let error):
                 guard let error = error as? RequestError, error != RequestError.noData else { return }
                 self.presenter?.onError(errorMessage: error.localizedDescription)
@@ -135,7 +136,6 @@ final class HomeInteractorImpl: HomeInteractorInput {
             if let error = error {
                 self.presenter?.onError(errorMessage: error.localizedDescription)
             }else{
-                self.nameField = ""
                 self.presenter?.userDataLoaded()
             }
         }

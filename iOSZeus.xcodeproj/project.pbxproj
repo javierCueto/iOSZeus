@@ -52,6 +52,7 @@
 		3BA88165289580B600C8DA3A /* SeeSelfieProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA88164289580B600C8DA3A /* SeeSelfieProtocols.swift */; };
 		3BA881672895821600C8DA3A /* SeeSelfiePresenterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA881662895821600C8DA3A /* SeeSelfiePresenterImpl.swift */; };
 		3BA8816A289582AB00C8DA3A /* SeeSelfieInteractorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA88169289582AB00C8DA3A /* SeeSelfieInteractorImpl.swift */; };
+		3BA8816C2895880B00C8DA3A /* UIImageView+DownloadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA8816B2895880B00C8DA3A /* UIImageView+DownloadImage.swift */; };
 		3BEE879A2891ED11007CB88F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEE87992891ED11007CB88F /* AppDelegate.swift */; };
 		3BEE879C2891ED11007CB88F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEE879B2891ED11007CB88F /* SceneDelegate.swift */; };
 		3BEE87A32891ED15007CB88F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BEE87A22891ED15007CB88F /* Assets.xcassets */; };
@@ -124,6 +125,7 @@
 		3BA88164289580B600C8DA3A /* SeeSelfieProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeeSelfieProtocols.swift; sourceTree = "<group>"; };
 		3BA881662895821600C8DA3A /* SeeSelfiePresenterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeeSelfiePresenterImpl.swift; sourceTree = "<group>"; };
 		3BA88169289582AB00C8DA3A /* SeeSelfieInteractorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeeSelfieInteractorImpl.swift; sourceTree = "<group>"; };
+		3BA8816B2895880B00C8DA3A /* UIImageView+DownloadImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+DownloadImage.swift"; sourceTree = "<group>"; };
 		3BEE87962891ED11007CB88F /* iOSZeus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSZeus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BEE87992891ED11007CB88F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3BEE879B2891ED11007CB88F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -631,6 +633,7 @@
 				3BEE87EF28923B8B007CB88F /* UIView+Constraints.swift */,
 				3BEE87F128923FA0007CB88F /* UIViewController+Utils.swift */,
 				3B16C2BC289371260078C602 /* UIViewController+CustomAlerts.swift */,
+				3BA8816B2895880B00C8DA3A /* UIImageView+DownloadImage.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -781,6 +784,7 @@
 				3B16C2B328935DA10078C602 /* ChartInfoInteractorImpl.swift in Sources */,
 				3BEE879C2891ED11007CB88F /* SceneDelegate.swift in Sources */,
 				3BEE87D6289211BD007CB88F /* HomeModuleFactory.swift in Sources */,
+				3BA8816C2895880B00C8DA3A /* UIImageView+DownloadImage.swift in Sources */,
 				3B16C29528933C3E0078C602 /* GLocalizable.swift in Sources */,
 				3BEE87ED28923AB6007CB88F /* HomeDefaultCell.swift in Sources */,
 				3BA881672895821600C8DA3A /* SeeSelfiePresenterImpl.swift in Sources */,

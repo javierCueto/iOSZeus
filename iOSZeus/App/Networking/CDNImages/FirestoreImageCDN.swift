@@ -21,7 +21,7 @@ struct FirestoreImageCDN: ImageCDN {
         }
         
         guard
-            let imageData = image.jpegData(compressionQuality: 0.75)
+            let imageData = image.jpegData(compressionQuality: 0.50)
         else {
             return completion(.failure(ErrorImageCDN.imageReducing))
         }
