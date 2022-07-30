@@ -11,8 +11,6 @@ protocol SeeSelfieViewFromPresenter: AnyObject {
     var presenter: SeeSelfiePresenterInputFromView? { get }
 }
 
-
-
 protocol SeeSelfiePresenterInputFromView: AnyObject {
     var interactor: SeeSelfieInteractorInput? { get }
     var title: String? { get }

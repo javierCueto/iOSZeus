@@ -9,7 +9,6 @@ import Foundation
 
 final class SeeSelfiePresenterImpl: SeeSelfiePresenterInputFromView {
 
-    
     var interactor: SeeSelfieInteractorInput?
     
     var title: String? {

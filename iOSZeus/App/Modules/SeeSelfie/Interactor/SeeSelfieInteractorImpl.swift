@@ -6,13 +6,13 @@
 //
 
 final class SeeSelfieInteractorImpl: SeeSelfieInteractorInput {
-
+    
+    var title: String?
+    
+    var imageData: Any?
+    
+    var imageURL: String?
     
     var backgroundColor: String?
     
-    var imageData: Any?
-    var imageURL: String?
-    var title: String?
-    
-
 }

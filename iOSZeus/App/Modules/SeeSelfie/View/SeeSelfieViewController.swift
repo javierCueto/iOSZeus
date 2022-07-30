@@ -18,7 +18,6 @@ final class SeeSelfieViewController: UIViewController {
         return imageView
     }()
     
-    
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,7 +43,6 @@ final class SeeSelfieViewController: UIViewController {
             let imageURL = URL(string: presenter?.imageURL ?? String() )
             userImageView.setImageFromNetwork(withURL: imageURL)
         }
-
     }
 
 }

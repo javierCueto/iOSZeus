@@ -1,9 +1,11 @@
 //
-//  ModulesFactoryd.swift
+//  ModulesFactory.swift
 //  iOSZeus
 //
 //  Created by Javier Cueto on 30/07/22.
 //
+
+import UIKit
 
 protocol AppFactory {
     func makeApp(navigationController: UINavigationController, window: UIWindow?)
