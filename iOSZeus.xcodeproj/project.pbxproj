@@ -54,11 +54,15 @@
 		3BA881762895CE8100C8DA3A /* ModulesFactoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA881752895CE8100C8DA3A /* ModulesFactoryImpl.swift */; };
 		3BA881782895D2A700C8DA3A /* ModulesFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA881772895D2A700C8DA3A /* ModulesFactory.swift */; };
 		3BA8817B2895DBDF00C8DA3A /* CollectionDocuments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA8817A2895DBDF00C8DA3A /* CollectionDocuments.swift */; };
+		3BA881832895F66B00C8DA3A /* SeeSelfiePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA881822895F66B00C8DA3A /* SeeSelfiePresenterTests.swift */; };
+		3BA881862895F79D00C8DA3A /* SeeSelfieInteractorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA881852895F79D00C8DA3A /* SeeSelfieInteractorMock.swift */; };
+		3BA881882895F94A00C8DA3A /* SeeSelfieInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA881872895F94A00C8DA3A /* SeeSelfieInteractorTests.swift */; };
+		3BA8818A2895FAED00C8DA3A /* SeeSelfieViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA881892895FAED00C8DA3A /* SeeSelfieViewControllerTest.swift */; };
+		3BA8818C2895FB9100C8DA3A /* SeeSelfiePresenterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA8818B2895FB9100C8DA3A /* SeeSelfiePresenterMock.swift */; };
 		3BEE879A2891ED11007CB88F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEE87992891ED11007CB88F /* AppDelegate.swift */; };
 		3BEE879C2891ED11007CB88F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEE879B2891ED11007CB88F /* SceneDelegate.swift */; };
 		3BEE87A32891ED15007CB88F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BEE87A22891ED15007CB88F /* Assets.xcassets */; };
 		3BEE87A62891ED15007CB88F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BEE87A42891ED15007CB88F /* LaunchScreen.storyboard */; };
-		3BEE87B12891ED15007CB88F /* iOSZeusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEE87B02891ED15007CB88F /* iOSZeusTests.swift */; };
 		3BEE87D828921213007CB88F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEE87D728921213007CB88F /* HomeViewController.swift */; };
 		3BEE87DF2892156D007CB88F /* HomeProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEE87DE2892156D007CB88F /* HomeProtocols.swift */; };
 		3BEE87E1289216C3007CB88F /* HomePresenterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEE87E0289216C3007CB88F /* HomePresenterImpl.swift */; };
@@ -126,6 +130,11 @@
 		3BA881752895CE8100C8DA3A /* ModulesFactoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModulesFactoryImpl.swift; sourceTree = "<group>"; };
 		3BA881772895D2A700C8DA3A /* ModulesFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModulesFactory.swift; sourceTree = "<group>"; };
 		3BA8817A2895DBDF00C8DA3A /* CollectionDocuments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionDocuments.swift; sourceTree = "<group>"; };
+		3BA881822895F66B00C8DA3A /* SeeSelfiePresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeeSelfiePresenterTests.swift; sourceTree = "<group>"; };
+		3BA881852895F79D00C8DA3A /* SeeSelfieInteractorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeeSelfieInteractorMock.swift; sourceTree = "<group>"; };
+		3BA881872895F94A00C8DA3A /* SeeSelfieInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeeSelfieInteractorTests.swift; sourceTree = "<group>"; };
+		3BA881892895FAED00C8DA3A /* SeeSelfieViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeeSelfieViewControllerTest.swift; sourceTree = "<group>"; };
+		3BA8818B2895FB9100C8DA3A /* SeeSelfiePresenterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeeSelfiePresenterMock.swift; sourceTree = "<group>"; };
 		3BEE87962891ED11007CB88F /* iOSZeus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSZeus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BEE87992891ED11007CB88F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3BEE879B2891ED11007CB88F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -133,7 +142,6 @@
 		3BEE87A52891ED15007CB88F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3BEE87A72891ED15007CB88F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3BEE87AC2891ED15007CB88F /* iOSZeusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSZeusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3BEE87B02891ED15007CB88F /* iOSZeusTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSZeusTests.swift; sourceTree = "<group>"; };
 		3BEE87D728921213007CB88F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		3BEE87DE2892156D007CB88F /* HomeProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProtocols.swift; sourceTree = "<group>"; };
 		3BEE87E0289216C3007CB88F /* HomePresenterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenterImpl.swift; sourceTree = "<group>"; };
@@ -462,6 +470,34 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
+		3BA8817C2895F5C200C8DA3A /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				3BA8817D2895F5CA00C8DA3A /* SeeSelfie */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		3BA8817D2895F5CA00C8DA3A /* SeeSelfie */ = {
+			isa = PBXGroup;
+			children = (
+				3BA881842895F78100C8DA3A /* Mocks */,
+				3BA881822895F66B00C8DA3A /* SeeSelfiePresenterTests.swift */,
+				3BA881892895FAED00C8DA3A /* SeeSelfieViewControllerTest.swift */,
+				3BA881872895F94A00C8DA3A /* SeeSelfieInteractorTests.swift */,
+			);
+			path = SeeSelfie;
+			sourceTree = "<group>";
+		};
+		3BA881842895F78100C8DA3A /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				3BA881852895F79D00C8DA3A /* SeeSelfieInteractorMock.swift */,
+				3BA8818B2895FB9100C8DA3A /* SeeSelfiePresenterMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 		3BEE878D2891ED11007CB88F = {
 			isa = PBXGroup;
 			children = (
@@ -493,7 +529,7 @@
 		3BEE87AF2891ED15007CB88F /* iOSZeusTests */ = {
 			isa = PBXGroup;
 			children = (
-				3BEE87B02891ED15007CB88F /* iOSZeusTests.swift */,
+				3BA8817C2895F5C200C8DA3A /* Modules */,
 			);
 			path = iOSZeusTests;
 			sourceTree = "<group>";
@@ -717,6 +753,7 @@
 					};
 					3BEE87AB2891ED15007CB88F = {
 						CreatedOnToolsVersion = 13.3;
+						LastSwiftMigration = 1330;
 						TestTargetID = 3BEE87952891ED11007CB88F;
 					};
 				};
@@ -831,7 +868,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3BEE87B12891ED15007CB88F /* iOSZeusTests.swift in Sources */,
+				3BA8818A2895FAED00C8DA3A /* SeeSelfieViewControllerTest.swift in Sources */,
+				3BA881882895F94A00C8DA3A /* SeeSelfieInteractorTests.swift in Sources */,
+				3BA881862895F79D00C8DA3A /* SeeSelfieInteractorMock.swift in Sources */,
+				3BA8818C2895FB9100C8DA3A /* SeeSelfiePresenterMock.swift in Sources */,
+				3BA881832895F66B00C8DA3A /* SeeSelfiePresenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1031,15 +1072,22 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = TNSM43P2F3;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.javiercueto.iOSZeusTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOSZeus.app/iOSZeus";
@@ -1051,11 +1099,17 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = TNSM43P2F3;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.javiercueto.iOSZeusTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
