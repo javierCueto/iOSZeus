@@ -1,5 +1,24 @@
 # iOSZeus
 
+## Descripción tecnica
+Aruitectura Viper (Algunos modulos no requieren todos los componentes de viper), con factories para inicializar los modulos. 76% de coverage en testing 🚀 (Por tiempo ya no se alcanzo el 90%) 
+
+
+Estructura de Folder:
+
+    - APP
+        - CompositionRoot (Inicialiazcion de modulos por inyección de dependencias)
+        - Commom
+        - Modules
+            - SeeSelfie
+            - CharInfo
+            - Camera
+            - Home
+
++ Gestor de paquets: Swift Package Manager
+
+
+## Tareas
 1. Crear una tabla con diferentes tipos de celdas donde:
     
    + a. La primera celda tiene un TextField y solo permite caracteres alfabéticos. ✅
