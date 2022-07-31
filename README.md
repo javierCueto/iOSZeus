@@ -3,6 +3,9 @@
 1. Crear una tabla con diferentes tipos de celdas donde:
     
    + a. La primera celda tiene un TextField y solo permite caracteres alfabéticos. ✅
+   
+   ![simulator_screenshot_A743C48A-23BE-4D35-B268-77713B4322EB](https://user-images.githubusercontent.com/39851501/182037202-be175ef2-ccd1-4d8f-9cbd-cf9a08e3fc95.png)
+
 
    + b. La segunda celda pedirá un selfie al usuario, al seleccionar la celda se mostrará un popup mostrando la opción de visualizar o retomar la foto. ✅
 
