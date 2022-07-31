@@ -3,6 +3,9 @@
 ## Descripción tecnica
 Aruitectura Viper (Algunos modulos no requieren todos los componentes de viper), con factories para inicializar los modulos. 76% de coverage en testing 🚀 (Por tiempo ya no se alcanzo el 90%) 
 
+<img width="749" alt="Screen Shot 2022-07-31 at 11 04 14 a m" src="https://user-images.githubusercontent.com/39851501/182037651-e67304fe-25d0-4a63-bf89-736bb557a594.png">
+
+
 
 Estructura de Folder:
 
