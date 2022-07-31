@@ -59,6 +59,11 @@
 		3BA881882895F94A00C8DA3A /* SeeSelfieInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA881872895F94A00C8DA3A /* SeeSelfieInteractorTests.swift */; };
 		3BA8818A2895FAED00C8DA3A /* SeeSelfieViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA881892895FAED00C8DA3A /* SeeSelfieViewControllerTest.swift */; };
 		3BA8818C2895FB9100C8DA3A /* SeeSelfiePresenterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA8818B2895FB9100C8DA3A /* SeeSelfiePresenterMock.swift */; };
+		3BA88190289600F900C8DA3A /* ChartInfoServiceStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA8818F289600F900C8DA3A /* ChartInfoServiceStub.swift */; };
+		3BA881922896027200C8DA3A /* ChartInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA881912896027200C8DA3A /* ChartInteractorTests.swift */; };
+		3BA8819428960C4F00C8DA3A /* ChartPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA8819328960C4F00C8DA3A /* ChartPresenterTest.swift */; };
+		3BA8819628960CC800C8DA3A /* ChartInfoInteractorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA8819528960CC800C8DA3A /* ChartInfoInteractorMock.swift */; };
+		3BA881982896101C00C8DA3A /* ChartInfoCellViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA881972896101C00C8DA3A /* ChartInfoCellViewModelTest.swift */; };
 		3BEE879A2891ED11007CB88F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEE87992891ED11007CB88F /* AppDelegate.swift */; };
 		3BEE879C2891ED11007CB88F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEE879B2891ED11007CB88F /* SceneDelegate.swift */; };
 		3BEE87A32891ED15007CB88F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BEE87A22891ED15007CB88F /* Assets.xcassets */; };
@@ -135,6 +140,11 @@
 		3BA881872895F94A00C8DA3A /* SeeSelfieInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeeSelfieInteractorTests.swift; sourceTree = "<group>"; };
 		3BA881892895FAED00C8DA3A /* SeeSelfieViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeeSelfieViewControllerTest.swift; sourceTree = "<group>"; };
 		3BA8818B2895FB9100C8DA3A /* SeeSelfiePresenterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeeSelfiePresenterMock.swift; sourceTree = "<group>"; };
+		3BA8818F289600F900C8DA3A /* ChartInfoServiceStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartInfoServiceStub.swift; sourceTree = "<group>"; };
+		3BA881912896027200C8DA3A /* ChartInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartInteractorTests.swift; sourceTree = "<group>"; };
+		3BA8819328960C4F00C8DA3A /* ChartPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartPresenterTest.swift; sourceTree = "<group>"; };
+		3BA8819528960CC800C8DA3A /* ChartInfoInteractorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartInfoInteractorMock.swift; sourceTree = "<group>"; };
+		3BA881972896101C00C8DA3A /* ChartInfoCellViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartInfoCellViewModelTest.swift; sourceTree = "<group>"; };
 		3BEE87962891ED11007CB88F /* iOSZeus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSZeus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BEE87992891ED11007CB88F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3BEE879B2891ED11007CB88F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -473,6 +483,7 @@
 		3BA8817C2895F5C200C8DA3A /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				3BA8818D289600CA00C8DA3A /* ChartInfo */,
 				3BA8817D2895F5CA00C8DA3A /* SeeSelfie */,
 			);
 			path = Modules;
@@ -496,6 +507,26 @@
 				3BA8818B2895FB9100C8DA3A /* SeeSelfiePresenterMock.swift */,
 			);
 			path = Mocks;
+			sourceTree = "<group>";
+		};
+		3BA8818D289600CA00C8DA3A /* ChartInfo */ = {
+			isa = PBXGroup;
+			children = (
+				3BA8818E289600D400C8DA3A /* Fake */,
+				3BA881912896027200C8DA3A /* ChartInteractorTests.swift */,
+				3BA8819328960C4F00C8DA3A /* ChartPresenterTest.swift */,
+				3BA881972896101C00C8DA3A /* ChartInfoCellViewModelTest.swift */,
+			);
+			path = ChartInfo;
+			sourceTree = "<group>";
+		};
+		3BA8818E289600D400C8DA3A /* Fake */ = {
+			isa = PBXGroup;
+			children = (
+				3BA8818F289600F900C8DA3A /* ChartInfoServiceStub.swift */,
+				3BA8819528960CC800C8DA3A /* ChartInfoInteractorMock.swift */,
+			);
+			path = Fake;
 			sourceTree = "<group>";
 		};
 		3BEE878D2891ED11007CB88F = {
@@ -870,7 +901,12 @@
 			files = (
 				3BA8818A2895FAED00C8DA3A /* SeeSelfieViewControllerTest.swift in Sources */,
 				3BA881882895F94A00C8DA3A /* SeeSelfieInteractorTests.swift in Sources */,
+				3BA88190289600F900C8DA3A /* ChartInfoServiceStub.swift in Sources */,
 				3BA881862895F79D00C8DA3A /* SeeSelfieInteractorMock.swift in Sources */,
+				3BA881982896101C00C8DA3A /* ChartInfoCellViewModelTest.swift in Sources */,
+				3BA881922896027200C8DA3A /* ChartInteractorTests.swift in Sources */,
+				3BA8819628960CC800C8DA3A /* ChartInfoInteractorMock.swift in Sources */,
+				3BA8819428960C4F00C8DA3A /* ChartPresenterTest.swift in Sources */,
 				3BA8818C2895FB9100C8DA3A /* SeeSelfiePresenterMock.swift in Sources */,
 				3BA881832895F66B00C8DA3A /* SeeSelfiePresenterTests.swift in Sources */,
 			);
