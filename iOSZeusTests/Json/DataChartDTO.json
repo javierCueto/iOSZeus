@@ -1,0 +1,23 @@
+{
+    "reporte": [
+        {
+            "valor": "Si",
+            "cantidad": "60"
+        },
+        {
+            "valor": "Si",
+            "cantidad": "40"
+        }
+    ],
+    "empresas": [
+        {
+            "nombre": "Elektra",
+            "porcentaje": 30
+            
+        },
+        {
+            "nombre": "Banco Azteca",
+            "porcentaje": 15
+        }
+    ]
+}

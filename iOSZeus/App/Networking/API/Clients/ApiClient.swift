@@ -33,8 +33,13 @@ struct ApiClient: Requester {
                     completion(Result.failure(RequestError.errorParsing))
                 }
                 
-            } else if let error = error {
-                completion(Result.failure(error))
+            } else {
+                if let error = error {
+                    completion(Result.failure(error))
+                }else{
+                    completion(Result.failure(RequestError.noData))
+                }
+     
             }
         }.resume()
     }
