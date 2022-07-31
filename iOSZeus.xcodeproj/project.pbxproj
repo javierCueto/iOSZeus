@@ -77,6 +77,9 @@
 		3BA881B42896CF5800C8DA3A /* HomeServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA881B32896CF5800C8DA3A /* HomeServiceTest.swift */; };
 		3BA881B62896D24200C8DA3A /* SettingsDTO.json in Resources */ = {isa = PBXBuildFile; fileRef = 3BA881B52896D24200C8DA3A /* SettingsDTO.json */; };
 		3BA881B82896D8AC00C8DA3A /* UserDataDTO.json in Resources */ = {isa = PBXBuildFile; fileRef = 3BA881B72896D8AC00C8DA3A /* UserDataDTO.json */; };
+		3BA881BA2896D9F600C8DA3A /* HomeRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA881B92896D9F600C8DA3A /* HomeRouterTests.swift */; };
+		3BA881BC2896E0BE00C8DA3A /* ErrorImageCDNTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA881BB2896E0BE00C8DA3A /* ErrorImageCDNTests.swift */; };
+		3BA881BE2896E18500C8DA3A /* HomeInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA881BD2896E18500C8DA3A /* HomeInteractorTest.swift */; };
 		3BEE879A2891ED11007CB88F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEE87992891ED11007CB88F /* AppDelegate.swift */; };
 		3BEE879C2891ED11007CB88F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEE879B2891ED11007CB88F /* SceneDelegate.swift */; };
 		3BEE87A32891ED15007CB88F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BEE87A22891ED15007CB88F /* Assets.xcassets */; };
@@ -171,6 +174,9 @@
 		3BA881B32896CF5800C8DA3A /* HomeServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeServiceTest.swift; sourceTree = "<group>"; };
 		3BA881B52896D24200C8DA3A /* SettingsDTO.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SettingsDTO.json; sourceTree = "<group>"; };
 		3BA881B72896D8AC00C8DA3A /* UserDataDTO.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = UserDataDTO.json; sourceTree = "<group>"; };
+		3BA881B92896D9F600C8DA3A /* HomeRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouterTests.swift; sourceTree = "<group>"; };
+		3BA881BB2896E0BE00C8DA3A /* ErrorImageCDNTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorImageCDNTests.swift; sourceTree = "<group>"; };
+		3BA881BD2896E18500C8DA3A /* HomeInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractorTest.swift; sourceTree = "<group>"; };
 		3BEE87962891ED11007CB88F /* iOSZeus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSZeus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BEE87992891ED11007CB88F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3BEE879B2891ED11007CB88F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -576,6 +582,7 @@
 			children = (
 				3BA8819D289614C600C8DA3A /* FakeSession.swift */,
 				3BA881A1289617A000C8DA3A /* MockJSONData.swift */,
+				3BA881BB2896E0BE00C8DA3A /* ErrorImageCDNTests.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -594,6 +601,8 @@
 			isa = PBXGroup;
 			children = (
 				3BA881B32896CF5800C8DA3A /* HomeServiceTest.swift */,
+				3BA881B92896D9F600C8DA3A /* HomeRouterTests.swift */,
+				3BA881BD2896E18500C8DA3A /* HomeInteractorTest.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -979,12 +988,15 @@
 				3BA88190289600F900C8DA3A /* ChartInfoServiceStub.swift in Sources */,
 				3BA881A82896256800C8DA3A /* ChartInfoViewControllerTest.swift in Sources */,
 				3BA881862895F79D00C8DA3A /* SeeSelfieInteractorMock.swift in Sources */,
+				3BA881BC2896E0BE00C8DA3A /* ErrorImageCDNTests.swift in Sources */,
 				3BA881B42896CF5800C8DA3A /* HomeServiceTest.swift in Sources */,
 				3BA881AD2896B4F200C8DA3A /* CameraRouterTests.swift in Sources */,
 				3BA881982896101C00C8DA3A /* ChartInfoCellViewModelTest.swift in Sources */,
 				3BA881AA289625CF00C8DA3A /* ChartInfoPresenterMock.swift in Sources */,
+				3BA881BA2896D9F600C8DA3A /* HomeRouterTests.swift in Sources */,
 				3BA8819E289614C600C8DA3A /* FakeSession.swift in Sources */,
 				3BA881922896027200C8DA3A /* ChartInteractorTests.swift in Sources */,
+				3BA881BE2896E18500C8DA3A /* HomeInteractorTest.swift in Sources */,
 				3BA881AF2896B7BD00C8DA3A /* CameraPresenterTest.swift in Sources */,
 				3BA881B12896BAC700C8DA3A /* CameraViewControllerTest.swift in Sources */,
 				3BA8819628960CC800C8DA3A /* ChartInfoInteractorMock.swift in Sources */,

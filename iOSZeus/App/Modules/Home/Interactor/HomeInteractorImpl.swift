@@ -15,7 +15,7 @@ final class HomeInteractorImpl: HomeInteractorInput {
     private let homeService: HomeService
     private var name = String()
     private var nameFromField = String()
-    private var photoURL = String()
+    var photoURL = String()
     private var imageData: Any?
     
     init(homeService: HomeService) {
