@@ -25,6 +25,10 @@ struct ApiClient: Requester {
     ) {
         guard let url = url else { return }
         urlSession.dataTask(with: url) { data, response, error in
+            if let error = error {
+                return completion(Result.failure(error))
+            }
+ 
             if let data = data {
                 do {
                     let model = try JSONDecoder().decode(T.self, from: data)
@@ -34,12 +38,7 @@ struct ApiClient: Requester {
                 }
                 
             } else {
-                if let error = error {
-                    completion(Result.failure(error))
-                }else{
-                    completion(Result.failure(RequestError.noData))
-                }
-     
+                completion(Result.failure(RequestError.noData))
             }
         }.resume()
     }

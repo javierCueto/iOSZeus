@@ -15,5 +15,18 @@ class MockJSONData {
         let data = try Data(contentsOf: URL(fileURLWithPath: path))
         return data
     }
+    
+    func settingsDTOData() throws -> Data {
+        guard let path = Bundle(for: type(of: self)).path(forResource: "SettingsDTO", ofType: "json") else { fatalError("Couldn't find SettingsDTO.json file") }
+        let data = try Data(contentsOf: URL(fileURLWithPath: path))
+        return data
+    }
+    
+    func userDataDTOData() throws -> Data {
+        guard let path = Bundle(for: type(of: self)).path(forResource: "UserDataDTO", ofType: "json") else { fatalError("Couldn't find UserDTO.json file") }
+        let data = try Data(contentsOf: URL(fileURLWithPath: path))
+        return data
+    }
+    
 
 }
